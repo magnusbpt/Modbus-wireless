@@ -1,0 +1,2765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\mbt\Desktop\Kicad\Modbus_master\Modbus_master.kicad_sch</source>
+    <date>3/29/2023 9:50:24 AM</date>
+    <tool>Eeschema 7.0.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>GSM Teknik - Modbus master</title>
+        <company>GSM Teknik</company>
+        <rev/>
+        <date>2023-03-17</date>
+        <source>Modbus_master.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>33pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/281/GJM1555C1H330GB01_01-1973084.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Murata Electronics</field>
+        <field name="Manufacturer_Part_Number">GJM1555C1H330GB01D</field>
+        <field name="Mouser Price/Stock">0,15</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="Murata Electronics"/>
+      <property name="Manufacturer_Part_Number" value="GJM1555C1H330GB01D"/>
+      <property name="Mouser Price/Stock" value="0,15"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b755ab0e-0f4f-4271-92f3-9f2429673d57</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>33pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/281/GJM1555C1H330GB01_01-1973084.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Murata Electronics</field>
+        <field name="Manufacturer_Part_Number">GJM1555C1H330GB01D</field>
+        <field name="Mouser Price/Stock">0,15</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="Murata Electronics"/>
+      <property name="Manufacturer_Part_Number" value="GJM1555C1H330GB01D"/>
+      <property name="Mouser Price/Stock" value="0,15"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ee26b270-a599-4686-af53-d2ebfbefb6fa</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>33pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/281/GJM1555C1H330GB01_01-1973084.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Murata Electronics</field>
+        <field name="Manufacturer_Part_Number">GJM1555C1H330GB01D</field>
+        <field name="Mouser Price/Stock">0,15</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="Murata Electronics"/>
+      <property name="Manufacturer_Part_Number" value="GJM1555C1H330GB01D"/>
+      <property name="Mouser Price/Stock" value="0,15"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dc2af79f-c85a-4fc9-8356-9a52699df630</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>33pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/281/GJM1555C1H330GB01_01-1973084.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Murata Electronics</field>
+        <field name="Manufacturer_Part_Number">GJM1555C1H330GB01D</field>
+        <field name="Mouser Price/Stock">0,15</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="Murata Electronics"/>
+      <property name="Manufacturer_Part_Number" value="GJM1555C1H330GB01D"/>
+      <property name="Mouser Price/Stock" value="0,15"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae49b688-ca44-48c6-86f8-d93915e2398b</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>33pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/281/GJM1555C1H330GB01_01-1973084.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Murata Electronics</field>
+        <field name="Manufacturer_Part_Number">GJM1555C1H330GB01D</field>
+        <field name="Mouser Price/Stock">0,15</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="Murata Electronics"/>
+      <property name="Manufacturer_Part_Number" value="GJM1555C1H330GB01D"/>
+      <property name="Mouser Price/Stock" value="0,15"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9dbc79af-f2d9-42d1-8868-685c12a713df</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C1005X7R1C104K050BC</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C1005X7R1C104K050BC"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5b6ef43-2094-45e6-8090-051e99110244</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C1005X7R1C104K050BC</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C1005X7R1C104K050BC"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e1f27ade-c601-484e-9e99-73fdf82a14b5</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C1005X7R1C104K050BC</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C1005X7R1C104K050BC"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c1b8740-47a0-43dc-8f92-a2c6b98093a7</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C1005X7R1C104K050BC</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C1005X7R1C104K050BC"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0cbf5a6b-c6f6-4a44-8e45-ceda37db2005</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>330nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/585/MLCC-1837944.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer_Part_Number">CL21B334KBFNNNG</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer_Part_Number" value="CL21B334KBFNNNG"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2256892e-316b-415c-9031-f866932fce0e</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C1005X7R1C104K050BC</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C1005X7R1C104K050BC"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0509711b-9f20-4626-ab21-dca9889eddbf</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C1005X7R1C104K050BC</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C1005X7R1C104K050BC"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>addf2cad-6bb3-48bf-b42d-cbeee6db9e62</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>0.47F SC</value>
+      <footprint>SELF_MADE:Radial_D6.3mm_W13.6mm_P9.00mm</footprint>
+      <libsource lib="Device" part="C_Polarized_Small" description="Polarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Polarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>943d02bb-1dbd-4b51-9d6c-6c04970f844d</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C1005X7R1C104K050BC</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C1005X7R1C104K050BC"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>614e2b63-56f9-4a30-b56a-9cd1490c1e45</tstamps>
+    </comp>
+    <comp ref="C15">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C1005X6S1C105K050BC</field>
+        <field name="Mouser Price/Stock">0,113</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C1005X6S1C105K050BC"/>
+      <property name="Mouser Price/Stock" value="0,113"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d9c4d25-ab5c-4560-aa7c-4cf3d18435d3</tstamps>
+    </comp>
+    <comp ref="C16">
+      <value>100uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">TDK</field>
+        <field name="Manufacturer_Part_Number">C3216X5R0J107M160AB</field>
+        <field name="Mouser Price/Stock">0,893</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Manufacturer_Name" value="TDK"/>
+      <property name="Manufacturer_Part_Number" value="C3216X5R0J107M160AB"/>
+      <property name="Mouser Price/Stock" value="0,893"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bb3de845-bd54-479d-9f53-475cf4200dbb</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>UHD111A-FKA</value>
+      <footprint>LED_SMD_RGB:LED_RGB_1_1_mm</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/723/CREE_9_23_2022_HB_UHD111A_FKA-3043931.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Cree LED</field>
+        <field name="Manufacturer_Part_Number">UHD111A-FKA-C3K23E1L3VG5ZB3Z3</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="LED_BGRA" description="RGB LED, blue/green/red/anode"/>
+      <property name="Manufacturer_Name" value="Cree LED"/>
+      <property name="Manufacturer_Part_Number" value="UHD111A-FKA-C3K23E1L3VG5ZB3Z3"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="RGB LED, blue/green/red/anode"/>
+      <property name="ki_keywords" value="LED RGB diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0d2bbb95-ef95-4158-96fe-70ad820e5f7c</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>SS0540_R1_00001</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1057/SS0520_SERIES-1877120.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Panjit</field>
+        <field name="Manufacturer_Part_Number">SS0540_R1_00001</field>
+        <field name="Mouser Price/Stock">0,254</field>
+      </fields>
+      <libsource lib="Diode" part="PMEG1020EH" description="10V, 2A ultra low Vf MEGA Schottky barrier rectifier, SOD-123F"/>
+      <property name="Manufacturer_Name" value="Panjit"/>
+      <property name="Manufacturer_Part_Number" value="SS0540_R1_00001"/>
+      <property name="Mouser Price/Stock" value="0,254"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="10V, 2A ultra low Vf MEGA Schottky barrier rectifier, SOD-123F"/>
+      <property name="ki_keywords" value="forward voltage diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3fdc32c3-5d5e-4e9c-b4ad-fe4b45292012</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>SS0540_R1_00001</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1057/SS0520_SERIES-1877120.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Panjit</field>
+        <field name="Manufacturer_Part_Number">SS0540_R1_00001</field>
+        <field name="Mouser Price/Stock">0,254</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Sim.Device" value="D"/>
+      <property name="Sim.Pins" value="1=K 2=A"/>
+      <property name="Manufacturer_Name" value="Panjit"/>
+      <property name="Manufacturer_Part_Number" value="SS0540_R1_00001"/>
+      <property name="Mouser Price/Stock" value="0,254"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>612feb2b-3ea2-4b3e-bc56-02044a4b1479</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>DF2S6.8FS,L3M</value>
+      <footprint>Diode_SMD:D_SOD-923</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/408/DF2S6_8FS_datasheet_en_20211216-1916398.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Toshiba</field>
+        <field name="Manufacturer_Part_Number">DF2S6.8FS,L3M</field>
+        <field name="Mouser Price/Stock">0,169</field>
+      </fields>
+      <libsource lib="Diode" part="ESD5Zxx" description="ESD Protection Diode, SOD-523"/>
+      <property name="Manufacturer_Name" value="Toshiba"/>
+      <property name="Manufacturer_Part_Number" value="DF2S6.8FS,L3M"/>
+      <property name="Mouser Price/Stock" value="0,169"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="ESD Protection Diode, SOD-523"/>
+      <property name="ki_keywords" value="esd tvs unidirectional diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5ccb018a-a430-4458-bf46-e3353cf98719</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>SS0540_R1_00001</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1057/SS0520_SERIES-1877120.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Panjit</field>
+        <field name="Manufacturer_Part_Number">SS0540_R1_00001</field>
+        <field name="Mouser Price/Stock">0,254</field>
+      </fields>
+      <libsource lib="Diode" part="PMEG1020EH" description="10V, 2A ultra low Vf MEGA Schottky barrier rectifier, SOD-123F"/>
+      <property name="Manufacturer_Name" value="Panjit"/>
+      <property name="Manufacturer_Part_Number" value="SS0540_R1_00001"/>
+      <property name="Mouser Price/Stock" value="0,254"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="10V, 2A ultra low Vf MEGA Schottky barrier rectifier, SOD-123F"/>
+      <property name="ki_keywords" value="forward voltage diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0219d8ee-8094-4fc9-853b-f3608f102326</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>GREEN</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/445/150060VS75000-3085276.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Wurth Elektronik</field>
+        <field name="Manufacturer_Part_Number">150060VS75000</field>
+        <field name="Mouser Price/Stock">0,141</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer_Name" value="Wurth Elektronik"/>
+      <property name="Manufacturer_Part_Number" value="150060VS75000"/>
+      <property name="Mouser Price/Stock" value="0,141"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8f26b3d-7f6c-48a0-9b79-f3af02088b22</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>ESDA6V1-5W6</value>
+      <footprint>SELF_MADE:SOT323-6L</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/389/esdaxxxwx-1849182.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">STMicroelectronics</field>
+        <field name="Manufacturer_Part_Number">ESDA6V1-5W6</field>
+        <field name="Mouser Price/Stock">0,545</field>
+      </fields>
+      <libsource lib="" part="ESDA6V1-5SC6_1" description="Quintuple bidirectional transil, Suppressor for ESD protection, 6V1 Breakdown, SOT-23-6"/>
+      <property name="Manufacturer_Name" value="STMicroelectronics"/>
+      <property name="Manufacturer_Part_Number" value="ESDA6V1-5W6"/>
+      <property name="Mouser Price/Stock" value="0,545"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Quintuple bidirectional transil, Suppressor for ESD protection, 6V1 Breakdown, SOT-23-6"/>
+      <property name="ki_keywords" value="ESD protection suppression transient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c1734139-6fc3-44d5-86c4-358f06d22e79</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>ESD5B5.0ST1G</value>
+      <footprint>Diode_SMD:D_SOD-523</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/308/ESD5B5_0ST1_D-1805066.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">onsemi</field>
+        <field name="Manufacturer_Part_Number">ESD5B5.0ST1G</field>
+        <field name="Mouser Price/Stock">0,263</field>
+      </fields>
+      <libsource lib="Diode" part="ESD9B5.0ST5G" description="ESD protection diode, 5.0Vrwm, SOD-923"/>
+      <property name="Manufacturer_Name" value="onsemi"/>
+      <property name="Manufacturer_Part_Number" value="ESD5B5.0ST1G"/>
+      <property name="Mouser Price/Stock" value="0,263"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="ESD protection diode, 5.0Vrwm, SOD-923"/>
+      <property name="ki_keywords" value="diode TVS ESD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6186d4d1-6eef-4ad2-aa56-6a1b3b24e32a</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>GS1M-LTP</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/258/GS1A_L_7eGS1M_L_DO_214AC_-2634344.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Micro Commercial Components (MCC)</field>
+        <field name="Manufacturer_Part_Number">GS1M-LTP</field>
+        <field name="Mouser Price/Stock">0,15</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <libsource lib="Diode" part="US1G" description="400V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="Sim.Device" value="D"/>
+      <property name="Sim.Pins" value="1=K 2=A"/>
+      <property name="Manufacturer_Name" value="Micro Commercial Components (MCC)"/>
+      <property name="Manufacturer_Part_Number" value="GS1M-LTP"/>
+      <property name="Mouser Price/Stock" value="0,15"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="400V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="ki_keywords" value="Ultra Fast"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>867c959f-d7e7-4827-8e6e-bf3e214d52c1</tstamps>
+    </comp>
+    <comp ref="D11">
+      <value>YELLOW</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/445/150060YS75000-3085594.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Wurth Elektronik</field>
+        <field name="Manufacturer_Part_Number">150060YS75000</field>
+        <field name="Mouser Price/Stock">0,141</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer_Name" value="Wurth Elektronik"/>
+      <property name="Manufacturer_Part_Number" value="150060YS75000"/>
+      <property name="Mouser Price/Stock" value="0,141"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>88d36acd-d716-4f9f-a921-11386df3858e</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Screw_Terminal_01x03</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/670/tb002_500-2306853.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">CUI Devices</field>
+        <field name="Manufacturer_Part_Number">TB002-500-03BE</field>
+        <field name="Mouser Price/Stock">0,686</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer_Name" value="CUI Devices"/>
+      <property name="Manufacturer_Part_Number" value="TB002-500-03BE"/>
+      <property name="Mouser Price/Stock" value="0,686"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="screw terminal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a74fb822-5728-4b3e-97bb-506d54aefa27</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>SIM8066-6-1-14-01-A</value>
+      <footprint>SIM8066611401A:SIM8066611401A</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/837/sim8066-2326668.pdf</datasheet>
+      <fields>
+        <field name="Height">1.64</field>
+        <field name="Manufacturer_Name">GCT (GLOBAL CONNECTOR TECHNOLOGY)</field>
+        <field name="Manufacturer_Part_Number">SIM8066-6-1-14-01-A</field>
+        <field name="Mouser Part Number">640-SIM8066-611401A</field>
+        <field name="Mouser Price/Stock">1,26</field>
+      </fields>
+      <libsource lib="SIM8066-6-1-14-01-A" part="SIM8066-6-1-14-01-A" description="Memory Card Connectors 1.44mm Nano SIM Conn w/Peg and Switch"/>
+      <property name="Height" value="1.64"/>
+      <property name="Mouser Part Number" value="640-SIM8066-611401A"/>
+      <property name="Mouser Price/Stock" value="1,26"/>
+      <property name="Manufacturer_Name" value="GCT (GLOBAL CONNECTOR TECHNOLOGY)"/>
+      <property name="Manufacturer_Part_Number" value="SIM8066-6-1-14-01-A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Memory Card Connectors 1.44mm Nano SIM Conn w/Peg and Switch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f5da940-e98e-4b63-8be1-622356afbac9</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_Coaxial</value>
+      <footprint>Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/185/HIROS08829_1-2549389.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Hirose Connector</field>
+        <field name="Manufacturer_Part_Number">U.FL-R-SMT-1(10)</field>
+        <field name="Mouser Price/Stock">1,18</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_Coaxial" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"/>
+      <property name="Manufacturer_Name" value="Hirose Connector"/>
+      <property name="Manufacturer_Part_Number" value="U.FL-R-SMT-1(10)"/>
+      <property name="Mouser Price/Stock" value="1,18"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"/>
+      <property name="ki_keywords" value="BNC SMA SMB SMC LEMO coaxial connector CINCH RCA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>077e2812-a5ad-4c19-8abd-1b7cbf747d1c</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>Screw_Terminal_01x04</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-5.0-H_1x04_P5.00mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/670/tb002_500-2306853.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">CUI Devices</field>
+        <field name="Manufacturer_Part_Number">TB002-500-04BE</field>
+        <field name="Mouser Price/Stock">0,902</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x04" description="Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer_Name" value="CUI Devices"/>
+      <property name="Manufacturer_Part_Number" value="TB002-500-04BE"/>
+      <property name="Mouser Price/Stock" value="0,902"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="screw terminal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4fccc3dd-28ee-47bd-8f2e-6ec7fa75815c</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>AVR-ISP-6</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <datasheet>https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/boardwiretoboard/bwb_bergstik.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Amphenol FCI</field>
+        <field name="Manufacturer_Part_Number">54102-T06-00</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Connector" part="AVR-ISP-6" description="Atmel 6-pin ISP connector"/>
+      <property name="Manufacturer_Name" value="Amphenol FCI"/>
+      <property name="Manufacturer_Part_Number" value="54102-T06-00"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Atmel 6-pin ISP connector"/>
+      <property name="ki_keywords" value="AVR ISP Connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1595171b-98ff-450e-b60d-004490ac0686</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>BC847CW</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/916/BC847XW_SER-3081653.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Nexperia</field>
+        <field name="Manufacturer_Part_Number">BC847CW,115</field>
+        <field name="Mouser Price/Stock">0,16</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="BC847W" description="0.1A Ic, 45V Vce, NPN Transistor, SOT-323"/>
+      <property name="Manufacturer_Name" value="Nexperia"/>
+      <property name="Manufacturer_Part_Number" value="BC847CW,115"/>
+      <property name="Mouser Price/Stock" value="0,16"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="0.1A Ic, 45V Vce, NPN Transistor, SOT-323"/>
+      <property name="ki_keywords" value="NPN Small Signal Transistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bce88522-97d7-4532-b3df-78070052f4b1</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>BC847CW</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/916/BC847XW_SER-3081653.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Nexperia</field>
+        <field name="Manufacturer_Part_Number">BC847CW,115</field>
+        <field name="Mouser Price/Stock">0,16</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="BC847W" description="0.1A Ic, 45V Vce, NPN Transistor, SOT-323"/>
+      <property name="Manufacturer_Name" value="Nexperia"/>
+      <property name="Manufacturer_Part_Number" value="BC847CW,115"/>
+      <property name="Mouser Price/Stock" value="0,16"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="0.1A Ic, 45V Vce, NPN Transistor, SOT-323"/>
+      <property name="ki_keywords" value="NPN Small Signal Transistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3be887ce-2536-4afa-8944-d0e094337ee4</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>BC847CW</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/916/BC847XW_SER-3081653.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Nexperia</field>
+        <field name="Manufacturer_Part_Number">BC847CW,115</field>
+        <field name="Mouser Price/Stock">0,16</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="BC847W" description="0.1A Ic, 45V Vce, NPN Transistor, SOT-323"/>
+      <property name="Manufacturer_Name" value="Nexperia"/>
+      <property name="Manufacturer_Part_Number" value="BC847CW,115"/>
+      <property name="Mouser Price/Stock" value="0,16"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="0.1A Ic, 45V Vce, NPN Transistor, SOT-323"/>
+      <property name="ki_keywords" value="NPN Small Signal Transistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>08c9ba20-5786-41bc-99b6-7af5fc5b9c48</tstamps>
+    </comp>
+    <comp ref="Q4">
+      <value>BC847CW</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/916/BC847XW_SER-3081653.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Nexperia</field>
+        <field name="Manufacturer_Part_Number">BC847CW,115</field>
+        <field name="Mouser Price/Stock">0,16</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="BC847W" description="0.1A Ic, 45V Vce, NPN Transistor, SOT-323"/>
+      <property name="Manufacturer_Name" value="Nexperia"/>
+      <property name="Manufacturer_Part_Number" value="BC847CW,115"/>
+      <property name="Mouser Price/Stock" value="0,16"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="0.1A Ic, 45V Vce, NPN Transistor, SOT-323"/>
+      <property name="ki_keywords" value="NPN Small Signal Transistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a1986c9a-6904-4789-8229-b47efba13e70</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>60cccc3f-a8a7-419c-903a-50831f85b859</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>22</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF220JTCE</field>
+        <field name="Mouser Price/Stock">0,004</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF220JTCE"/>
+      <property name="Mouser Price/Stock" value="0,004"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a0a24768-786e-45d0-a66e-a44d304b172e</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>22</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF220JTCE</field>
+        <field name="Mouser Price/Stock">0,004</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF220JTCE"/>
+      <property name="Mouser Price/Stock" value="0,004"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3cac0ea3-9b53-4c2b-bf82-49b62a894a61</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>22</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF220JTCE</field>
+        <field name="Mouser Price/Stock">0,004</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF220JTCE"/>
+      <property name="Mouser Price/Stock" value="0,004"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e48559d5-d43c-44f2-9b0a-3254bc3e8d4f</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>268da0c9-9c7e-4126-8dea-2ef1cb6b7ee5</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>19864fa0-d332-4974-aef5-91fa9b8427a1</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e2d7157-de59-49a6-a206-61a8fff36653</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>47k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF4702TCE</field>
+        <field name="Mouser Price/Stock">0,004</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF4702TCE"/>
+      <property name="Mouser Price/Stock" value="0,004"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e940640b-ce19-4a7c-b707-6ffc4e7f0f40</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ba4da96-0214-4075-a5ac-ab4755263d53</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1001TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1001TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fbc9772f-e5fd-43c1-a7c1-968764003ba4</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>27e3f81d-d127-40a2-81e1-a3849f8b7e35</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1001TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1001TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>45e72d0f-2f9d-4a3c-9faa-a6f84517789f</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>680</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF6800TCE</field>
+        <field name="Mouser Price/Stock">0,004</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF6800TCE"/>
+      <property name="Mouser Price/Stock" value="0,004"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d3f256c-b794-4b07-a2e1-9c6d1ff82c7f</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>910</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/54/cr-1858361.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Bourns</field>
+        <field name="Manufacturer_Part_Number">CR0402-FX-9100GLF</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Bourns"/>
+      <property name="Manufacturer_Part_Number" value="CR0402-FX-9100GLF"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>87d1aa0f-49d0-4b23-8ae0-a9748982a37a</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>910</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/54/cr-1858361.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Bourns</field>
+        <field name="Manufacturer_Part_Number">CR0402-FX-9100GLF</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Bourns"/>
+      <property name="Manufacturer_Part_Number" value="CR0402-FX-9100GLF"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5d3aef0-17b6-4d6a-8c58-5b556a037ee4</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1001TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1001TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0c559c6b-906f-4cce-9a55-7085cf70631a</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>62</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/315/AOA0000C331-1141874.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06J620V</field>
+        <field name="Mouser Price/Stock">0,122</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06J620V"/>
+      <property name="Mouser Price/Stock" value="0,122"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f267e0a1-66b8-4ee1-9465-4e74dc1c20d6</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>160</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/447/PYu_RC_Group_51_RoHS_L_11-1984063.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">YAGEO</field>
+        <field name="Manufacturer_Part_Number">RC0603JR-07160RL</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="YAGEO"/>
+      <property name="Manufacturer_Part_Number" value="RC0603JR-07160RL"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f2323e74-46b9-42d4-a24e-2dfa39546dd5</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>301f8c44-c9c8-4b7d-8ce3-6c8846a1b544</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f3874eaa-6ac8-4e16-bedd-e8747621346a</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1001TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1001TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e56601fc-aea6-4455-9f95-8120a35dbcf7</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>200K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF2003TCE</field>
+        <field name="Mouser Price/Stock">0,004</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF2003TCE"/>
+      <property name="Mouser Price/Stock" value="0,004"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>23ecd4ba-0ada-46a9-b537-1afd47a0c6fe</tstamps>
+    </comp>
+    <comp ref="R23">
+      <value>160</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/447/PYu_RC_Group_51_RoHS_L_11-1984063.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">YAGEO</field>
+        <field name="Manufacturer_Part_Number">RC0603JR-07160RL</field>
+        <field name="Mouser Price/Stock">0,094</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="YAGEO"/>
+      <property name="Manufacturer_Part_Number" value="RC0603JR-07160RL"/>
+      <property name="Mouser Price/Stock" value="0,094"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ebaccb2-9ac1-4a50-a763-d44c2fe9eeb4</tstamps>
+    </comp>
+    <comp ref="R24">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a669c43c-def2-4dd5-9dc5-253eed30f4c4</tstamps>
+    </comp>
+    <comp ref="R25">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ddcf1c66-fa26-47a4-ae04-15f49e73d398</tstamps>
+    </comp>
+    <comp ref="R26">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF1002TCE</field>
+        <field name="Mouser Price/Stock">0,001</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF1002TCE"/>
+      <property name="Mouser Price/Stock" value="0,001"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6b8ffd0-4fc0-4984-bcbf-5220124152a2</tstamps>
+    </comp>
+    <comp ref="R27">
+      <value>20K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/1365/1-3044649.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Royalohm</field>
+        <field name="Manufacturer_Part_Number">0402WGF2002TCE</field>
+        <field name="Mouser Price/Stock">0,004</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer_Name" value="Royalohm"/>
+      <property name="Manufacturer_Part_Number" value="0402WGF2002TCE"/>
+      <property name="Mouser Price/Stock" value="0,004"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5b115e68-6e2b-4e56-aa13-8beda924005f</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>TL3305AF260QG</value>
+      <footprint>SELF_MADE:TL3305AF260QG</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/140/TL3305-2065758.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">E-Switch</field>
+        <field name="Manufacturer_Part_Number">TL3305AF260QG</field>
+        <field name="Mouser Price/Stock">0,197</field>
+      </fields>
+      <libsource lib="Switch" part="SW_MEC_5E" description="MEC 5E single pole normally-open tactile switch"/>
+      <property name="Manufacturer_Name" value="E-Switch"/>
+      <property name="Manufacturer_Part_Number" value="TL3305AF260QG"/>
+      <property name="Mouser Price/Stock" value="0,197"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="MEC 5E single pole normally-open tactile switch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>617cb498-c2a7-4272-943c-962d3e4920c0</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ATmega2560-16A</value>
+      <footprint>Package_QFP:TQFP-100_14x14mm_P0.5mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Microchip Technology</field>
+        <field name="Manufacturer_Part_Number">ATMEGA2560-16AU</field>
+        <field name="Mouser Price/Stock">15,33</field>
+      </fields>
+      <libsource lib="MCU_Microchip_ATmega" part="ATmega2560-16A" description="16MHz, 256kB Flash, 8kB SRAM, 4kB EEPROM, JTAG, TQFP-100"/>
+      <property name="Manufacturer_Name" value="Microchip Technology"/>
+      <property name="Manufacturer_Part_Number" value="ATMEGA2560-16AU"/>
+      <property name="Mouser Price/Stock" value="15,33"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="16MHz, 256kB Flash, 8kB SRAM, 4kB EEPROM, JTAG, TQFP-100"/>
+      <property name="ki_keywords" value="AVR 8bit Microcontroller MegaAVR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c605fb08-6440-4e06-9a81-9d71a0230711</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>SP485EN-L/TR</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/146/sp483-sp485-1816424.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">MaxLinear</field>
+        <field name="Manufacturer_Part_Number">SP485EN-L/TR</field>
+        <field name="Mouser Price/Stock">0,968</field>
+      </fields>
+      <libsource lib="Interface_UART" part="MAX485E" description="Half duplex RS-485/RS-422, 2.5 Mbps, ±15kV electro-static discharge (ESD) protection, no slew-rate, no low-power shutdown, with receiver/driver enable, 32 receiver drive kapacitity, DIP-8 and SOIC-8"/>
+      <property name="Manufacturer_Name" value="MaxLinear"/>
+      <property name="Manufacturer_Part_Number" value="SP485EN-L/TR"/>
+      <property name="Mouser Price/Stock" value="0,968"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Half duplex RS-485/RS-422, 2.5 Mbps, ±15kV electro-static discharge (ESD) protection, no slew-rate, no low-power shutdown, with receiver/driver enable, 32 receiver drive kapacitity, DIP-8 and SOIC-8"/>
+      <property name="ki_keywords" value="Half duplex RS-485/RS-422, 2.5 Mbps, ±15kV electro-static discharge (ESD) protection, no slew-rate, no low-power shutdown, with receiver/driver enable, 32 receiver drive kapacitity, DIP-8 and SOIC-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1aa3e23b-c711-4558-913f-af638da8effe</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>LM7805</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">STMicroelectronics</field>
+        <field name="Manufacturer_Part_Number">L7805CV</field>
+        <field name="Mouser Price/Stock">0,649</field>
+      </fields>
+      <libsource lib="Regulator_Linear" part="LM7805_TO220" description="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
+      <property name="Manufacturer_Name" value="STMicroelectronics"/>
+      <property name="Manufacturer_Part_Number" value="L7805CV"/>
+      <property name="Mouser Price/Stock" value="0,649"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
+      <property name="ki_keywords" value="Voltage Regulator 1A Positive"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>607b5107-c09d-41a6-8e93-e23806c45504</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>SIM7080G</value>
+      <footprint>SIM7080G:XCVR_SIM7080G</footprint>
+      <datasheet>https://drive.google.com/file/d/1-UHoSTVD5j3yvv5Yxyj0Qw3VSiNqDAng/view?usp=sharing</datasheet>
+      <fields>
+        <field name="MANUFACTURER">SIMCOM</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">2.6 mm</field>
+        <field name="Manufacturer_Name">SIMCOM</field>
+        <field name="Manufacturer_Part_Number">SIM7080G</field>
+        <field name="Mouser Price/Stock">21,79</field>
+        <field name="PARTREV">1.04</field>
+        <field name="STANDARD">Manufacturer Recommendation</field>
+      </fields>
+      <libsource lib="SIM7080G" part="SIM7080G" description=""/>
+      <property name="PARTREV" value="1.04"/>
+      <property name="STANDARD" value="Manufacturer Recommendation"/>
+      <property name="MANUFACTURER" value="SIMCOM"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="2.6 mm"/>
+      <property name="Manufacturer_Name" value="SIMCOM"/>
+      <property name="Manufacturer_Part_Number" value="SIM7080G"/>
+      <property name="Mouser Price/Stock" value="21,79"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b890c624-7aa2-4c99-b5a5-15b7819c740e</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>LSF0204PW-Q100J</value>
+      <footprint>Package_SO:TSSOP-14_4.4x5mm_P0.65mm</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/916/LSF0204_Q100-1894314.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Nexperia</field>
+        <field name="Manufacturer_Part_Number">LSF0204PW-Q100J</field>
+        <field name="Mouser Price/Stock">0,818</field>
+      </fields>
+      <libsource lib="LSF" part="LSF0108_PW" description="Bidirectional  level-shifting voltage translator, TSSOP-20"/>
+      <property name="Manufacturer_Name" value="Nexperia"/>
+      <property name="Manufacturer_Part_Number" value="LSF0204PW-Q100J"/>
+      <property name="Mouser Price/Stock" value="0,818"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Bidirectional  level-shifting voltage translator, TSSOP-20"/>
+      <property name="ki_keywords" value="8-bit"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f083f622-e3d9-4d28-9644-60acdef5bd47</tstamps>
+    </comp>
+    <comp ref="Y1">
+      <value>ABM3B-8.000MHZ-10-1-U-T</value>
+      <footprint>SELF_MADE:Oscillator_SMD_abm3b</footprint>
+      <datasheet>https://www.mouser.dk/datasheet/2/3/abm3b-1774998.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">ABRACON</field>
+        <field name="Manufacturer_Part_Number">ABM3B-8.000MHZ-10-1-U-T</field>
+        <field name="Mouser Price/Stock">0,743</field>
+      </fields>
+      <libsource lib="Device" part="Crystal_GND24_Small" description="Four pin crystal, GND on pins 2 and 4, small symbol"/>
+      <property name="Manufacturer_Name" value="ABRACON"/>
+      <property name="Manufacturer_Part_Number" value="ABM3B-8.000MHZ-10-1-U-T"/>
+      <property name="Mouser Price/Stock" value="0,743"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Modbus_master.kicad_sch"/>
+      <property name="ki_description" value="Four pin crystal, GND on pins 2 and 4, small symbol"/>
+      <property name="ki_keywords" value="quartz ceramic resonator oscillator"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>686e1551-a892-4238-a54d-0b0ad6238412</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="ESDA6V1-5SC6_1">
+      <description>Quintuple bidirectional transil, Suppressor for ESD protection, 6V1 Breakdown, SOT-23-6</description>
+      <docs>www.st.com/resource/en/datasheet/esda6v1-5sc6.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ESDA6V1-5SC6</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">www.st.com/resource/en/datasheet/esda6v1-5sc6.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IO1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="IO2" type="passive"/>
+        <pin num="4" name="IO3" type="passive"/>
+        <pin num="5" name="IO4" type="passive"/>
+        <pin num="6" name="IO5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="AVR-ISP-6">
+      <description>Atmel 6-pin ISP connector</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>IDC?Header*2x03*</fp>
+        <fp>Pin?Header*2x03*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">AVR-ISP-6</field>
+        <field name="Datasheet"> ~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="MISO" type="passive"/>
+        <pin num="2" name="VCC" type="passive"/>
+        <pin num="3" name="SCK" type="passive"/>
+        <pin num="4" name="MOSI" type="passive"/>
+        <pin num="5" name="~{RST}" type="passive"/>
+        <pin num="6" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_Coaxial">
+      <description>coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>*BNC*</fp>
+        <fp>*SMA*</fp>
+        <fp>*SMB*</fp>
+        <fp>*SMC*</fp>
+        <fp>*Cinch*</fp>
+        <fp>*LEMO*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_Coaxial</field>
+        <field name="Datasheet"> ~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="In" type="passive"/>
+        <pin num="2" name="Ext" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x03">
+      <description>Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x04">
+      <description>Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized_Small">
+      <description>Polarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Crystal_GND24_Small">
+      <description>Four pin crystal, GND on pins 2 and 4, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_GND24_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Datasheet">~</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED_BGRA">
+      <description>RGB LED, blue/green/red/anode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_BGRA</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="BK" type="passive"/>
+        <pin num="2" name="GK" type="passive"/>
+        <pin num="3" name="RK" type="passive"/>
+        <pin num="4" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="ESD5Zxx">
+      <description>ESD Protection Diode, SOD-523</description>
+      <docs>https://www.onsemi.com/pdf/datasheet/esd5z2.5t1-d.pdf</docs>
+      <footprints>
+        <fp>D?SOD?523*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ESD5Zxx</field>
+        <field name="Footprint">Diode_SMD:D_SOD-523</field>
+        <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/esd5z2.5t1-d.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="ESD9B5.0ST5G">
+      <description>ESD protection diode, 5.0Vrwm, SOD-923</description>
+      <docs>https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF</docs>
+      <footprints>
+        <fp>D*SOD?923*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ESD9B5.0ST5G</field>
+        <field name="Footprint">Diode_SMD:D_SOD-923</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="PMEG1020EH">
+      <description>10V, 2A ultra low Vf MEGA Schottky barrier rectifier, SOD-123F</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/PMEG1020EH_EJ.pdf</docs>
+      <footprints>
+        <fp>D*SOD?123F*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">PMEG1020EH</field>
+        <field name="Footprint">Diode_SMD:D_SOD-123F</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/PMEG1020EH_EJ.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="US1G">
+      <description>400V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)</description>
+      <docs>https://www.diodes.com/assets/Datasheets/ds16008.pdf</docs>
+      <footprints>
+        <fp>D*SMA*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">US1G</field>
+        <field name="Footprint">Diode_SMD:D_SMA</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/ds16008.pdf</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_UART" part="MAX485E">
+      <description>Half duplex RS-485/RS-422, 2.5 Mbps, ±15kV electro-static discharge (ESD) protection, no slew-rate, no low-power shutdown, with receiver/driver enable, 32 receiver drive kapacitity, DIP-8 and SOIC-8</description>
+      <docs>https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX485E</field>
+        <field name="Datasheet">https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RO" type="output"/>
+        <pin num="2" name="~{RE}" type="input"/>
+        <pin num="3" name="DE" type="input"/>
+        <pin num="4" name="DI" type="input"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="A" type="bidirectional"/>
+        <pin num="7" name="B" type="bidirectional"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="LSF" part="LSF0108_PW">
+      <description>Bidirectional  level-shifting voltage translator, TSSOP-20</description>
+      <docs>https://www.ti.com/lit/ds/symlink/lsf0102.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&amp;ts=1679990723266&amp;ref_url=https%253A%252F%252Fwww.mouser.de%252F</docs>
+      <footprints>
+        <fp>*SSOP*4.4x6.5mm*P0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U5</field>
+        <field name="Value">LSF0204PW-Q100J</field>
+        <field name="Footprint">Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/lsf0102.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&amp;ts=1679990723266&amp;ref_url=https%253A%252F%252Fwww.mouser.de%252F</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">LSF0108PWR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Vref_A" type="power_in"/>
+        <pin num="2" name="A1" type="bidirectional"/>
+        <pin num="3" name="A2" type="bidirectional"/>
+        <pin num="4" name="A3" type="bidirectional"/>
+        <pin num="5" name="A4" type="bidirectional"/>
+        <pin num="6" name="NC" type="no_connect"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="EN" type="input"/>
+        <pin num="9" name="NC" type="no_connect"/>
+        <pin num="10" name="B4" type="bidirectional"/>
+        <pin num="11" name="B3" type="bidirectional"/>
+        <pin num="12" name="B2" type="bidirectional"/>
+        <pin num="13" name="B1" type="bidirectional"/>
+        <pin num="14" name="Vref_B" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Microchip_ATmega" part="ATmega2560-16A">
+      <description>16MHz, 256kB Flash, 8kB SRAM, 4kB EEPROM, JTAG, TQFP-100</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf</docs>
+      <footprints>
+        <fp>TQFP*14x14mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATmega2560-16A</field>
+        <field name="Footprint">Package_QFP:TQFP-100_14x14mm_P0.5mm</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PG5" type="bidirectional"/>
+        <pin num="2" name="PE0" type="bidirectional"/>
+        <pin num="3" name="PE1" type="bidirectional"/>
+        <pin num="4" name="PE2" type="bidirectional"/>
+        <pin num="5" name="PE3" type="bidirectional"/>
+        <pin num="6" name="PE4" type="bidirectional"/>
+        <pin num="7" name="PE5" type="bidirectional"/>
+        <pin num="8" name="PE6" type="bidirectional"/>
+        <pin num="9" name="PE7" type="bidirectional"/>
+        <pin num="10" name="VCC" type="power_in"/>
+        <pin num="11" name="GND" type="power_in"/>
+        <pin num="12" name="PH0" type="bidirectional"/>
+        <pin num="13" name="PH1" type="bidirectional"/>
+        <pin num="14" name="PH2" type="bidirectional"/>
+        <pin num="15" name="PH3" type="bidirectional"/>
+        <pin num="16" name="PH4" type="bidirectional"/>
+        <pin num="17" name="PH5" type="bidirectional"/>
+        <pin num="18" name="PH6" type="bidirectional"/>
+        <pin num="19" name="PB0" type="bidirectional"/>
+        <pin num="20" name="PB1" type="bidirectional"/>
+        <pin num="21" name="PB2" type="bidirectional"/>
+        <pin num="22" name="PB3" type="bidirectional"/>
+        <pin num="23" name="PB4" type="bidirectional"/>
+        <pin num="24" name="PB5" type="bidirectional"/>
+        <pin num="25" name="PB6" type="bidirectional"/>
+        <pin num="26" name="PB7" type="bidirectional"/>
+        <pin num="27" name="PH7" type="bidirectional"/>
+        <pin num="28" name="PG3" type="bidirectional"/>
+        <pin num="29" name="PG4" type="bidirectional"/>
+        <pin num="30" name="~{RESET}" type="input"/>
+        <pin num="31" name="VCC" type="passive"/>
+        <pin num="32" name="GND" type="passive"/>
+        <pin num="33" name="XTAL2" type="output"/>
+        <pin num="34" name="XTAL1" type="input"/>
+        <pin num="35" name="PL0" type="bidirectional"/>
+        <pin num="36" name="PL1" type="bidirectional"/>
+        <pin num="37" name="PL2" type="bidirectional"/>
+        <pin num="38" name="PL3" type="bidirectional"/>
+        <pin num="39" name="PL4" type="bidirectional"/>
+        <pin num="40" name="PL5" type="bidirectional"/>
+        <pin num="41" name="PL6" type="bidirectional"/>
+        <pin num="42" name="PL7" type="bidirectional"/>
+        <pin num="43" name="PD0" type="bidirectional"/>
+        <pin num="44" name="PD1" type="bidirectional"/>
+        <pin num="45" name="PD2" type="bidirectional"/>
+        <pin num="46" name="PD3" type="bidirectional"/>
+        <pin num="47" name="PD4" type="bidirectional"/>
+        <pin num="48" name="PD5" type="bidirectional"/>
+        <pin num="49" name="PD6" type="bidirectional"/>
+        <pin num="50" name="PD7" type="bidirectional"/>
+        <pin num="51" name="PG0" type="bidirectional"/>
+        <pin num="52" name="PG1" type="bidirectional"/>
+        <pin num="53" name="PC0" type="bidirectional"/>
+        <pin num="54" name="PC1" type="bidirectional"/>
+        <pin num="55" name="PC2" type="bidirectional"/>
+        <pin num="56" name="PC3" type="bidirectional"/>
+        <pin num="57" name="PC4" type="bidirectional"/>
+        <pin num="58" name="PC5" type="bidirectional"/>
+        <pin num="59" name="PC6" type="bidirectional"/>
+        <pin num="60" name="PC7" type="bidirectional"/>
+        <pin num="61" name="VCC" type="passive"/>
+        <pin num="62" name="GND" type="passive"/>
+        <pin num="63" name="PJ0" type="bidirectional"/>
+        <pin num="64" name="PJ1" type="bidirectional"/>
+        <pin num="65" name="PJ2" type="bidirectional"/>
+        <pin num="66" name="PJ3" type="bidirectional"/>
+        <pin num="67" name="PJ4" type="bidirectional"/>
+        <pin num="68" name="PJ5" type="bidirectional"/>
+        <pin num="69" name="PJ6" type="bidirectional"/>
+        <pin num="70" name="PG2" type="bidirectional"/>
+        <pin num="71" name="PA7" type="bidirectional"/>
+        <pin num="72" name="PA6" type="bidirectional"/>
+        <pin num="73" name="PA5" type="bidirectional"/>
+        <pin num="74" name="PA4" type="bidirectional"/>
+        <pin num="75" name="PA3" type="bidirectional"/>
+        <pin num="76" name="PA2" type="bidirectional"/>
+        <pin num="77" name="PA1" type="bidirectional"/>
+        <pin num="78" name="PA0" type="bidirectional"/>
+        <pin num="79" name="PJ7" type="bidirectional"/>
+        <pin num="80" name="VCC" type="passive"/>
+        <pin num="81" name="GND" type="passive"/>
+        <pin num="82" name="PK7" type="bidirectional"/>
+        <pin num="83" name="PK6" type="bidirectional"/>
+        <pin num="84" name="PK5" type="bidirectional"/>
+        <pin num="85" name="PK4" type="bidirectional"/>
+        <pin num="86" name="PK3" type="bidirectional"/>
+        <pin num="87" name="PK2" type="bidirectional"/>
+        <pin num="88" name="PK1" type="bidirectional"/>
+        <pin num="89" name="PK0" type="bidirectional"/>
+        <pin num="90" name="PF7" type="bidirectional"/>
+        <pin num="91" name="PF6" type="bidirectional"/>
+        <pin num="92" name="PF5" type="bidirectional"/>
+        <pin num="93" name="PF4" type="bidirectional"/>
+        <pin num="94" name="PF3" type="bidirectional"/>
+        <pin num="95" name="PF2" type="bidirectional"/>
+        <pin num="96" name="PF1" type="bidirectional"/>
+        <pin num="97" name="PF0" type="bidirectional"/>
+        <pin num="98" name="AREF" type="passive"/>
+        <pin num="99" name="GND" type="passive"/>
+        <pin num="100" name="AVCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LM7805_TO220">
+      <description>Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220</description>
+      <docs>https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7805_TO220</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="SIM7080G" part="SIM7080G">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SIM7080G</field>
+        <field name="Footprint">XCVR_SIM7080G</field>
+        <field name="PARTREV">1.04</field>
+        <field name="STANDARD">Manufacturer Recommendation</field>
+        <field name="MANUFACTURER">SIMCOM</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">2.6 mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="UART1_TXD" type="output"/>
+        <pin num="2" name="UART1_RXD" type="input"/>
+        <pin num="3" name="UART1_RTS" type="input"/>
+        <pin num="4" name="UART1_CTS" type="output"/>
+        <pin num="5" name="UART1_DCD" type="output"/>
+        <pin num="6" name="UART1_DTR" type="input"/>
+        <pin num="7" name="UART1_RI" type="output"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="PCM_DIN" type="input"/>
+        <pin num="10" name="PCM_DOUT" type="output"/>
+        <pin num="11" name="PCM_CLK" type="output"/>
+        <pin num="12" name="PCM_SYNC" type="output"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="GPIO5" type="bidirectional"/>
+        <pin num="15" name="SIM_DATA" type="bidirectional"/>
+        <pin num="16" name="SIM_CLK" type="output"/>
+        <pin num="17" name="SIM_RST" type="output"/>
+        <pin num="18" name="SIM_VDD" type="output"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="USB_BOOT" type="input"/>
+        <pin num="21" name="GND" type="power_in"/>
+        <pin num="22" name="UART2_TXD" type="output"/>
+        <pin num="23" name="UART2_RXD" type="input"/>
+        <pin num="24" name="USB_VBUS" type="input"/>
+        <pin num="25" name="USB_DP" type="bidirectional"/>
+        <pin num="26" name="USB_DM" type="bidirectional"/>
+        <pin num="27" name="GND" type="power_in"/>
+        <pin num="30" name="GND" type="power_in"/>
+        <pin num="31" name="GND" type="power_in"/>
+        <pin num="32" name="RF_ANT" type="bidirectional"/>
+        <pin num="33" name="GND" type="power_in"/>
+        <pin num="34" name="VBAT" type="power_in"/>
+        <pin num="35" name="VBAT" type="power_in"/>
+        <pin num="36" name="GND" type="power_in"/>
+        <pin num="37" name="GND" type="power_in"/>
+        <pin num="38" name="ADC" type="input"/>
+        <pin num="39" name="PWRKEY" type="input"/>
+        <pin num="40" name="VDD_EXT" type="output"/>
+        <pin num="41" name="NETLIGHT" type="output"/>
+        <pin num="42" name="STATUS" type="output"/>
+        <pin num="43" name="ANT_CONTROL1" type="bidirectional"/>
+        <pin num="44" name="ANT_CONTROL0" type="output"/>
+        <pin num="45" name="GND" type="power_in"/>
+        <pin num="48" name="SPI_CS" type="output"/>
+        <pin num="49" name="SPI_MOSI" type="output"/>
+        <pin num="50" name="SPI_CLK" type="output"/>
+        <pin num="51" name="SPI_MISO" type="input"/>
+        <pin num="57" name="GPIO1" type="bidirectional"/>
+        <pin num="58" name="GPIO2" type="bidirectional"/>
+        <pin num="59" name="GPIO3" type="bidirectional"/>
+        <pin num="60" name="GPIO4" type="bidirectional"/>
+        <pin num="61" name="UART3_TXD" type="output"/>
+        <pin num="62" name="UART3_RXD" type="input"/>
+        <pin num="63" name="GND" type="power_in"/>
+        <pin num="64" name="I2C_SDA" type="bidirectional"/>
+        <pin num="65" name="I2C_SCL" type="output"/>
+        <pin num="66" name="GND" type="power_in"/>
+        <pin num="67" name="GND" type="power_in"/>
+        <pin num="68" name="GNSS_ANT" type="input"/>
+        <pin num="69" name="GND" type="power_in"/>
+        <pin num="70" name="GND" type="power_in"/>
+        <pin num="71" name="GND" type="power_in"/>
+        <pin num="72" name="GND" type="power_in"/>
+        <pin num="73" name="GND" type="power_in"/>
+        <pin num="74" name="GND" type="power_in"/>
+        <pin num="75" name="GND" type="power_in"/>
+        <pin num="76" name="GND" type="power_in"/>
+        <pin num="77" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SIM8066-6-1-14-01-A" part="SIM8066-6-1-14-01-A">
+      <description>Memory Card Connectors 1.44mm Nano SIM Conn w/Peg and Switch</description>
+      <docs>https://gct.co/connector/sim8066</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">SIM8066-6-1-14-01-A</field>
+        <field name="Footprint">SIM8066611401A</field>
+        <field name="Datasheet">https://gct.co/connector/sim8066</field>
+        <field name="Height">1.64</field>
+        <field name="Mouser Part Number">640-SIM8066-611401A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/GCT/SIM8066-6-1-14-01-A?qs=TuK3vfAjtkWgq0pKcqnMSw%3D%3D</field>
+        <field name="Manufacturer_Name">GCT (GLOBAL CONNECTOR TECHNOLOGY)</field>
+        <field name="Manufacturer_Part_Number">SIM8066-6-1-14-01-A</field>
+      </fields>
+      <pins>
+        <pin num="C1" name="VCC" type="passive"/>
+        <pin num="C2" name="RST" type="passive"/>
+        <pin num="C3" name="CLK" type="passive"/>
+        <pin num="C5" name="GND_1" type="passive"/>
+        <pin num="C6" name="VPP" type="passive"/>
+        <pin num="C7" name="I/O" type="passive"/>
+        <pin num="CD1" name="CD1" type="passive"/>
+        <pin num="G1" name="GND_2" type="passive"/>
+        <pin num="G2" name="GND_3" type="passive"/>
+        <pin num="G3" name="GND_4" type="passive"/>
+        <pin num="G4" name="GND_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_MEC_5E">
+      <description>MEC 5E single pole normally-open tactile switch</description>
+      <docs>https://www.mouser.dk/datasheet/2/140/TL3305-2065758.pdf</docs>
+      <fields>
+        <field name="Reference">SW1</field>
+        <field name="Value">TL3305AF260QG</field>
+        <field name="Footprint">SELF_MADE:TL3305AF260QG</field>
+        <field name="Datasheet">https://www.mouser.dk/datasheet/2/140/TL3305-2065758.pdf</field>
+        <field name="Manufacturer_Name">E-Switch</field>
+        <field name="Manufacturer_Part_Number">TL3305AF260QG</field>
+        <field name="Mouser Price/Stock">0,197</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BC847W">
+      <description>0.1A Ic, 45V Vce, NPN Transistor, SOT-323</description>
+      <docs>http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657</docs>
+      <footprints>
+        <fp>SOT?323*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC847W</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="Interface_UART">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Interface_UART.kicad_sym</uri>
+    </library>
+    <library logical="MCU_Microchip_ATmega">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/MCU_Microchip_ATmega.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="SIM7080G">
+      <uri>C:/Users/mbt/Desktop/SIM7080G/SIM7080G.kicad_sym</uri>
+    </library>
+    <library logical="SIM8066-6-1-14-01-A">
+      <uri>C:/Users/mbt/Downloads/LIB_SIM8066-6-1-14-01-A/SIM8066-6-1-14-01-A.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Transistor_BJT.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="CD">
+      <node ref="J2" pin="CD1" pinfunction="CD1" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="U1" pin="74" pinfunction="PA4" pintype="bidirectional"/>
+    </net>
+    <net code="2" name="DTR_E">
+      <node ref="U1" pin="51" pinfunction="PG0" pintype="bidirectional"/>
+      <node ref="U5" pin="11" pinfunction="B3" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D8" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="D9" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J2" pin="C5" pinfunction="GND_1" pintype="passive"/>
+      <node ref="J2" pin="G1" pinfunction="GND_2" pintype="passive"/>
+      <node ref="J2" pin="G2" pinfunction="GND_3" pintype="passive"/>
+      <node ref="J2" pin="G3" pinfunction="GND_4" pintype="passive"/>
+      <node ref="J2" pin="G4" pinfunction="GND_5" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Ext" pintype="passive"/>
+      <node ref="J5" pin="6" pinfunction="GND" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="R26" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="32" pinfunction="GND" pintype="passive"/>
+      <node ref="U1" pin="62" pinfunction="GND" pintype="passive"/>
+      <node ref="U1" pin="81" pinfunction="GND" pintype="passive"/>
+      <node ref="U1" pin="99" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="19" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="21" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="27" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="30" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="31" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="33" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="36" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="37" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="45" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="63" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="66" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="67" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="69" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="70" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="71" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="72" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="73" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="74" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="75" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="76" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="77" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="Y1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Y1" pin="4" pinfunction="4" pintype="passive"/>
+    </net>
+    <net code="4" name="LED_BLUE">
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="U1" pin="77" pinfunction="PA1" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="LED_GREEN">
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U1" pin="76" pinfunction="PA2" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="LED_RED">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U1" pin="75" pinfunction="PA3" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="MISO">
+      <node ref="J5" pin="1" pinfunction="MISO" pintype="passive"/>
+      <node ref="U1" pin="22" pinfunction="PB3" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="MOSI">
+      <node ref="J5" pin="4" pinfunction="MOSI" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="PB2" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="Net-(D2-BK)">
+      <node ref="D2" pin="1" pinfunction="BK" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(D2-GK)">
+      <node ref="D2" pin="2" pinfunction="GK" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(D2-RK)">
+      <node ref="D2" pin="3" pinfunction="RK" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(D4-A)">
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(D5-K)">
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(D6-A)">
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(D7-A)">
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(D8-IO1)">
+      <node ref="D8" pin="1" pinfunction="IO1" pintype="passive"/>
+      <node ref="J2" pin="C7" pinfunction="I/O" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(D8-IO2)">
+      <node ref="D8" pin="3" pinfunction="IO2" pintype="passive"/>
+      <node ref="J2" pin="C3" pinfunction="CLK" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(D8-IO3)">
+      <node ref="D8" pin="4" pinfunction="IO3" pintype="passive"/>
+      <node ref="J2" pin="C2" pinfunction="RST" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(D11-A)">
+      <node ref="D11" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(D11-K)">
+      <node ref="D11" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="C" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(J1-Pin_1)">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="B" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="Net-(J1-Pin_2)">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="A" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="Net-(Q1-B)">
+      <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(Q1-C)">
+      <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(Q2-B)">
+      <node ref="Q2" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(Q2-C)">
+      <node ref="Q2" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(Q3-B)">
+      <node ref="Q3" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(Q3-C)">
+      <node ref="Q3" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(Q4-B)">
+      <node ref="Q4" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(U1-PA0)">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="78" pinfunction="PA0" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="Net-(U1-PF0)">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="97" pinfunction="PF0" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="Net-(U1-XTAL1)">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="34" pinfunction="XTAL1" pintype="input"/>
+      <node ref="Y1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(U1-XTAL2)">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="33" pinfunction="XTAL2" pintype="output"/>
+      <node ref="Y1" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(U2-DE)">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="DE" pintype="input"/>
+    </net>
+    <net code="35" name="Net-(U2-~{RE})">
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="~{RE}" pintype="input"/>
+    </net>
+    <net code="36" name="Net-(U5-EN)">
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="U5" pin="8" pinfunction="EN" pintype="input"/>
+    </net>
+    <net code="37" name="PWRKEY">
+      <node ref="R27" pin="1" pintype="passive"/>
+      <node ref="U1" pin="52" pinfunction="PG1" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="PWRSTATUS">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="39" name="RESET">
+      <node ref="J5" pin="5" pinfunction="~{RST}" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="30" pinfunction="~{RESET}" pintype="input"/>
+    </net>
+    <net code="40" name="RF_ANT">
+      <node ref="J3" pin="1" pinfunction="In" pintype="passive"/>
+      <node ref="U4" pin="32" pinfunction="RF_ANT" pintype="bidirectional"/>
+    </net>
+    <net code="41" name="SCK">
+      <node ref="J5" pin="3" pinfunction="SCK" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="PB1" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="SIM_CLK">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U4" pin="16" pinfunction="SIM_CLK" pintype="output"/>
+    </net>
+    <net code="43" name="SIM_DATA">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U4" pin="15" pinfunction="SIM_DATA" pintype="bidirectional"/>
+    </net>
+    <net code="44" name="SIM_DTR">
+      <node ref="U4" pin="6" pinfunction="UART1_DTR" pintype="input"/>
+      <node ref="U5" pin="4" pinfunction="A3" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="SIM_PWRKEY">
+      <node ref="R26" pin="1" pintype="passive"/>
+      <node ref="R27" pin="2" pintype="passive"/>
+      <node ref="U4" pin="39" pinfunction="PWRKEY" pintype="input"/>
+    </net>
+    <net code="46" name="SIM_RST">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U4" pin="17" pinfunction="SIM_RST" pintype="output"/>
+    </net>
+    <net code="47" name="SIM_RXD">
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="UART1_RXD" pintype="input"/>
+      <node ref="U5" pin="2" pinfunction="A1" pintype="bidirectional"/>
+    </net>
+    <net code="48" name="SIM_TXD">
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="UART1_TXD" pintype="output"/>
+      <node ref="U5" pin="3" pinfunction="A2" pintype="bidirectional"/>
+    </net>
+    <net code="49" name="SIM_VDD">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="D8" pin="5" pinfunction="IO4" pintype="passive"/>
+      <node ref="J2" pin="C1" pinfunction="VCC" pintype="passive"/>
+      <node ref="U4" pin="18" pinfunction="SIM_VDD" pintype="output"/>
+    </net>
+    <net code="50" name="SS">
+      <node ref="U1" pin="19" pinfunction="PB0" pintype="bidirectional"/>
+    </net>
+    <net code="51" name="STATUS">
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="U4" pin="42" pinfunction="STATUS" pintype="output"/>
+    </net>
+    <net code="52" name="UART1_RXD">
+      <node ref="R24" pin="2" pintype="passive"/>
+      <node ref="U1" pin="45" pinfunction="PD2" pintype="bidirectional"/>
+      <node ref="U5" pin="12" pinfunction="B2" pintype="bidirectional"/>
+    </net>
+    <net code="53" name="UART1_TXD">
+      <node ref="R25" pin="2" pintype="passive"/>
+      <node ref="U1" pin="46" pinfunction="PD3" pintype="bidirectional"/>
+      <node ref="U5" pin="13" pinfunction="B1" pintype="bidirectional"/>
+    </net>
+    <net code="54" name="UART2_RXD">
+      <node ref="U1" pin="12" pinfunction="PH0" pintype="bidirectional"/>
+      <node ref="U2" pin="1" pinfunction="RO" pintype="output"/>
+    </net>
+    <net code="55" name="UART2_TXD">
+      <node ref="U1" pin="13" pinfunction="PH1" pintype="bidirectional"/>
+      <node ref="U2" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="56" name="VCC_3.6">
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="A2" pintype="passive"/>
+      <node ref="U4" pin="34" pinfunction="VBAT" pintype="power_in"/>
+      <node ref="U4" pin="35" pinfunction="VBAT" pintype="power_in"/>
+    </net>
+    <net code="57" name="VCC_5">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D2" pin="4" pinfunction="A" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="VCC" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="R25" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="SW1" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U1" pin="100" pinfunction="AVCC" pintype="power_in"/>
+      <node ref="U1" pin="31" pinfunction="VCC" pintype="passive"/>
+      <node ref="U1" pin="61" pinfunction="VCC" pintype="passive"/>
+      <node ref="U1" pin="80" pinfunction="VCC" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U5" pin="14" pinfunction="Vref_B" pintype="power_in"/>
+    </net>
+    <net code="58" name="VCC_12-24">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="59" name="VDD_EXT">
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="U4" pin="40" pinfunction="VDD_EXT" pintype="output"/>
+      <node ref="U5" pin="1" pinfunction="Vref_A" pintype="power_in"/>
+    </net>
+    <net code="60" name="unconnected-(D8-IO5-Pad6)">
+      <node ref="D8" pin="6" pinfunction="IO5" pintype="passive"/>
+    </net>
+    <net code="61" name="unconnected-(J2-VPP-PadC6)">
+      <node ref="J2" pin="C6" pinfunction="VPP" pintype="passive"/>
+    </net>
+    <net code="62" name="unconnected-(U1-AREF-Pad98)">
+      <node ref="U1" pin="98" pinfunction="AREF" pintype="passive"/>
+    </net>
+    <net code="63" name="unconnected-(U1-PA5-Pad73)">
+      <node ref="U1" pin="73" pinfunction="PA5" pintype="bidirectional"/>
+    </net>
+    <net code="64" name="unconnected-(U1-PA6-Pad72)">
+      <node ref="U1" pin="72" pinfunction="PA6" pintype="bidirectional"/>
+    </net>
+    <net code="65" name="unconnected-(U1-PA7-Pad71)">
+      <node ref="U1" pin="71" pinfunction="PA7" pintype="bidirectional"/>
+    </net>
+    <net code="66" name="unconnected-(U1-PB4-Pad23)">
+      <node ref="U1" pin="23" pinfunction="PB4" pintype="bidirectional"/>
+    </net>
+    <net code="67" name="unconnected-(U1-PB5-Pad24)">
+      <node ref="U1" pin="24" pinfunction="PB5" pintype="bidirectional"/>
+    </net>
+    <net code="68" name="unconnected-(U1-PB6-Pad25)">
+      <node ref="U1" pin="25" pinfunction="PB6" pintype="bidirectional"/>
+    </net>
+    <net code="69" name="unconnected-(U1-PB7-Pad26)">
+      <node ref="U1" pin="26" pinfunction="PB7" pintype="bidirectional"/>
+    </net>
+    <net code="70" name="unconnected-(U1-PC0-Pad53)">
+      <node ref="U1" pin="53" pinfunction="PC0" pintype="bidirectional"/>
+    </net>
+    <net code="71" name="unconnected-(U1-PC1-Pad54)">
+      <node ref="U1" pin="54" pinfunction="PC1" pintype="bidirectional"/>
+    </net>
+    <net code="72" name="unconnected-(U1-PC2-Pad55)">
+      <node ref="U1" pin="55" pinfunction="PC2" pintype="bidirectional"/>
+    </net>
+    <net code="73" name="unconnected-(U1-PC3-Pad56)">
+      <node ref="U1" pin="56" pinfunction="PC3" pintype="bidirectional"/>
+    </net>
+    <net code="74" name="unconnected-(U1-PC4-Pad57)">
+      <node ref="U1" pin="57" pinfunction="PC4" pintype="bidirectional"/>
+    </net>
+    <net code="75" name="unconnected-(U1-PC5-Pad58)">
+      <node ref="U1" pin="58" pinfunction="PC5" pintype="bidirectional"/>
+    </net>
+    <net code="76" name="unconnected-(U1-PC6-Pad59)">
+      <node ref="U1" pin="59" pinfunction="PC6" pintype="bidirectional"/>
+    </net>
+    <net code="77" name="unconnected-(U1-PC7-Pad60)">
+      <node ref="U1" pin="60" pinfunction="PC7" pintype="bidirectional"/>
+    </net>
+    <net code="78" name="unconnected-(U1-PD0-Pad43)">
+      <node ref="U1" pin="43" pinfunction="PD0" pintype="bidirectional"/>
+    </net>
+    <net code="79" name="unconnected-(U1-PD1-Pad44)">
+      <node ref="U1" pin="44" pinfunction="PD1" pintype="bidirectional"/>
+    </net>
+    <net code="80" name="unconnected-(U1-PD4-Pad47)">
+      <node ref="U1" pin="47" pinfunction="PD4" pintype="bidirectional"/>
+    </net>
+    <net code="81" name="unconnected-(U1-PD5-Pad48)">
+      <node ref="U1" pin="48" pinfunction="PD5" pintype="bidirectional"/>
+    </net>
+    <net code="82" name="unconnected-(U1-PD6-Pad49)">
+      <node ref="U1" pin="49" pinfunction="PD6" pintype="bidirectional"/>
+    </net>
+    <net code="83" name="unconnected-(U1-PD7-Pad50)">
+      <node ref="U1" pin="50" pinfunction="PD7" pintype="bidirectional"/>
+    </net>
+    <net code="84" name="unconnected-(U1-PE0-Pad2)">
+      <node ref="U1" pin="2" pinfunction="PE0" pintype="bidirectional"/>
+    </net>
+    <net code="85" name="unconnected-(U1-PE1-Pad3)">
+      <node ref="U1" pin="3" pinfunction="PE1" pintype="bidirectional"/>
+    </net>
+    <net code="86" name="unconnected-(U1-PE2-Pad4)">
+      <node ref="U1" pin="4" pinfunction="PE2" pintype="bidirectional"/>
+    </net>
+    <net code="87" name="unconnected-(U1-PE3-Pad5)">
+      <node ref="U1" pin="5" pinfunction="PE3" pintype="bidirectional"/>
+    </net>
+    <net code="88" name="unconnected-(U1-PE4-Pad6)">
+      <node ref="U1" pin="6" pinfunction="PE4" pintype="bidirectional"/>
+    </net>
+    <net code="89" name="unconnected-(U1-PE5-Pad7)">
+      <node ref="U1" pin="7" pinfunction="PE5" pintype="bidirectional"/>
+    </net>
+    <net code="90" name="unconnected-(U1-PE6-Pad8)">
+      <node ref="U1" pin="8" pinfunction="PE6" pintype="bidirectional"/>
+    </net>
+    <net code="91" name="unconnected-(U1-PE7-Pad9)">
+      <node ref="U1" pin="9" pinfunction="PE7" pintype="bidirectional"/>
+    </net>
+    <net code="92" name="unconnected-(U1-PF1-Pad96)">
+      <node ref="U1" pin="96" pinfunction="PF1" pintype="bidirectional"/>
+    </net>
+    <net code="93" name="unconnected-(U1-PF2-Pad95)">
+      <node ref="U1" pin="95" pinfunction="PF2" pintype="bidirectional"/>
+    </net>
+    <net code="94" name="unconnected-(U1-PF3-Pad94)">
+      <node ref="U1" pin="94" pinfunction="PF3" pintype="bidirectional"/>
+    </net>
+    <net code="95" name="unconnected-(U1-PF4-Pad93)">
+      <node ref="U1" pin="93" pinfunction="PF4" pintype="bidirectional"/>
+    </net>
+    <net code="96" name="unconnected-(U1-PF5-Pad92)">
+      <node ref="U1" pin="92" pinfunction="PF5" pintype="bidirectional"/>
+    </net>
+    <net code="97" name="unconnected-(U1-PF6-Pad91)">
+      <node ref="U1" pin="91" pinfunction="PF6" pintype="bidirectional"/>
+    </net>
+    <net code="98" name="unconnected-(U1-PF7-Pad90)">
+      <node ref="U1" pin="90" pinfunction="PF7" pintype="bidirectional"/>
+    </net>
+    <net code="99" name="unconnected-(U1-PG2-Pad70)">
+      <node ref="U1" pin="70" pinfunction="PG2" pintype="bidirectional"/>
+    </net>
+    <net code="100" name="unconnected-(U1-PG3-Pad28)">
+      <node ref="U1" pin="28" pinfunction="PG3" pintype="bidirectional"/>
+    </net>
+    <net code="101" name="unconnected-(U1-PG4-Pad29)">
+      <node ref="U1" pin="29" pinfunction="PG4" pintype="bidirectional"/>
+    </net>
+    <net code="102" name="unconnected-(U1-PG5-Pad1)">
+      <node ref="U1" pin="1" pinfunction="PG5" pintype="bidirectional"/>
+    </net>
+    <net code="103" name="unconnected-(U1-PH2-Pad14)">
+      <node ref="U1" pin="14" pinfunction="PH2" pintype="bidirectional"/>
+    </net>
+    <net code="104" name="unconnected-(U1-PH3-Pad15)">
+      <node ref="U1" pin="15" pinfunction="PH3" pintype="bidirectional"/>
+    </net>
+    <net code="105" name="unconnected-(U1-PH4-Pad16)">
+      <node ref="U1" pin="16" pinfunction="PH4" pintype="bidirectional"/>
+    </net>
+    <net code="106" name="unconnected-(U1-PH5-Pad17)">
+      <node ref="U1" pin="17" pinfunction="PH5" pintype="bidirectional"/>
+    </net>
+    <net code="107" name="unconnected-(U1-PH6-Pad18)">
+      <node ref="U1" pin="18" pinfunction="PH6" pintype="bidirectional"/>
+    </net>
+    <net code="108" name="unconnected-(U1-PH7-Pad27)">
+      <node ref="U1" pin="27" pinfunction="PH7" pintype="bidirectional"/>
+    </net>
+    <net code="109" name="unconnected-(U1-PJ0-Pad63)">
+      <node ref="U1" pin="63" pinfunction="PJ0" pintype="bidirectional"/>
+    </net>
+    <net code="110" name="unconnected-(U1-PJ1-Pad64)">
+      <node ref="U1" pin="64" pinfunction="PJ1" pintype="bidirectional"/>
+    </net>
+    <net code="111" name="unconnected-(U1-PJ2-Pad65)">
+      <node ref="U1" pin="65" pinfunction="PJ2" pintype="bidirectional"/>
+    </net>
+    <net code="112" name="unconnected-(U1-PJ3-Pad66)">
+      <node ref="U1" pin="66" pinfunction="PJ3" pintype="bidirectional"/>
+    </net>
+    <net code="113" name="unconnected-(U1-PJ4-Pad67)">
+      <node ref="U1" pin="67" pinfunction="PJ4" pintype="bidirectional"/>
+    </net>
+    <net code="114" name="unconnected-(U1-PJ5-Pad68)">
+      <node ref="U1" pin="68" pinfunction="PJ5" pintype="bidirectional"/>
+    </net>
+    <net code="115" name="unconnected-(U1-PJ6-Pad69)">
+      <node ref="U1" pin="69" pinfunction="PJ6" pintype="bidirectional"/>
+    </net>
+    <net code="116" name="unconnected-(U1-PJ7-Pad79)">
+      <node ref="U1" pin="79" pinfunction="PJ7" pintype="bidirectional"/>
+    </net>
+    <net code="117" name="unconnected-(U1-PK0-Pad89)">
+      <node ref="U1" pin="89" pinfunction="PK0" pintype="bidirectional"/>
+    </net>
+    <net code="118" name="unconnected-(U1-PK1-Pad88)">
+      <node ref="U1" pin="88" pinfunction="PK1" pintype="bidirectional"/>
+    </net>
+    <net code="119" name="unconnected-(U1-PK2-Pad87)">
+      <node ref="U1" pin="87" pinfunction="PK2" pintype="bidirectional"/>
+    </net>
+    <net code="120" name="unconnected-(U1-PK3-Pad86)">
+      <node ref="U1" pin="86" pinfunction="PK3" pintype="bidirectional"/>
+    </net>
+    <net code="121" name="unconnected-(U1-PK4-Pad85)">
+      <node ref="U1" pin="85" pinfunction="PK4" pintype="bidirectional"/>
+    </net>
+    <net code="122" name="unconnected-(U1-PK5-Pad84)">
+      <node ref="U1" pin="84" pinfunction="PK5" pintype="bidirectional"/>
+    </net>
+    <net code="123" name="unconnected-(U1-PK6-Pad83)">
+      <node ref="U1" pin="83" pinfunction="PK6" pintype="bidirectional"/>
+    </net>
+    <net code="124" name="unconnected-(U1-PK7-Pad82)">
+      <node ref="U1" pin="82" pinfunction="PK7" pintype="bidirectional"/>
+    </net>
+    <net code="125" name="unconnected-(U1-PL0-Pad35)">
+      <node ref="U1" pin="35" pinfunction="PL0" pintype="bidirectional"/>
+    </net>
+    <net code="126" name="unconnected-(U1-PL1-Pad36)">
+      <node ref="U1" pin="36" pinfunction="PL1" pintype="bidirectional"/>
+    </net>
+    <net code="127" name="unconnected-(U1-PL2-Pad37)">
+      <node ref="U1" pin="37" pinfunction="PL2" pintype="bidirectional"/>
+    </net>
+    <net code="128" name="unconnected-(U1-PL3-Pad38)">
+      <node ref="U1" pin="38" pinfunction="PL3" pintype="bidirectional"/>
+    </net>
+    <net code="129" name="unconnected-(U1-PL4-Pad39)">
+      <node ref="U1" pin="39" pinfunction="PL4" pintype="bidirectional"/>
+    </net>
+    <net code="130" name="unconnected-(U1-PL5-Pad40)">
+      <node ref="U1" pin="40" pinfunction="PL5" pintype="bidirectional"/>
+    </net>
+    <net code="131" name="unconnected-(U1-PL6-Pad41)">
+      <node ref="U1" pin="41" pinfunction="PL6" pintype="bidirectional"/>
+    </net>
+    <net code="132" name="unconnected-(U1-PL7-Pad42)">
+      <node ref="U1" pin="42" pinfunction="PL7" pintype="bidirectional"/>
+    </net>
+    <net code="133" name="unconnected-(U4-ADC-Pad38)">
+      <node ref="U4" pin="38" pinfunction="ADC" pintype="input"/>
+    </net>
+    <net code="134" name="unconnected-(U4-ANT_CONTROL0-Pad44)">
+      <node ref="U4" pin="44" pinfunction="ANT_CONTROL0" pintype="output"/>
+    </net>
+    <net code="135" name="unconnected-(U4-ANT_CONTROL1-Pad43)">
+      <node ref="U4" pin="43" pinfunction="ANT_CONTROL1" pintype="bidirectional"/>
+    </net>
+    <net code="136" name="unconnected-(U4-GNSS_ANT-Pad68)">
+      <node ref="U4" pin="68" pinfunction="GNSS_ANT" pintype="input"/>
+    </net>
+    <net code="137" name="unconnected-(U4-GPIO1-Pad57)">
+      <node ref="U4" pin="57" pinfunction="GPIO1" pintype="bidirectional"/>
+    </net>
+    <net code="138" name="unconnected-(U4-GPIO2-Pad58)">
+      <node ref="U4" pin="58" pinfunction="GPIO2" pintype="bidirectional"/>
+    </net>
+    <net code="139" name="unconnected-(U4-GPIO3-Pad59)">
+      <node ref="U4" pin="59" pinfunction="GPIO3" pintype="bidirectional"/>
+    </net>
+    <net code="140" name="unconnected-(U4-GPIO4-Pad60)">
+      <node ref="U4" pin="60" pinfunction="GPIO4" pintype="bidirectional"/>
+    </net>
+    <net code="141" name="unconnected-(U4-GPIO5-Pad14)">
+      <node ref="U4" pin="14" pinfunction="GPIO5" pintype="bidirectional"/>
+    </net>
+    <net code="142" name="unconnected-(U4-I2C_SCL-Pad65)">
+      <node ref="U4" pin="65" pinfunction="I2C_SCL" pintype="output"/>
+    </net>
+    <net code="143" name="unconnected-(U4-I2C_SDA-Pad64)">
+      <node ref="U4" pin="64" pinfunction="I2C_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="144" name="unconnected-(U4-NETLIGHT-Pad41)">
+      <node ref="U4" pin="41" pinfunction="NETLIGHT" pintype="output"/>
+    </net>
+    <net code="145" name="unconnected-(U4-PCM_CLK-Pad11)">
+      <node ref="U4" pin="11" pinfunction="PCM_CLK" pintype="output"/>
+    </net>
+    <net code="146" name="unconnected-(U4-PCM_DIN-Pad9)">
+      <node ref="U4" pin="9" pinfunction="PCM_DIN" pintype="input"/>
+    </net>
+    <net code="147" name="unconnected-(U4-PCM_DOUT-Pad10)">
+      <node ref="U4" pin="10" pinfunction="PCM_DOUT" pintype="output"/>
+    </net>
+    <net code="148" name="unconnected-(U4-PCM_SYNC-Pad12)">
+      <node ref="U4" pin="12" pinfunction="PCM_SYNC" pintype="output"/>
+    </net>
+    <net code="149" name="unconnected-(U4-SPI_CLK-Pad50)">
+      <node ref="U4" pin="50" pinfunction="SPI_CLK" pintype="output"/>
+    </net>
+    <net code="150" name="unconnected-(U4-SPI_CS-Pad48)">
+      <node ref="U4" pin="48" pinfunction="SPI_CS" pintype="output"/>
+    </net>
+    <net code="151" name="unconnected-(U4-SPI_MISO-Pad51)">
+      <node ref="U4" pin="51" pinfunction="SPI_MISO" pintype="input"/>
+    </net>
+    <net code="152" name="unconnected-(U4-SPI_MOSI-Pad49)">
+      <node ref="U4" pin="49" pinfunction="SPI_MOSI" pintype="output"/>
+    </net>
+    <net code="153" name="unconnected-(U4-UART1_CTS-Pad4)">
+      <node ref="U4" pin="4" pinfunction="UART1_CTS" pintype="output"/>
+    </net>
+    <net code="154" name="unconnected-(U4-UART1_DCD-Pad5)">
+      <node ref="U4" pin="5" pinfunction="UART1_DCD" pintype="output"/>
+    </net>
+    <net code="155" name="unconnected-(U4-UART1_RI-Pad7)">
+      <node ref="U4" pin="7" pinfunction="UART1_RI" pintype="output"/>
+    </net>
+    <net code="156" name="unconnected-(U4-UART1_RTS-Pad3)">
+      <node ref="U4" pin="3" pinfunction="UART1_RTS" pintype="input"/>
+    </net>
+    <net code="157" name="unconnected-(U4-UART2_RXD-Pad23)">
+      <node ref="U4" pin="23" pinfunction="UART2_RXD" pintype="input"/>
+    </net>
+    <net code="158" name="unconnected-(U4-UART2_TXD-Pad22)">
+      <node ref="U4" pin="22" pinfunction="UART2_TXD" pintype="output"/>
+    </net>
+    <net code="159" name="unconnected-(U4-UART3_RXD-Pad62)">
+      <node ref="U4" pin="62" pinfunction="UART3_RXD" pintype="input"/>
+    </net>
+    <net code="160" name="unconnected-(U4-UART3_TXD-Pad61)">
+      <node ref="U4" pin="61" pinfunction="UART3_TXD" pintype="output"/>
+    </net>
+    <net code="161" name="unconnected-(U4-USB_BOOT-Pad20)">
+      <node ref="U4" pin="20" pinfunction="USB_BOOT" pintype="input"/>
+    </net>
+    <net code="162" name="unconnected-(U4-USB_DM-Pad26)">
+      <node ref="U4" pin="26" pinfunction="USB_DM" pintype="bidirectional"/>
+    </net>
+    <net code="163" name="unconnected-(U4-USB_DP-Pad25)">
+      <node ref="U4" pin="25" pinfunction="USB_DP" pintype="bidirectional"/>
+    </net>
+    <net code="164" name="unconnected-(U4-USB_VBUS-Pad24)">
+      <node ref="U4" pin="24" pinfunction="USB_VBUS" pintype="input"/>
+    </net>
+    <net code="165" name="unconnected-(U5-A4-Pad5)">
+      <node ref="U5" pin="5" pinfunction="A4" pintype="bidirectional"/>
+    </net>
+    <net code="166" name="unconnected-(U5-B4-Pad10)">
+      <node ref="U5" pin="10" pinfunction="B4" pintype="bidirectional"/>
+    </net>
+    <net code="167" name="unconnected-(U5-NC-Pad6)">
+      <node ref="U5" pin="6" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="168" name="unconnected-(U5-NC-Pad9)">
+      <node ref="U5" pin="9" pinfunction="NC" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>

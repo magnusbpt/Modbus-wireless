@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "SIM_GSM")(type "KiCad")(uri "${KIPRJMOD}/SIM_GSM.kicad_sym")(options "")(descr ""))
+)
