@@ -326,6 +326,14 @@
     [
       "0e0a1f86-1a9d-413b-96af-bc4dca868b1d",
       ""
+    ],
+    [
+      "58bbf317-6f19-4695-b4b3-bbbe360cf741",
+      "RPI2040_main"
+    ],
+    [
+      "652affe9-0d80-4167-b21e-3f1d9d20c33e",
+      "LoRa"
     ]
   ],
   "text_variables": {}
