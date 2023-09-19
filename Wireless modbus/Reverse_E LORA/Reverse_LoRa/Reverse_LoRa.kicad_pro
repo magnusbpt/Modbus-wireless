@@ -380,7 +380,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
-      "simulation_model_issue": "ignore",
+      "simulation_model_issue": "error",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -392,7 +392,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "wireless_Slave.kicad_pro",
+    "filename": "Reverse_LoRa.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -469,16 +469,8 @@
   },
   "sheets": [
     [
-      "0e0a1f86-1a9d-413b-96af-bc4dca868b1d",
+      "7cb0616d-7ef6-4c75-b661-298eb2f35854",
       ""
-    ],
-    [
-      "58bbf317-6f19-4695-b4b3-bbbe360cf741",
-      "RPI2040_main"
-    ],
-    [
-      "652affe9-0d80-4167-b21e-3f1d9d20c33e",
-      "LoRa"
     ]
   ],
   "text_variables": {}
