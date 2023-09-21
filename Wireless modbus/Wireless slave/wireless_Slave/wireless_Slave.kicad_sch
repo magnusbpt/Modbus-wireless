@@ -58,6 +58,23 @@
     )
   )
 
+  (sheet (at 71.12 74.93) (size 27.94 26.67) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 944a4731-fec1-493e-8647-43ef4bfeb442)
+    (property "Sheetname" "Temp+Hum" (at 71.12 74.2184 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Temp+Hum.kicad_sch" (at 71.12 102.1846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "wireless_Slave"
+        (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d" (page "4"))
+      )
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )

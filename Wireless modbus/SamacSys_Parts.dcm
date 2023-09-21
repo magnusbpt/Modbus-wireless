@@ -30,4 +30,10 @@ K
 F https://componentsearchengine.com/Datasheets/1/219-8MSTR.pdf
 $ENDCMP
 #
+$CMP SHT30-DIS-B10KS
+D Humidity/Temperature Sensor Digital Serial (I2C) Automotive 8-Pin TDFN EP T/R
+K
+F https://datasheet.lcsc.com/lcsc/2106070104_Sensirion-SHT30-DIS-B10KS_C2687423.pdf
+$ENDCMP
+#
 #End Doc Library
