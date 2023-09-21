@@ -24,4 +24,10 @@ K
 F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7FC-2337019%7FA3%7Fpdf%7FEnglish%7FENG_CD_C-2337019_A3.pdf%7F2337019-1
 $ENDCMP
 #
+$CMP 219-8MSTR
+D DIP Switches / SIP Switches 8 switch sections SPST
+K
+F https://componentsearchengine.com/Datasheets/1/219-8MSTR.pdf
+$ENDCMP
+#
 #End Doc Library
