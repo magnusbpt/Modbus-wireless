@@ -36,4 +36,10 @@ K
 F https://datasheet.lcsc.com/lcsc/2106070104_Sensirion-SHT30-DIS-B10KS_C2687423.pdf
 $ENDCMP
 #
+$CMP NH-B2020RGBA-HF
+D -30~+85 Common anode RGB 110 SMD,2.1x2.1mm Light Emitting Diodes (LED) ROHS
+K
+F https://datasheet.lcsc.com/lcsc/2108150330_Foshan-NationStar-Optoelectronics-NH-B2020RGBA-HF_C2874116.pdf
+$ENDCMP
+#
 #End Doc Library
