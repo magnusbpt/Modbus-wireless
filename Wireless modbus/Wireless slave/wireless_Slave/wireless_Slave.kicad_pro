@@ -479,10 +479,6 @@
     [
       "652affe9-0d80-4167-b21e-3f1d9d20c33e",
       "LoRa"
-    ],
-    [
-      "944a4731-fec1-493e-8647-43ef4bfeb442",
-      "Temp+Hum"
     ]
   ],
   "text_variables": {}
