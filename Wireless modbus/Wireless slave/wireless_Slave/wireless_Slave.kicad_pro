@@ -479,6 +479,10 @@
     [
       "652affe9-0d80-4167-b21e-3f1d9d20c33e",
       "LoRa"
+    ],
+    [
+      "6fc288ee-49ba-4f78-a527-a360a72ed5fc",
+      "dB_sensor"
     ]
   ],
   "text_variables": {}
