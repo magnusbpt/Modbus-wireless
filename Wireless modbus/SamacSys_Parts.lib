@@ -260,4 +260,100 @@ P 5 0 1 6 200 100 800 100 800 -200 200 -200 200 100 N
 ENDDRAW
 ENDDEF
 #
+#SamacSys ECAD Model 02-LDR1
+#/14842868/593791/2.50/2/4/Resistor
+DEF 02-LDR1 R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "02-LDR1" 550 150 50 H V L CNN
+F2 "02LDR1" 550 50 50 H I L CNN
+F3 "" 550 -50 50 H I L CNN
+F4 "PHOTORESISTOR" 550 -150 50 H I L CNN "Description"
+F5 "2.4" 550 -250 50 H I L CNN "Height"
+F6 "NTE ELECTRONICS" 550 -350 50 H I L CNN "Manufacturer_Name"
+F7 "02-LDR1" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 550 -550 50 H I L CNN "Mouser Part Number"
+F9 "" 550 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "" 550 -750 50 H I L CNN "Arrow Part Number"
+F11 "" 550 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model CMA-4544PF-W
+#/13690275/593791/2.50/2/0/Microphone
+DEF CMA-4544PF-W MK 0 30 Y Y 1 F N
+F0 "MK" 650 300 50 H V L CNN
+F1 "CMA-4544PF-W" 650 200 50 H V L CNN
+F2 "CMA4544PFW" 650 100 50 H I L CNN
+F3 "https://www.cuidevices.com/product/resource/cma-4544pf-w.pdf" 650 0 50 H I L CNN
+F4 "ELECTRET CONDENSER MICROPHONE" 650 -100 50 H I L CNN "Description"
+F5 "4.65" 650 -200 50 H I L CNN "Height"
+F6 "CUI Devices" 650 -300 50 H I L CNN "Manufacturer_Name"
+F7 "CMA-4544PF-W" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "490-CMA-4544PF-W" 650 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/CMA-4544PF-W?qs=WyjlAZoYn50RZRL7clQhww%3D%3D" 650 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "CMA-4544PF-W" 650 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/cma-4544pf-w/cui-devices?region=nac" 650 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model X322512MSB4SI
+#/2378534/593791/2.50/4/4/Crystal or Oscillator
+DEF X322512MSB4SI Y 0 30 Y Y 1 F N
+F0 "Y" 1450 300 50 H V L CNN
+F1 "X322512MSB4SI" 1450 200 50 H V L CNN
+F2 "X322512MSB4SI" 1450 100 50 H I L CNN
+F3 "https://datasheet.lcsc.com/szlcsc/Yangxing-Tech-X322512MSB4SI_C9002.pdf" 1450 0 50 H I L CNN
+F4 "SMD Crystal Resonators 12MHz +/-10ppm SMD-3225_4P RoHS" 1450 -100 50 H I L CNN "Description"
+F5 "0.8" 1450 -200 50 H I L CNN "Height"
+F6 "Yangxing Tech" 1450 -300 50 H I L CNN "Manufacturer_Name"
+F7 "X322512MSB4SI" 1450 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 1450 -500 50 H I L CNN "Mouser Part Number"
+F9 "" 1450 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1450 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 1450 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X CRYSTAL_1 1 0 -100 200 R 50 50 0 0 P
+X GND_1 2 1600 -100 200 L 50 50 0 0 P
+X CRYSTAL_2 3 1600 0 200 L 50 50 0 0 P
+X GND_2 4 0 0 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 1400 100 1400 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model ZXMHC3A01N8TC
+#/277592/1064747/2.50/8/3/Transistor
+DEF ZXMHC3A01N8TC Q 0 30 Y Y 1 F N
+F0 "Q" 1250 300 50 H V L CNN
+F1 "ZXMHC3A01N8TC" 1250 200 50 H V L CNN
+F2 "SOIC127P600X175-8N" 1250 100 50 H I L CNN
+F3 "http://uk.rs-online.com/web/p/products/7515341" 1250 0 50 H I L CNN
+F4 "Diodes Inc ZXMHC3A01N8TC Quad N/P-channel MOSFET, 2.1 A, 2.7 A, 30 V, 8-Pin SOIC" 1250 -100 50 H I L CNN "Description"
+F5 "1.75" 1250 -200 50 H I L CNN "Height"
+F6 "Diodes Inc." 1250 -300 50 H I L CNN "Manufacturer_Name"
+F7 "ZXMHC3A01N8TC" 1250 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "522-ZXMHC3A01N8TC" 1250 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/ZXMHC3A01N8TC?qs=7E5rbXJDVJqFKGGBzjK9UA%3D%3D" 1250 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "ZXMHC3A01N8TC" 1250 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/zxmhc3a01n8tc/diodes-incorporated" 1250 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X N1G 1 0 0 200 R 50 50 0 0 I
+X N1D/P1D 2 0 -100 200 R 50 50 0 0 B
+X N1S/N2S 3 0 -200 200 R 50 50 0 0 W
+X N2G 4 0 -300 200 R 50 50 0 0 I
+X P1G 8 1400 0 200 L 50 50 0 0 I
+X P1S/P2S 7 1400 -100 200 L 50 50 0 0 W
+X N2D/P2D 6 1400 -200 200 L 50 50 0 0 B
+X P2G 5 1400 -300 200 L 50 50 0 0 I
+P 5 0 1 6 200 100 1200 100 1200 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
 #End Library

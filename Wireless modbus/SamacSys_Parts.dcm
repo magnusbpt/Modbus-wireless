@@ -49,4 +49,28 @@ F https://na.industrial.panasonic.com/file-download/4671
 >>>>>>> Stashed changes
 $ENDCMP
 #
+$CMP 02-LDR1
+D PHOTORESISTOR
+K
+F 
+$ENDCMP
+#
+$CMP CMA-4544PF-W
+D ELECTRET CONDENSER MICROPHONE
+K
+F https://www.cuidevices.com/product/resource/cma-4544pf-w.pdf
+$ENDCMP
+#
+$CMP X322512MSB4SI
+D SMD Crystal Resonators 12MHz +/-10ppm SMD-3225_4P RoHS
+K
+F https://datasheet.lcsc.com/szlcsc/Yangxing-Tech-X322512MSB4SI_C9002.pdf
+$ENDCMP
+#
+$CMP ZXMHC3A01N8TC
+D Diodes Inc ZXMHC3A01N8TC Quad N/P-channel MOSFET, 2.1 A, 2.7 A, 30 V, 8-Pin SOIC
+K
+F http://uk.rs-online.com/web/p/products/7515341
+$ENDCMP
+#
 #End Doc Library

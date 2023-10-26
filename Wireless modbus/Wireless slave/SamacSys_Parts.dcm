@@ -1,0 +1,45 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP X322512MSB4SI
+D SMD Crystal Resonators 12MHz +/-10ppm SMD-3225_4P RoHS
+K
+F https://datasheet.lcsc.com/szlcsc/Yangxing-Tech-X322512MSB4SI_C9002.pdf
+$ENDCMP
+#
+$CMP 87
+D Cylindrical Battery Contacts, Clips, Holders & Springs C CELL END CLIP INSULATED
+K
+F 
+$ENDCMP
+#
+$CMP ZMOD4410AI1R
+D The ZMOD4410 gas sensor module is an easily integrated firmware configurable architecture enabling multiple sensing solutions with a common hardware platform. Simply download one of the firmware libraries that best supports your application from the Renesas website and integrate it with your host microcontroller. The JEDEC JESD47 qualified device supports 10+ years of life, supporting your indoor air quality (IAQ) application designed for detecting total volatile organic compounds (TVOCs), estimating CO2, a
+K
+F https://www.idt.com/document/dst/zmod4410-datasheet
+$ENDCMP
+#
+$CMP BHAA-3
+D AA Battery Holder
+K
+F http://www.memoryprotectiondevices.com/datasheets/BHAA-3-datasheet.pdf
+$ENDCMP
+#
+$CMP 219-12LPST
+D DIP Switches / SIP Switches SPST 12 switch sections
+K
+F https://www.ctscorp.com/wp-content/uploads/219.pdf
+$ENDCMP
+#
+$CMP 219-5MSTR
+D Dip Switch SPST 5 Position Surface Mount Slide (Standard) Actuator 100mA 20VDC
+K
+F https://www.ctscorp.com/wp-content/uploads/219.pdf
+$ENDCMP
+#
+#End Doc Library

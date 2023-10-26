@@ -1,0 +1,207 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model NE555DR
+#/6648/2/2.37/8/4/Integrated Circuit
+DEF NE555DR IC 0 30 Y Y 1 F N
+F0 "IC" 1050 600 50 H V L CNN
+F1 "NE555DR" 1050 500 50 H V L CNN
+F2 "SOIC127P600X175-8N" 1050 400 50 H I L CNN
+F3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" 1050 300 50 H I L CNN
+F4 "Single Precision Timer" 1050 200 50 H I L CNN "Description"
+F5 "1.75" 1050 100 50 H I L CNN "Height"
+F6 "Texas Instruments" 1050 0 50 H I L CNN "Manufacturer_Name"
+F7 "NE555DR" 1050 -100 50 H I L CNN "Manufacturer_Part_Number"
+F8 "595-NE555DR" 1050 -200 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-NE555DR" 1050 -300 50 H I L CNN "Mouser Price/Stock"
+F10 "1218414" 1050 -400 50 H I L CNN "RS Part Number"
+F11 "http//uk.rs-online.com/web/p/products/1218414" 1050 -500 50 H I L CNN "RS Price/Stock"
+DRAW
+X GND 1 600 -1000 200 U 50 50 0 0 B
+X TRIG 2 0 -400 200 R 50 50 0 0 B
+X OUT 3 1200 -200 200 L 50 50 0 0 B
+X ~RESET 4 0 0 200 R 50 50 0 0 B
+X CONT 5 500 600 200 D 50 50 0 0 B
+X THRES 6 0 -300 200 R 50 50 0 0 B
+X DISCH 7 0 -100 200 R 50 50 0 0 B
+X VCC 8 700 600 200 D 50 50 0 0 B
+P 5 0 1 6 200 400 1000 400 1000 -800 200 -800 200 400 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model X322512MSB4SI
+#/2378534/593791/2.50/4/4/Crystal or Oscillator
+DEF X322512MSB4SI Y 0 30 Y Y 1 F N
+F0 "Y" 1450 300 50 H V L CNN
+F1 "X322512MSB4SI" 1450 200 50 H V L CNN
+F2 "X322512MSB4SI" 1450 100 50 H I L CNN
+F3 "https://datasheet.lcsc.com/szlcsc/Yangxing-Tech-X322512MSB4SI_C9002.pdf" 1450 0 50 H I L CNN
+F4 "SMD Crystal Resonators 12MHz +/-10ppm SMD-3225_4P RoHS" 1450 -100 50 H I L CNN "Description"
+F5 "0.8" 1450 -200 50 H I L CNN "Height"
+F6 "Yangxing Tech" 1450 -300 50 H I L CNN "Manufacturer_Name"
+F7 "X322512MSB4SI" 1450 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 1450 -500 50 H I L CNN "Mouser Part Number"
+F9 "" 1450 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1450 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 1450 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X CRYSTAL_1 1 0 -100 200 R 50 50 0 0 P
+X GND_1 2 1600 -100 200 L 50 50 0 0 P
+X CRYSTAL_2 3 1600 0 200 L 50 50 0 0 P
+X GND_2 4 0 0 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 1400 100 1400 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 87
+#/4678463/1064747/2.50/3/4/Hardware
+DEF 87 H 0 30 Y Y 1 F N
+F0 "H" 650 300 50 H V L CNN
+F1 "87" 650 200 50 H V L CNN
+F2 "87" 650 100 50 H I L CNN
+F3 "" 650 0 50 H I L CNN
+F4 "Cylindrical Battery Contacts, Clips, Holders & Springs C CELL END CLIP INSULATED" 650 -100 50 H I L CNN "Description"
+F5 "24.21" 650 -200 50 H I L CNN "Height"
+F6 "534-87" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/87?qs=g5fiFmky%2Fl4VJPBn3X0ZTw%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Keystone Electronics" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "87" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model ZMOD4410AI1R
+#/1558585/593791/2.50/12/2/Integrated Circuit
+DEF ZMOD4410AI1R IC 0 30 Y Y 1 F N
+F0 "IC" 1250 700 50 H V L CNN
+F1 "ZMOD4410AI1R" 1250 600 50 H V L CNN
+F2 "ZMOD4410AI1R" 1250 500 50 H I L CNN
+F3 "https://www.idt.com/document/dst/zmod4410-datasheet" 1250 400 50 H I L CNN
+F4 "The ZMOD4410 gas sensor module is an easily integrated firmware configurable architecture enabling multiple sensing solutions with a common hardware platform. Simply download one of the firmware libraries that best supports your application from the Renesas website and integrate it with your host microcontroller. The JEDEC JESD47 qualified device supports 10+ years of life, supporting your indoor air quality (IAQ) application designed for detecting total volatile organic compounds (TVOCs), estimating CO2, a" 1250 300 50 H I L CNN "Description"
+F5 "0.77" 1250 200 50 H I L CNN "Height"
+F6 "Renesas Electronics" 1250 100 50 H I L CNN "Manufacturer_Name"
+F7 "ZMOD4410AI1R" 1250 0 50 H I L CNN "Manufacturer_Part_Number"
+F8 "964-ZMOD4410AI1R" 1250 -100 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Renesas-Electronics/ZMOD4410AI1R?qs=y6ZabgHbY%252BwCtZi1inoY6g%3D%3D" 1250 -200 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1250 -300 50 H I L CNN "Arrow Part Number"
+F11 "" 1250 -400 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X SCL 1 600 -800 200 U 50 50 0 0 P
+X SDA 2 700 -800 200 U 50 50 0 0 P
+X INT 3 800 -800 200 U 50 50 0 0 P
+X N.C._1 4 1400 -200 200 L 50 50 0 0 P
+X VDD 5 1400 -100 200 L 50 50 0 0 P
+X VSS_1 6 1400 0 200 L 50 50 0 0 P
+X VSS_2 7 800 700 200 D 50 50 0 0 P
+X N.C._2 8 700 700 200 D 50 50 0 0 P
+X VSS_3 9 600 700 200 D 50 50 0 0 P
+X VDDH 10 0 0 200 R 50 50 0 0 P
+X RES_N 11 0 -100 200 R 50 50 0 0 P
+X VDDIO 12 0 -200 200 R 50 50 0 0 P
+P 5 0 1 6 200 500 1200 500 1200 -600 200 -600 200 500 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model BHAA-3
+#/545537/593791/2.50/5/3/Undefined or Miscellaneous
+DEF BHAA-3 U 0 30 Y Y 1 F N
+F0 "U" 650 300 50 H V L CNN
+F1 "BHAA-3" 650 200 50 H V L CNN
+F2 "BHAA-3" 650 100 50 H I L CNN
+F3 "http://www.memoryprotectiondevices.com/datasheets/BHAA-3-datasheet.pdf" 650 0 50 H I L CNN
+F4 "AA Battery Holder" 650 -100 50 H I L CNN "Description"
+F5 "" 650 -200 50 H I L CNN "Height"
+F6 "Memory Protection Devices" 650 -300 50 H I L CNN "Manufacturer_Name"
+F7 "BHAA-3" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 650 -500 50 H I L CNN "Mouser Part Number"
+F9 "" 650 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 650 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 650 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X 1 1 800 -100 200 L 50 50 0 0 P
+X 2 2 800 -200 200 L 50 50 0 0 P
+X 3 3 800 0 200 L 50 50 0 0 P
+X 4 4 800 -300 200 L 50 50 0 0 P
+X 5 5 0 0 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 219-12LPST
+#/1444629/593791/2.50/24/3/Switch
+DEF 219-12LPST S 0 30 Y Y 1 F N
+F0 "S" 850 300 50 H V L CNN
+F1 "219-12LPST" 850 200 50 H V L CNN
+F2 "21912LPST" 850 100 50 H I L CNN
+F3 "https://www.ctscorp.com/wp-content/uploads/219.pdf" 850 0 50 H I L CNN
+F4 "DIP Switches / SIP Switches SPST 12 switch sections" 850 -100 50 H I L CNN "Description"
+F5 "4.58" 850 -200 50 H I L CNN "Height"
+F6 "CTS" 850 -300 50 H I L CNN "Manufacturer_Name"
+F7 "219-12LPST" 850 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 850 -500 50 H I L CNN "Mouser Part Number"
+F9 "" 850 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "219-12LPST" 850 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/219-12lpst/cts" 850 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X A1 A1 0 0 200 R 50 50 0 0 P
+X A2 A2 0 -100 200 R 50 50 0 0 P
+X A3 A3 0 -200 200 R 50 50 0 0 P
+X A4 A4 0 -300 200 R 50 50 0 0 P
+X A5 A5 0 -400 200 R 50 50 0 0 P
+X A6 A6 0 -500 200 R 50 50 0 0 P
+X A7 A7 0 -600 200 R 50 50 0 0 P
+X A8 A8 0 -700 200 R 50 50 0 0 P
+X A9 A9 0 -800 200 R 50 50 0 0 P
+X A10 A10 0 -900 200 R 50 50 0 0 P
+X A11 A11 0 -1000 200 R 50 50 0 0 P
+X A12 A12 0 -1100 200 R 50 50 0 0 P
+X B1 B1 1000 0 200 L 50 50 0 0 P
+X B2 B2 1000 -100 200 L 50 50 0 0 P
+X B3 B3 1000 -200 200 L 50 50 0 0 P
+X B4 B4 1000 -300 200 L 50 50 0 0 P
+X B5 B5 1000 -400 200 L 50 50 0 0 P
+X B6 B6 1000 -500 200 L 50 50 0 0 P
+X B7 B7 1000 -600 200 L 50 50 0 0 P
+X B8 B8 1000 -700 200 L 50 50 0 0 P
+X B9 B9 1000 -800 200 L 50 50 0 0 P
+X B10 B10 1000 -900 200 L 50 50 0 0 P
+X B11 B11 1000 -1000 200 L 50 50 0 0 P
+X B12 B12 1000 -1100 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 800 100 800 -1200 200 -1200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 219-5MSTR
+#/1592695/593791/2.50/10/3/Switch
+DEF 219-5MSTR S 0 30 Y Y 1 F N
+F0 "S" 750 300 50 H V L CNN
+F1 "219-5MSTR" 750 200 50 H V L CNN
+F2 "2195MSTR" 750 100 50 H I L CNN
+F3 "https://www.ctscorp.com/wp-content/uploads/219.pdf" 750 0 50 H I L CNN
+F4 "Dip Switch SPST 5 Position Surface Mount Slide (Standard) Actuator 100mA 20VDC" 750 -100 50 H I L CNN "Description"
+F5 "4.58" 750 -200 50 H I L CNN "Height"
+F6 "CTS" 750 -300 50 H I L CNN "Manufacturer_Name"
+F7 "219-5MSTR" 750 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "774-2195MSTR" 750 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/CTS-Electronic-Components/219-5MSTR?qs=hDoPxpGr7leT2abJ4eEPDw%3D%3D" 750 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "219-5MSTR" 750 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/219-5mstr/cts" 750 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X A1 A1 0 0 200 R 50 50 0 0 P
+X A2 A2 0 -100 200 R 50 50 0 0 P
+X A3 A3 0 -200 200 R 50 50 0 0 P
+X A4 A4 0 -300 200 R 50 50 0 0 P
+X A5 A5 0 -400 200 R 50 50 0 0 P
+X B1 B1 900 0 200 L 50 50 0 0 P
+X B2 B2 900 -100 200 L 50 50 0 0 P
+X B3 B3 900 -200 200 L 50 50 0 0 P
+X B4 B4 900 -300 200 L 50 50 0 0 P
+X B5 B5 900 -400 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -500 200 -500 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
