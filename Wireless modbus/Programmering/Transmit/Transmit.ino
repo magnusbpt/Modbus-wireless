@@ -29,22 +29,23 @@ void loop() {
   unsigned long timerStart = 0;
   unsigned long timerEnd = 0;
   
-
   millisDelay(300);
 
   Serial1.println("AT+TEST=TXLRPKT, \"AA\"");  // Need ln when writing to sim module
   read();
   memset(message, 0, sizeof message);
 
-  millisDelay(300);
+  millisDelay(100);
 
   Serial1.println(F("AT+TEST=RXLRPKT"));
   read();
 
-  timerStart = millis();
-  
-  while (!Serial1.available() && !(((millis()) - timerStart) > 1000)) {}
+  while (!Serial1.available());
   read();
+  // timerStart = millis();
+  
+  // while (!Serial1.available() && !(((millis()) - timerStart) > 1000)) {}
+  
 
   // read();
   // memset(message, 0, sizeof message);
@@ -68,16 +69,16 @@ void read() {  // Read response after sending AT command
   Serial.write(Serial1.read());
   delay(10);
 
-  //   int numBytes = Serial1.available();
-  //   for (int i = 0; i < numBytes; i++) {
-  //     message[i] = Serial1.read();
-  //   }
-  // }
-  // Serial.write((char*)message);  // Write to terminal
-  // Serial.println();
+    int numBytes = Serial1.available();
+    for (int i = 0; i < numBytes; i++) {
+      message[i] = Serial1.read();
+    }
+  }
+  Serial.write((char*)message);  // Write to terminal
+  Serial.println();
 
 }
-}
+
 
 void millisDelay(int delayTime) {
 

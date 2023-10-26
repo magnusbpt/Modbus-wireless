@@ -106,6 +106,10 @@ void setup() {
   pinMode(RED_LED, OUTPUT);
   pinMode(Button, INPUT);
 
+  digitalWrite(BLUE_LED, HIGH);
+  digitalWrite(RED_LED, HIGH);
+  digitalWrite(GREEN_LED, HIGH);
+
   digitalWrite(PWRKEY, HIGH);
   digitalWrite(DTR_E, LOW);
 
