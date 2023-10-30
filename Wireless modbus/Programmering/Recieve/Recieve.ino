@@ -1,72 +1,104 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <EEPROM.h>
 
-static char message[512];
+#define DTR_E 42
+#define PWRKEY 43
+#define RED_LED 64
+#define GREEN_LED 65
+#define BLUE_LED 66
+#define Button 67
+
+#define simSerial Serial1 
+#define modbusSerial Serial2 
+#define loraSerial Serial3
+
+unsigned char* simBuffer = (unsigned char*)malloc(1000 * sizeof(char));
+unsigned char serverMessage[500];
+unsigned char modBuffer[50];  // Buffer to store modbus slave response
+char IMEI[20];                // Array to store IMEI number
+char CSQ[3];                  // Til at hente NB signalvaerdi.
+
+char readBuffer[1000];
 int i = 0;
 
 void setup() {
+
+  CLKPR = 1 << CLKPCE;  // Clock Prescaler Change Enable
+  CLKPR = 0;            // Change clock division factor to 1.
+
   Serial.begin(9600);
-  Serial1.begin(9600);
+  loraSerial.begin(9600);
 
-  millisDelay(2000);
+  pinMode(DTR_E, OUTPUT);
+  pinMode(PWRKEY, OUTPUT);
+  pinMode(BLUE_LED, OUTPUT);
+  pinMode(GREEN_LED, OUTPUT);
+  pinMode(RED_LED, OUTPUT);
+  pinMode(Button, INPUT);
 
-  Serial1.println(F("AT+MODE=TEST"));
+  digitalWrite(BLUE_LED, HIGH);
+  digitalWrite(RED_LED, HIGH);
+  digitalWrite(GREEN_LED, HIGH);
+  digitalWrite(PWRKEY, HIGH);
+  digitalWrite(DTR_E, LOW);
+
+  delay(2000);
+
+  loraSerial.println(F("AT+MODE=TEST"));
   read();
-  // memset(message, 0, sizeof message);
+  memset(readBuffer, 0, sizeof readBuffer);
 
-  millisDelay(300);
+  delay(300);
 
-  Serial1.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
+  loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
+  read();  
+  memset(readBuffer, 0, sizeof readBuffer);
+
+  delay(300);
+
+  loraSerial.println(F("AT+TEST=RXLRPKT"));
   read();
-  // memset(message, 0, sizeof message);
-
+  memset(readBuffer, 0, sizeof readBuffer);
 }
 
 void loop() {
-  Serial1.println(F("AT+TEST=RXLRPKT"));
+
+
+  digitalWrite(BLUE_LED, LOW);
+  while (!loraSerial.available()) {}
   read();
-  // memset(message, 0, sizeof message);
+  memset(readBuffer, 0, sizeof readBuffer);
+  delay(500);
+  digitalWrite(BLUE_LED, HIGH);
 
-  while (!Serial1.available()) {}
+  delay(500);
+  
 
-  millisDelay(300);
+  // read();
 
-  Serial1.println("AT+TEST=TXLRPKT, \"BB\"");
-  read();
-    // memset(message, 0, sizeof message);
-
-  // if (strstr(message, "AA")) {
-    // memset(message, 0, sizeof message);
-    // delay(3000);
-    // Serial1.println("AT+TEST=TXLRPKT, \"BB\"");
-    // read();
-    // memset(message, 0, sizeof message);
+  // if(strstr(readBuffer, "AA")){
+  //   memset(readBuffer, 0, sizeof readBuffer);
+  //   delay(100);
+  //   loraSerial.println("AT+TEST=TXLRPKT, \"BB\"");
+  //   read();
+  //   memset(readBuffer, 0, sizeof readBuffer);
   // }
-}
 
-void read() {  // Read response after sending AT command
-
-  millisDelay(300);  // Wait for sim module to respons correctly
-
-  while (Serial1.available()) {  // While data incomming: Read into buffer
-
-  Serial.write(Serial1.read());
-  delay(10);
-
-  //   int numBytes = Serial1.available();
-  //   for (int i = 0; i < numBytes; i++) {
-  //     message[i] = Serial1.read();
-  //   }
-  // }
-  // Serial.write((char*)message);  // Write to terminal
-  // Serial.println();
 
 }
-}
 
-void millisDelay(int delayTime) {
+void read() {    // Read response after sending AT command
 
-  unsigned long time_now = millis();
+  delay(100);      // Wait for sim module to respons correctly
+  i = 0;
 
-  while (millis() - time_now < delayTime) {
-    //wait.
+  while (loraSerial.available()) {           // While data incomming: Read into buffer
+      readBuffer[i] = loraSerial.read();
+      i++;
   }
+  
+  Serial.write((char*)readBuffer);    // Write to terminal
+  Serial.println();
 }
