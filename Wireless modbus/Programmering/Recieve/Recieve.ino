@@ -1,7 +1,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <EEPROM.h>
 
 #define DTR_E 42
 #define PWRKEY 43
