@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void read();
-
 #define DTR_E 41
 #define PWRKEY 40
 #define RED_LED 25
@@ -25,6 +23,9 @@ char CSQ[3];                  // Til at hente NB signalvaerdi.
 char readBuffer[1000];
 int i = 0;
 
+/***************Define functions***************/
+void read();
+
 void setup() {
 
   CLKPR = 1 << CLKPCE;  // Clock Prescaler Change Enable
@@ -40,7 +41,7 @@ void setup() {
   pinMode(RED_LED, OUTPUT);
   pinMode(Button, INPUT);
 
-  digitalWrite(BLUE_LED, LOW);
+  digitalWrite(BLUE_LED, HIGH);
   digitalWrite(RED_LED, HIGH);
   digitalWrite(GREEN_LED, HIGH);
   digitalWrite(PWRKEY, HIGH);
@@ -63,8 +64,6 @@ void setup() {
   loraSerial.println(F("AT+TEST=RXLRPKT"));
   read();
   memset(readBuffer, 0, sizeof readBuffer);
-
-  
 }
 
 void loop() {
