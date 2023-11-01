@@ -42,4 +42,10 @@ K
 F https://www.ctscorp.com/wp-content/uploads/219.pdf
 $ENDCMP
 #
+$CMP ADP5587ACPZ-R7
+D Analog Devices ADP5587ACPZ-R7, 18-channel 18bit I/O Expander 400kHz, I2C, 24-Pin LFCSP WQ
+K
+F http://componentsearchengine.com/Datasheets/3/ADP5587ACPZ-R7.pdf
+$ENDCMP
+#
 #End Doc Library
