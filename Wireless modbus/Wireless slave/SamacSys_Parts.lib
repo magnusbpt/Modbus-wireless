@@ -249,4 +249,26 @@ P 5 0 1 6 200 400 1000 400 1000 -800 200 -800 200 400 N
 ENDDRAW
 ENDDEF
 #
+#SamacSys ECAD Model 4081
+#/1932330/593791/2.50/2/3/Switch
+DEF 4081 S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "4081" 650 200 50 H V L CNN
+F2 "4081" 650 100 50 H I L CNN
+F3 "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/311/4081_Web.pdf" 650 0 50 H I L CNN
+F4 "Adafruit Accessories Flat Vibration Switch - Breadboard friendly" 650 -100 50 H I L CNN "Description"
+F5 "5.8" 650 -200 50 H I L CNN "Height"
+F6 "Adafruit" 650 -300 50 H I L CNN "Manufacturer_Name"
+F7 "4081" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "485-4081" 650 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Adafruit/4081?qs=vLWxofP3U2ypipoZplSnyg%3D%3D" 650 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "4081" 650 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/4081/adafruit-industries?region=nac" 650 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
 #End Library

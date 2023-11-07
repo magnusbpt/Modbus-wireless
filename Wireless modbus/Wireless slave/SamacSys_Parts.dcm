@@ -48,4 +48,10 @@ K
 F http://componentsearchengine.com/Datasheets/3/ADP5587ACPZ-R7.pdf
 $ENDCMP
 #
+$CMP 4081
+D Adafruit Accessories Flat Vibration Switch - Breadboard friendly
+K
+F https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/311/4081_Web.pdf
+$ENDCMP
+#
 #End Doc Library
