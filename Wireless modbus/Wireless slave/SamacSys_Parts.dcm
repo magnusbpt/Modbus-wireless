@@ -54,4 +54,10 @@ K
 F https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/311/4081_Web.pdf
 $ENDCMP
 #
+$CMP 219-6LPST
+D Switch DIP ON OFF SPST 6 Flush Slide 0.1A 20VDC Gull Wing 2.54mm SMD Tube
+K
+F https://www.mouser.com/datasheet/2/96/219-1144706.pdf
+$ENDCMP
+#
 #End Doc Library

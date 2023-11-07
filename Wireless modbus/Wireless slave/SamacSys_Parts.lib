@@ -271,4 +271,36 @@ P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
 ENDDRAW
 ENDDEF
 #
+#SamacSys ECAD Model 219-6LPST
+#/1439087/593791/2.50/12/4/Connector
+DEF 219-6LPST J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "219-6LPST" 750 200 50 H V L CNN
+F2 "2196LPST" 750 100 50 H I L CNN
+F3 "https://www.mouser.com/datasheet/2/96/219-1144706.pdf" 750 0 50 H I L CNN
+F4 "Switch DIP ON OFF SPST 6 Flush Slide 0.1A 20VDC Gull Wing 2.54mm SMD Tube" 750 -100 50 H I L CNN "Description"
+F5 "4.2" 750 -200 50 H I L CNN "Height"
+F6 "CTS" 750 -300 50 H I L CNN "Manufacturer_Name"
+F7 "219-6LPST" 750 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "774-2196LPST" 750 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/CTS-Electronic-Components/219-6LPST?qs=qNzHFtQhdJ%252BKgVpfJmEziw%3D%3D" 750 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "219-6LPST" 750 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/219-6lpst/cts" 750 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 0 -300 200 R 50 50 0 0 P
+X 5 5 0 -400 200 R 50 50 0 0 P
+X 6 6 0 -500 200 R 50 50 0 0 P
+X 7 7 900 -500 200 L 50 50 0 0 P
+X 8 8 900 -400 200 L 50 50 0 0 P
+X 9 9 900 -300 200 L 50 50 0 0 P
+X 10 10 900 -200 200 L 50 50 0 0 P
+X 11 11 900 -100 200 L 50 50 0 0 P
+X 12 12 900 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -600 200 -600 200 100 N
+ENDDRAW
+ENDDEF
+#
 #End Library
