@@ -783,6 +783,35 @@
         )
       )
     )
+    (symbol "Mechanical:MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "MountingHole" (at 0 3.175 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "mounting hole" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Mounting Hole without connection" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "MountingHole_0_1"
+        (circle (center 0 0) (radius 1.27)
+          (stroke (width 1.27) (type default))
+          (fill (type none))
+        )
+      )
+    )
     (symbol "Memory_Flash:W25Q128JVS" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -8.89 8.89 0)
         (effects (font (size 1.27 1.27)))
@@ -2061,7 +2090,7 @@
   (junction (at 21.59 205.105) (diameter 0) (color 0 0 0 0)
     (uuid 06969751-fbe4-4616-b1d7-3487b125076d)
   )
-  (junction (at 147.955 31.75) (diameter 0) (color 0 0 0 0)
+  (junction (at 130.175 31.75) (diameter 0) (color 0 0 0 0)
     (uuid 0e64a78d-2f27-44e7-a97f-c868b59bddca)
   )
   (junction (at 65.405 247.015) (diameter 0) (color 0 0 0 0)
@@ -2073,7 +2102,7 @@
   (junction (at 241.3 80.01) (diameter 0) (color 0 0 0 0)
     (uuid 1ca7e53f-a0fc-4135-a08a-7b40f7715889)
   )
-  (junction (at 104.775 227.965) (diameter 0) (color 0 0 0 0)
+  (junction (at 109.22 227.965) (diameter 0) (color 0 0 0 0)
     (uuid 1d288e76-9e11-45ff-8d27-49d566c6de8a)
   )
   (junction (at 212.09 72.39) (diameter 0) (color 0 0 0 0)
@@ -2091,10 +2120,10 @@
   (junction (at 21.59 215.265) (diameter 0) (color 0 0 0 0)
     (uuid 3651ca42-b852-418f-a231-e778cf6a9a73)
   )
-  (junction (at 104.775 24.13) (diameter 0) (color 0 0 0 0)
+  (junction (at 86.995 24.13) (diameter 0) (color 0 0 0 0)
     (uuid 39d0f59c-1a44-47ee-9691-537c9d5f381c)
   )
-  (junction (at 152.4 24.13) (diameter 0) (color 0 0 0 0)
+  (junction (at 134.62 24.13) (diameter 0) (color 0 0 0 0)
     (uuid 39e91a71-0ba0-460a-ae9a-c7d8dce4840f)
   )
   (junction (at 257.81 72.39) (diameter 0) (color 0 0 0 0)
@@ -2133,7 +2162,7 @@
   (junction (at 99.695 247.015) (diameter 0) (color 0 0 0 0)
     (uuid 5db4ba7b-2d6b-435a-a15c-6aeb52c2223c)
   )
-  (junction (at 97.155 227.965) (diameter 0) (color 0 0 0 0)
+  (junction (at 101.6 227.965) (diameter 0) (color 0 0 0 0)
     (uuid 5f17fb7e-0be2-4abe-abd8-d58a554c7ee4)
   )
   (junction (at 190.5 72.39) (diameter 0) (color 0 0 0 0)
@@ -2148,7 +2177,7 @@
   (junction (at 84.455 247.015) (diameter 0) (color 0 0 0 0)
     (uuid 6d21e000-f3b3-482c-89b2-81ff9af3d07b)
   )
-  (junction (at 89.535 227.965) (diameter 0) (color 0 0 0 0)
+  (junction (at 93.98 227.965) (diameter 0) (color 0 0 0 0)
     (uuid 6f777942-7399-4229-9709-c36ecb509da4)
   )
   (junction (at 204.47 88.9) (diameter 0) (color 0 0 0 0)
@@ -2163,10 +2192,10 @@
   (junction (at 69.215 247.015) (diameter 0) (color 0 0 0 0)
     (uuid 7cb72a4b-0e4b-4858-ac89-fe62e6e5930f)
   )
-  (junction (at 81.915 227.965) (diameter 0) (color 0 0 0 0)
+  (junction (at 86.36 227.965) (diameter 0) (color 0 0 0 0)
     (uuid 7dbb3a00-62e3-44e4-a545-d6735a6c7c52)
   )
-  (junction (at 100.965 227.965) (diameter 0) (color 0 0 0 0)
+  (junction (at 105.41 227.965) (diameter 0) (color 0 0 0 0)
     (uuid 8049489d-2512-4547-94f5-bf3033c79754)
   )
   (junction (at 21.59 207.645) (diameter 0) (color 0 0 0 0)
@@ -2190,13 +2219,13 @@
   (junction (at 21.59 200.025) (diameter 0) (color 0 0 0 0)
     (uuid a3054270-ee1e-4e87-816e-726bfecb886d)
   )
-  (junction (at 125.73 31.75) (diameter 0) (color 0 0 0 0)
+  (junction (at 107.95 31.75) (diameter 0) (color 0 0 0 0)
     (uuid a62bc642-c1c3-4088-8369-4db5b638b3f8)
   )
   (junction (at 95.25 207.645) (diameter 0) (color 0 0 0 0)
     (uuid a80c45d0-5559-4a9c-97ba-f23a131262a7)
   )
-  (junction (at 104.775 31.75) (diameter 0) (color 0 0 0 0)
+  (junction (at 86.995 31.75) (diameter 0) (color 0 0 0 0)
     (uuid a8389a1a-edda-4f39-a851-e59efd8abc39)
   )
   (junction (at 38.735 247.015) (diameter 0) (color 0 0 0 0)
@@ -2269,17 +2298,17 @@
     (uuid ff7c3ce2-0cbc-4c49-a3dc-42f0db3ae5fe)
   )
 
-  (no_connect (at 75.565 31.75) (uuid 2e40094d-1946-470a-9713-fb1104a69865))
+  (no_connect (at 57.785 31.75) (uuid 2e40094d-1946-470a-9713-fb1104a69865))
   (no_connect (at 372.745 47.625) (uuid 6e120cd6-40e2-4bc6-9dff-db2cc681283f))
   (no_connect (at 364.49 114.3) (uuid 75dc18ac-8644-48de-85ee-c2105f46e7a8))
-  (no_connect (at 75.565 34.29) (uuid 890434bb-c611-4175-965f-5605fe0afeb0))
-  (no_connect (at 75.565 29.21) (uuid 8fb6126b-9e83-4310-94b4-1f5c091b4d94))
-  (no_connect (at 75.565 26.67) (uuid 914139d0-f054-489b-9bd9-d1238f09c27d))
+  (no_connect (at 57.785 34.29) (uuid 890434bb-c611-4175-965f-5605fe0afeb0))
+  (no_connect (at 57.785 29.21) (uuid 8fb6126b-9e83-4310-94b4-1f5c091b4d94))
+  (no_connect (at 57.785 26.67) (uuid 914139d0-f054-489b-9bd9-d1238f09c27d))
   (no_connect (at 390.525 70.485) (uuid a599e2d9-3a0b-4069-a21a-398d453875e1))
-  (no_connect (at 92.075 36.83) (uuid ce02be06-0c1b-47a0-9a46-0a8ab4d6889f))
+  (no_connect (at 74.295 36.83) (uuid ce02be06-0c1b-47a0-9a46-0a8ab4d6889f))
   (no_connect (at 328.93 114.3) (uuid d75015a4-efc3-4f89-9b7d-4f697e2b15a8))
-  (no_connect (at 75.565 24.13) (uuid f14296e2-6368-483d-a097-f6e4f2d1b35b))
-  (no_connect (at 92.075 31.75) (uuid fa2c6f0a-e571-4486-99f0-a7cb0b7a7ad0))
+  (no_connect (at 57.785 24.13) (uuid f14296e2-6368-483d-a097-f6e4f2d1b35b))
+  (no_connect (at 74.295 31.75) (uuid fa2c6f0a-e571-4486-99f0-a7cb0b7a7ad0))
 
   (wire (pts (xy 165.1 129.54) (xy 176.53 129.54))
     (stroke (width 0) (type default))
@@ -2317,7 +2346,7 @@
     (stroke (width 0) (type default))
     (uuid 0ffd5382-36eb-4cc9-b2da-b5766745c301)
   )
-  (wire (pts (xy 86.36 220.345) (xy 89.535 220.345))
+  (wire (pts (xy 90.805 220.345) (xy 93.98 220.345))
     (stroke (width 0) (type default))
     (uuid 103f6e9e-d651-40a0-88cd-d70ffd9d9451)
   )
@@ -2353,7 +2382,7 @@
     (stroke (width 0) (type default))
     (uuid 1a9746b7-f89c-4292-b2e4-9476f2fc4369)
   )
-  (wire (pts (xy 74.295 227.965) (xy 81.915 227.965))
+  (wire (pts (xy 78.74 227.965) (xy 86.36 227.965))
     (stroke (width 0) (type default))
     (uuid 1be16105-0bd9-432a-8627-56e71c4dfd0d)
   )
@@ -2397,7 +2426,7 @@
     (stroke (width 0) (type default))
     (uuid 359db7e2-97d6-4d81-9d96-ad2b53bccaf5)
   )
-  (wire (pts (xy 109.22 220.345) (xy 112.395 220.345))
+  (wire (pts (xy 113.665 220.345) (xy 116.84 220.345))
     (stroke (width 0) (type default))
     (uuid 35be15e5-fd9e-4fef-b5e0-0dd9284625a9)
   )
@@ -2449,7 +2478,7 @@
     (stroke (width 0) (type default))
     (uuid 3ee33511-ea0b-43f7-8492-d181aa7c4801)
   )
-  (wire (pts (xy 125.73 31.75) (xy 147.955 31.75))
+  (wire (pts (xy 107.95 31.75) (xy 130.175 31.75))
     (stroke (width 0) (type default))
     (uuid 3f418b48-1d02-42b4-b4d9-671fabdb838d)
   )
@@ -2457,7 +2486,7 @@
     (stroke (width 0) (type default))
     (uuid 3faf4eae-9a13-44a9-a7a6-2f2c03a11c6d)
   )
-  (wire (pts (xy 81.915 227.965) (xy 89.535 227.965))
+  (wire (pts (xy 86.36 227.965) (xy 93.98 227.965))
     (stroke (width 0) (type default))
     (uuid 3fdedb20-c6e1-42c0-8d4b-545d6eb9d7e7)
   )
@@ -2473,7 +2502,7 @@
     (stroke (width 0) (type default))
     (uuid 42bb1033-a488-4fd5-8300-daa1b35319c7)
   )
-  (wire (pts (xy 92.075 34.29) (xy 104.775 34.29))
+  (wire (pts (xy 74.295 34.29) (xy 86.995 34.29))
     (stroke (width 0) (type default))
     (uuid 439dff31-aaa7-480a-9ff8-04ae98ab636b)
   )
@@ -2557,7 +2586,7 @@
     (stroke (width 0) (type default))
     (uuid 518b29a9-4d45-46e5-91c7-ae0af0dc228a)
   )
-  (wire (pts (xy 89.535 227.965) (xy 97.155 227.965))
+  (wire (pts (xy 93.98 227.965) (xy 101.6 227.965))
     (stroke (width 0) (type default))
     (uuid 518f5461-70bc-4e70-b6ed-2b57bea05da9)
   )
@@ -2569,7 +2598,7 @@
     (stroke (width 0) (type default))
     (uuid 555b7a7a-bf6a-4534-a987-f900aa8d6e02)
   )
-  (wire (pts (xy 92.075 26.67) (xy 95.25 26.67))
+  (wire (pts (xy 74.295 26.67) (xy 77.47 26.67))
     (stroke (width 0) (type default))
     (uuid 556c6bfd-dc50-4f57-81aa-30dd718f00c7)
   )
@@ -2585,7 +2614,7 @@
     (stroke (width 0) (type default))
     (uuid 592a6682-3768-473c-bad0-240002e1b419)
   )
-  (wire (pts (xy 97.155 227.965) (xy 100.965 227.965))
+  (wire (pts (xy 101.6 227.965) (xy 105.41 227.965))
     (stroke (width 0) (type default))
     (uuid 5de3ce1b-b90a-4622-8d03-dd29337ed93c)
   )
@@ -2605,7 +2634,7 @@
     (stroke (width 0) (type default))
     (uuid 6403c96a-1015-4136-b95e-1208c69a3304)
   )
-  (wire (pts (xy 104.775 34.29) (xy 104.775 31.75))
+  (wire (pts (xy 86.995 34.29) (xy 86.995 31.75))
     (stroke (width 0) (type default))
     (uuid 66ce0c68-469e-4dc6-95cd-3f183f5a8ad0)
   )
@@ -2613,7 +2642,7 @@
     (stroke (width 0) (type default))
     (uuid 69b773a3-3a17-48e7-b64b-b80e14d3e4b0)
   )
-  (wire (pts (xy 104.775 227.965) (xy 112.395 227.965))
+  (wire (pts (xy 109.22 227.965) (xy 116.84 227.965))
     (stroke (width 0) (type default))
     (uuid 6bf65414-4103-43db-83ef-2104793a0361)
   )
@@ -2705,7 +2734,7 @@
     (stroke (width 0) (type default))
     (uuid 7f27a2d0-14c8-42f1-8739-801ea3e67d24)
   )
-  (wire (pts (xy 147.955 26.67) (xy 147.955 31.75))
+  (wire (pts (xy 130.175 26.67) (xy 130.175 31.75))
     (stroke (width 0) (type default))
     (uuid 7fdcb09e-1aed-499f-b247-c621264a01ac)
   )
@@ -2733,7 +2762,7 @@
     (stroke (width 0) (type default))
     (uuid 877c7343-01ea-42df-8f92-4d2ae9680d47)
   )
-  (wire (pts (xy 78.74 220.345) (xy 81.915 220.345))
+  (wire (pts (xy 83.185 220.345) (xy 86.36 220.345))
     (stroke (width 0) (type default))
     (uuid 88cb303c-d25b-4851-a085-9e3a7f45dd0a)
   )
@@ -2741,7 +2770,7 @@
     (stroke (width 0) (type default))
     (uuid 89895bb0-ca22-47dd-b86f-d51b738d3ad1)
   )
-  (wire (pts (xy 93.98 220.345) (xy 97.155 220.345))
+  (wire (pts (xy 98.425 220.345) (xy 101.6 220.345))
     (stroke (width 0) (type default))
     (uuid 8b802b67-fb2b-419a-9dc6-9816a05f8615)
   )
@@ -2829,7 +2858,7 @@
     (stroke (width 0) (type default))
     (uuid 9b8bf835-2fd8-45cf-b6e9-8c1034b262f5)
   )
-  (wire (pts (xy 147.955 24.13) (xy 152.4 24.13))
+  (wire (pts (xy 130.175 24.13) (xy 134.62 24.13))
     (stroke (width 0) (type default))
     (uuid 9bd599a3-e023-4962-ad91-077809a487bc)
   )
@@ -2841,7 +2870,7 @@
     (stroke (width 0) (type default))
     (uuid 9dd1841b-8159-485d-9c17-2df76d4b6b48)
   )
-  (wire (pts (xy 104.775 31.75) (xy 125.73 31.75))
+  (wire (pts (xy 86.995 31.75) (xy 107.95 31.75))
     (stroke (width 0) (type default))
     (uuid 9f3e17dc-105b-4958-9034-e63315138c8d)
   )
@@ -2869,7 +2898,7 @@
     (stroke (width 0) (type default))
     (uuid a6e905a5-d5d7-4b0b-b645-46524da3bfd8)
   )
-  (wire (pts (xy 71.12 220.345) (xy 74.295 220.345))
+  (wire (pts (xy 75.565 220.345) (xy 78.74 220.345))
     (stroke (width 0) (type default))
     (uuid a6ea33d9-1235-483b-9201-a0f45e198987)
   )
@@ -2897,7 +2926,7 @@
     (stroke (width 0) (type default))
     (uuid aec25cf9-d9fb-47c1-8692-5a9acec2a1ac)
   )
-  (wire (pts (xy 101.6 220.345) (xy 104.775 220.345))
+  (wire (pts (xy 106.045 220.345) (xy 109.22 220.345))
     (stroke (width 0) (type default))
     (uuid aee165a4-3c6e-43cf-ac1c-77b7a760cba1)
   )
@@ -2941,7 +2970,7 @@
     (stroke (width 0) (type default))
     (uuid bc383592-6cc3-4c17-937a-8195e42a046f)
   )
-  (wire (pts (xy 100.965 227.965) (xy 104.775 227.965))
+  (wire (pts (xy 105.41 227.965) (xy 109.22 227.965))
     (stroke (width 0) (type default))
     (uuid bcc22de4-7cea-4146-a972-5dc5ebabdb35)
   )
@@ -3037,7 +3066,7 @@
     (stroke (width 0) (type default))
     (uuid d7414aa9-cb95-443f-8607-e8da2712acb5)
   )
-  (wire (pts (xy 102.235 24.13) (xy 104.775 24.13))
+  (wire (pts (xy 84.455 24.13) (xy 86.995 24.13))
     (stroke (width 0) (type default))
     (uuid d84da72f-2d02-4dd3-9ae9-cac5ab497e4a)
   )
@@ -3129,11 +3158,11 @@
     (stroke (width 0) (type default))
     (uuid fbbfa7ac-c35c-4d8d-81d8-e4d87eeb847e)
   )
-  (wire (pts (xy 92.075 29.21) (xy 95.25 29.21))
+  (wire (pts (xy 74.295 29.21) (xy 77.47 29.21))
     (stroke (width 0) (type default))
     (uuid fdfc71fb-fda9-4bad-a895-0c2768e4a53d)
   )
-  (wire (pts (xy 147.955 31.75) (xy 152.4 31.75))
+  (wire (pts (xy 130.175 31.75) (xy 134.62 31.75))
     (stroke (width 0) (type default))
     (uuid fe3110f4-6233-4bbe-afab-cb4449916dcd)
   )
@@ -3180,7 +3209,7 @@
     (fill (type none))
     (uuid c20f649b-f1d0-457e-8c06-eccfd687bc82)
   )
-  (rectangle (start 15.24 13.97) (end 39.37 45.72)
+  (rectangle (start 15.24 13.97) (end 142.24 45.72)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid d5c7bd5c-e64c-4ee4-a90e-0ce5555161da)
@@ -3190,7 +3219,7 @@
     (fill (type none))
     (uuid d631a2a1-caff-42aa-9d23-5fda47300f1f)
   )
-  (rectangle (start 17.145 163.195) (end 120.015 252.095)
+  (rectangle (start 17.145 163.195) (end 142.875 252.095)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid d815907b-5104-4fe8-a2ab-969273e5673f)
@@ -3343,7 +3372,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 46f03f4a-c916-45f6-8158-2b8d509f334f)
   )
-  (label "D-" (at 95.25 26.67 180) (fields_autoplaced)
+  (label "D-" (at 77.47 26.67 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 48258926-73a9-40bb-bae0-02105647d950)
   )
@@ -3379,7 +3408,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5c2a0c2b-cf37-4788-bf63-85181b83a609)
   )
-  (label "C6" (at 86.36 220.345 0) (fields_autoplaced)
+  (label "C6" (at 90.805 220.345 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5c3be16c-06ee-41b3-a93f-d646154b7242)
   )
@@ -3391,7 +3420,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5f5f7e4a-359e-4ff6-8879-953b1e80e202)
   )
-  (label "C5" (at 78.74 220.345 0) (fields_autoplaced)
+  (label "C5" (at 83.185 220.345 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 62ed58f3-2b78-4c75-a2a3-43052cfb451f)
   )
@@ -3419,7 +3448,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7de3a069-3634-426d-8134-a1f5516609d1)
   )
-  (label "C7" (at 93.98 220.345 0) (fields_autoplaced)
+  (label "C7" (at 98.425 220.345 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8a7099a0-842c-4bb0-acfd-c3d4a6dd9c6c)
   )
@@ -3523,7 +3552,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c8c50db1-9aa6-4b25-8915-6300cb688d0c)
   )
-  (label "C9" (at 109.22 220.345 0) (fields_autoplaced)
+  (label "C9" (at 113.665 220.345 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ca8ec1c4-8c23-40f1-9ec7-85774af0bef9)
   )
@@ -3567,7 +3596,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e1bb16bb-62fc-4541-91e9-e23527dd7ed5)
   )
-  (label "C4" (at 71.12 220.345 0) (fields_autoplaced)
+  (label "C4" (at 75.565 220.345 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e32af0d3-a981-4ba5-aa02-6f245267ce9a)
   )
@@ -3583,11 +3612,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid efee3964-bbc7-4aa9-8323-d120fd73f2de)
   )
-  (label "D+" (at 95.25 29.21 180) (fields_autoplaced)
+  (label "D+" (at 77.47 29.21 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid f07f1e26-115a-42b9-ba1f-c36743f55e77)
   )
-  (label "C8" (at 101.6 220.345 0) (fields_autoplaced)
+  (label "C8" (at 106.045 220.345 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f186f2c7-fae7-4409-91ee-05a0d310d680)
   )
@@ -3640,7 +3669,7 @@
   (symbol (lib_id "Device:C") (at 212.09 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 006c96f4-68c5-4559-b7ec-7b19d5f0341d)
-    (property "Reference" "C8" (at 215.9 74.93 0)
+    (property "Reference" "C7" (at 215.9 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uf" (at 215.9 77.47 0)
@@ -3657,7 +3686,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C8") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )
@@ -3666,7 +3695,7 @@
   (symbol (lib_id "power:+3.3V") (at 367.03 116.84 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 00753ffd-d92a-4d25-a245-69df4ab83418)
-    (property "Reference" "#PWR021" (at 363.22 116.84 0)
+    (property "Reference" "#PWR024" (at 363.22 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 370.84 116.84 90)
@@ -3682,7 +3711,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -3691,7 +3720,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x04") (at 387.35 142.875 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00c2a223-8b80-4349-96f0-f31ca78486bc)
-    (property "Reference" "J8" (at 384.81 138.43 90)
+    (property "Reference" "J4" (at 384.81 138.43 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "I2C" (at 384.81 144.78 90)
@@ -3710,52 +3739,52 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "J8") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "SamacSys_Parts2:10118192-0002LF") (at 92.075 24.13 0) (mirror y) (unit 1)
+  (symbol (lib_id "SamacSys_Parts2:10118192-0002LF") (at 74.295 24.13 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 00f6c3c9-be26-46f6-a57c-7fd62e8c5382)
-    (property "Reference" "J4" (at 79.375 17.145 0)
+    (property "Reference" "J2" (at 61.595 17.145 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10118192-0002LF" (at 79.375 19.685 0)
+    (property "Value" "10118192-0002LF" (at 61.595 19.685 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "101181920002LF" (at 70.485 119.05 0)
+    (property "Footprint" "101181920002LF" (at 52.705 119.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Datasheet" "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/10118192.pdf" (at 70.485 219.05 0)
+    (property "Datasheet" "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/10118192.pdf" (at 52.705 219.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Height" "3.08" (at 70.485 419.05 0)
+    (property "Height" "3.08" (at 52.705 419.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Manufacturer_Name" "Amphenol Communications Solutions-FCI" (at 70.485 519.05 0)
+    (property "Manufacturer_Name" "Amphenol Communications Solutions-FCI" (at 52.705 519.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Manufacturer_Part_Number" "10118192-0002LF" (at 70.485 619.05 0)
+    (property "Manufacturer_Part_Number" "10118192-0002LF" (at 52.705 619.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Mouser Part Number" "" (at 70.485 719.05 0)
+    (property "Mouser Part Number" "" (at 52.705 719.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Mouser Price/Stock" "" (at 70.485 819.05 0)
+    (property "Mouser Price/Stock" "" (at 52.705 819.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Arrow Part Number" "10118192-0002LF" (at 70.485 919.05 0)
+    (property "Arrow Part Number" "10118192-0002LF" (at 52.705 919.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/10118192-0002lf/amphenol-fci?region=nac" (at 70.485 1019.05 0)
+    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/10118192-0002lf/amphenol-fci?region=nac" (at 52.705 1019.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "JLC" "C2972784" (at 92.075 24.13 0)
+    (property "JLC" "C2972784" (at 74.295 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "JLCPCB" "C2972784" (at 92.075 24.13 0)
+    (property "JLCPCB" "C2972784" (at 74.295 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid bd864685-3e26-48da-8974-73662b47eb1f))
@@ -3772,7 +3801,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "J4") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -3781,7 +3810,7 @@
   (symbol (lib_id "power:GND") (at 355.6 34.925 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 01f3afa9-0688-402c-85b7-6c0554e095cf)
-    (property "Reference" "#PWR01" (at 355.6 41.275 0)
+    (property "Reference" "#PWR07" (at 355.6 41.275 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 359.41 36.195 0)
@@ -3797,7 +3826,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -3806,7 +3835,7 @@
   (symbol (lib_id "power:GND") (at 21.59 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 03cc8a39-a287-4f4a-946d-bd00cd5bff70)
-    (property "Reference" "#PWR037" (at 21.59 38.1 0)
+    (property "Reference" "#PWR05" (at 21.59 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 21.59 36.83 0)
@@ -3822,7 +3851,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -3831,7 +3860,7 @@
   (symbol (lib_id "power:GND") (at 370.205 47.625 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06f707b6-44f3-4a3b-9045-9f6601bf8bfd)
-    (property "Reference" "#PWR039" (at 370.205 41.275 0)
+    (property "Reference" "#PWR08" (at 370.205 41.275 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 370.205 43.815 0)
@@ -3847,7 +3876,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -3856,7 +3885,7 @@
   (symbol (lib_id "Switch:SW_DIP_x12") (at 29.21 212.725 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 07dd0ba8-3649-472e-a646-4f67c7bc8537)
-    (property "Reference" "SW1" (at 29.21 189.865 0)
+    (property "Reference" "SW2" (at 29.21 189.865 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_DIP_x12" (at 29.21 192.405 0)
@@ -3895,7 +3924,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "SW1") (unit 1)
+          (reference "SW2") (unit 1)
         )
       )
     )
@@ -3904,7 +3933,7 @@
   (symbol (lib_id "Device:C") (at 280.67 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 08bb47a7-c741-455c-961e-b530949745f6)
-    (property "Reference" "C14" (at 284.48 74.93 0)
+    (property "Reference" "C13" (at 284.48 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 284.48 77.47 0)
@@ -3921,7 +3950,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C14") (unit 1)
+          (reference "C13") (unit 1)
         )
       )
     )
@@ -3930,7 +3959,7 @@
   (symbol (lib_id "power:GND") (at 50.8 182.245 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0bacf034-1f91-4298-bc67-c197740b2c68)
-    (property "Reference" "#PWR049" (at 44.45 182.245 0)
+    (property "Reference" "#PWR043" (at 44.45 182.245 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 46.99 182.245 0)
@@ -3946,7 +3975,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -3955,7 +3984,7 @@
   (symbol (lib_id "Device:C") (at 36.83 177.165 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 10260fa9-a3ad-4b28-ae85-42654ddd0511)
-    (property "Reference" "C22" (at 40.64 175.895 0)
+    (property "Reference" "C18" (at 40.64 175.895 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uf" (at 40.64 178.435 0)
@@ -3972,7 +4001,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C22") (unit 1)
+          (reference "C18") (unit 1)
         )
       )
     )
@@ -4029,7 +4058,7 @@
   (symbol (lib_id "power:GND") (at 375.285 47.625 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 11c9e777-ac66-4e48-9ec0-24e91bf90535)
-    (property "Reference" "#PWR040" (at 375.285 41.275 0)
+    (property "Reference" "#PWR09" (at 375.285 41.275 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 375.285 43.815 0)
@@ -4045,7 +4074,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -4101,7 +4130,7 @@
   (symbol (lib_id "power:GND") (at 160.02 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 14011147-236f-4e31-b42d-67a8743c9bc8)
-    (property "Reference" "#PWR046" (at 160.02 115.57 0)
+    (property "Reference" "#PWR020" (at 160.02 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 160.02 114.3 0)
@@ -4117,7 +4146,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -4126,7 +4155,7 @@
   (symbol (lib_id "Device:R") (at 382.27 184.15 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 146ccd90-857a-4fcd-9a48-40446d94d85f)
-    (property "Reference" "R31" (at 377.19 182.88 0)
+    (property "Reference" "R12" (at 377.19 182.88 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 377.19 184.785 0)
@@ -4143,7 +4172,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R31") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -4152,7 +4181,7 @@
   (symbol (lib_id "Device:C") (at 167.64 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 153e0bdd-941a-40d0-a7a3-971735277036)
-    (property "Reference" "C5" (at 171.45 74.93 0)
+    (property "Reference" "C4" (at 171.45 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 171.45 77.47 0)
@@ -4169,28 +4198,28 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C5") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Device:C") (at 152.4 27.94 0) (mirror y) (unit 1)
+  (symbol (lib_id "Device:C") (at 134.62 27.94 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 15cd8e69-792b-4767-8747-2b5c43fae567)
-    (property "Reference" "C20" (at 156.845 25.4 0)
+    (property "Reference" "C3" (at 139.065 25.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uf" (at 157.48 30.48 0)
+    (property "Value" "10uf" (at 139.7 30.48 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 151.4348 31.75 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 133.6548 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 152.4 27.94 0)
+    (property "Datasheet" "~" (at 134.62 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "JLCPCB" "C2972784" (at 152.4 27.94 0)
+    (property "JLCPCB" "C2972784" (at 134.62 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid acb3dad4-b363-4188-99e7-5fac2c5e8481))
@@ -4198,7 +4227,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C20") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -4207,7 +4236,7 @@
   (symbol (lib_id "SamacSys_Parts:SHT30-DIS-B10KS") (at 328.93 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1a84bc62-5b45-43e7-8ef5-f7e915f5cdb9)
-    (property "Reference" "IC1" (at 346.71 101.6 0)
+    (property "Reference" "IC3" (at 346.71 101.6 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SHT30-DIS-B10KS" (at 346.71 104.14 0)
@@ -4258,7 +4287,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "IC1") (unit 1)
+          (reference "IC3") (unit 1)
         )
       )
     )
@@ -4267,7 +4296,7 @@
   (symbol (lib_id "Device:R") (at 31.115 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1cc456fa-0c55-477a-9d58-f36a2da67ed3)
-    (property "Reference" "R27" (at 33.655 241.935 0)
+    (property "Reference" "R20" (at 33.655 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 33.655 244.475 0)
@@ -4284,7 +4313,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R27") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -4318,7 +4347,7 @@
   (symbol (lib_id "Device:R") (at 38.735 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1ddab6fe-2db5-498d-a228-9999975a2a74)
-    (property "Reference" "R5" (at 41.275 241.935 0)
+    (property "Reference" "R21" (at 41.275 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 41.275 244.475 0)
@@ -4335,7 +4364,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R5") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )
@@ -4344,7 +4373,7 @@
   (symbol (lib_id "power:+3.3V") (at 384.175 177.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 20c18b49-4aac-4cbc-a49b-ed1be804d1d4)
-    (property "Reference" "#PWR060" (at 384.175 181.61 0)
+    (property "Reference" "#PWR040" (at 384.175 181.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 381 175.26 0)
@@ -4360,7 +4389,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR060") (unit 1)
+          (reference "#PWR040") (unit 1)
         )
       )
     )
@@ -4369,7 +4398,7 @@
   (symbol (lib_id "power:+3.3V") (at 212.09 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 213203b8-353f-480f-9c42-e4db7c09e861)
-    (property "Reference" "#PWR013" (at 212.09 76.2 0)
+    (property "Reference" "#PWR015" (at 212.09 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 212.09 67.31 0)
@@ -4385,7 +4414,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -4394,7 +4423,7 @@
   (symbol (lib_id "Device:C") (at 234.95 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 228a283c-3e5c-4360-84cc-f75714a187a9)
-    (property "Reference" "C10" (at 238.76 74.93 0)
+    (property "Reference" "C9" (at 238.76 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 238.76 77.47 0)
@@ -4411,50 +4440,50 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C10") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 100.965 227.965 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 105.41 227.965 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 23728597-dd6f-4c9c-99f5-ff3ccf002d58)
-    (property "Reference" "#PWR045" (at 100.965 234.315 0)
+    (property "Reference" "#PWR049" (at 105.41 234.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 100.965 231.775 0)
+    (property "Value" "GND" (at 105.41 231.775 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 100.965 227.965 0)
+    (property "Footprint" "" (at 105.41 227.965 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 100.965 227.965 0)
+    (property "Datasheet" "" (at 105.41 227.965 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 795a6a89-a136-440e-a1a6-7ed3394a1ce6))
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR049") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Device:R") (at 97.155 224.155 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 101.6 224.155 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 28929d83-7940-432a-84b0-c060382898ed)
-    (property "Reference" "R20" (at 94.615 222.885 0)
+    (property "Reference" "R16" (at 99.06 222.885 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10K" (at 94.615 225.425 0)
+    (property "Value" "10K" (at 99.06 225.425 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 95.377 224.155 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 99.822 224.155 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 97.155 224.155 0)
+    (property "Datasheet" "~" (at 101.6 224.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 6931a8d7-b733-4460-8545-f14e9d8e837d))
@@ -4462,7 +4491,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R20") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -4494,19 +4523,19 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 81.915 224.155 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 86.36 224.155 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2dd75ead-72a0-4756-a29e-e78d81331a5b)
-    (property "Reference" "R22" (at 79.375 222.885 0)
+    (property "Reference" "R14" (at 83.82 222.885 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10K" (at 79.375 225.425 0)
+    (property "Value" "10K" (at 83.82 225.425 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 80.137 224.155 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 84.582 224.155 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 81.915 224.155 0)
+    (property "Datasheet" "~" (at 86.36 224.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c6167d61-6a73-4f15-9d2d-b463c1bd1cc4))
@@ -4514,7 +4543,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R22") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -4523,7 +4552,7 @@
   (symbol (lib_id "power:+3.3V") (at 60.96 182.245 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2de03f07-cfb7-4647-9b4e-8deb7d47fd8f)
-    (property "Reference" "#PWR051" (at 60.96 186.055 0)
+    (property "Reference" "#PWR044" (at 60.96 186.055 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 60.96 177.165 90)
@@ -4539,7 +4568,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -4548,7 +4577,7 @@
   (symbol (lib_id "power:+1V1") (at 190.5 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2feeaab6-c976-4e39-8ac1-546bee0f029c)
-    (property "Reference" "#PWR011" (at 190.5 76.2 0)
+    (property "Reference" "#PWR014" (at 190.5 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+1V1" (at 190.5 67.31 0)
@@ -4564,7 +4593,31 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR014") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 175.26 25.4 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 338b5725-ef15-40cc-91a8-bdd9c0f09aec)
+    (property "Reference" "H2" (at 177.8 24.13 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 177.8 26.67 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 175.26 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 175.26 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "wireless_Slave"
+        (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
+          (reference "H2") (unit 1)
         )
       )
     )
@@ -4573,7 +4626,7 @@
   (symbol (lib_id "Device:R") (at 92.075 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 37ee2694-b39a-443a-aed9-badac408e608)
-    (property "Reference" "R12" (at 94.615 241.935 0)
+    (property "Reference" "R28" (at 94.615 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 94.615 244.475 0)
@@ -4590,7 +4643,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R12") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
     )
@@ -4599,7 +4652,7 @@
   (symbol (lib_id "Device:C") (at 190.5 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3841f654-7dc5-4e20-9189-10e9e181ac81)
-    (property "Reference" "C7" (at 194.31 74.93 0)
+    (property "Reference" "C6" (at 194.31 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uf" (at 194.31 77.47 0)
@@ -4616,7 +4669,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C7") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -4625,7 +4678,7 @@
   (symbol (lib_id "Device:R") (at 246.38 106.68 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3ad4cd38-ce99-4379-a78f-136d742181a1)
-    (property "Reference" "R32" (at 245.11 102.87 0)
+    (property "Reference" "R4" (at 245.11 102.87 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 245.11 105.41 0)
@@ -4642,7 +4695,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R32") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -4651,7 +4704,7 @@
   (symbol (lib_id "power:GND") (at 170.18 147.32 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3baeccf5-8cdd-44ad-b9d9-8e6b01b45c3f)
-    (property "Reference" "#PWR036" (at 176.53 147.32 0)
+    (property "Reference" "#PWR033" (at 176.53 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 173.99 147.32 90)
@@ -4667,7 +4720,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -4676,7 +4729,7 @@
   (symbol (lib_id "power:+3.3V") (at 382.905 22.225 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 40d1e91b-7429-45db-a127-23973d4019fb)
-    (property "Reference" "#PWR03" (at 382.905 26.035 0)
+    (property "Reference" "#PWR02" (at 382.905 26.035 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 382.905 17.145 0)
@@ -4692,7 +4745,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -4701,7 +4754,7 @@
   (symbol (lib_id "power:GND") (at 364.49 110.49 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4142350d-5c82-4711-bb00-220e9f65768c)
-    (property "Reference" "#PWR019" (at 370.84 110.49 0)
+    (property "Reference" "#PWR021" (at 370.84 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 368.3 110.49 0)
@@ -4717,7 +4770,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -4726,7 +4779,7 @@
   (symbol (lib_id "Device:R") (at 36.195 130.81 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4429fc7f-b76c-4cd3-8681-da12d58390c0)
-    (property "Reference" "R2" (at 36.195 124.46 90)
+    (property "Reference" "R8" (at 36.195 124.46 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1K" (at 36.195 127 90)
@@ -4743,7 +4796,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R2") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -4752,7 +4805,7 @@
   (symbol (lib_id "power:GND") (at 328.93 111.76 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 46ea4c1e-b680-4228-bbb0-3ce65dbd20ee)
-    (property "Reference" "#PWR016" (at 322.58 111.76 0)
+    (property "Reference" "#PWR022" (at 322.58 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 325.12 111.76 0)
@@ -4768,7 +4821,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -4802,7 +4855,7 @@
   (symbol (lib_id "Device:R") (at 99.695 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4b527f3f-fb86-4b48-87b4-dded6b21d8ac)
-    (property "Reference" "R24" (at 102.235 241.935 0)
+    (property "Reference" "R29" (at 102.235 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 102.235 244.475 0)
@@ -4819,7 +4872,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R24") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
@@ -4828,7 +4881,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 392.43 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4d8cf071-c63d-4084-bb8c-227d5c5a91ad)
-    (property "Reference" "J7" (at 394.97 157.48 0)
+    (property "Reference" "J5" (at 394.97 157.48 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Digital_in" (at 391.16 160.02 0)
@@ -4845,7 +4898,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "J7") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -4854,7 +4907,7 @@
   (symbol (lib_id "power:GND") (at 201.93 180.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4da852c0-0678-4d2a-95ae-f7bbe4f42bf8)
-    (property "Reference" "#PWR012" (at 201.93 186.69 0)
+    (property "Reference" "#PWR041" (at 201.93 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 201.93 185.42 0)
@@ -4870,7 +4923,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR041") (unit 1)
         )
       )
     )
@@ -4879,7 +4932,7 @@
   (symbol (lib_id "power:GND") (at 382.27 187.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4f5ae402-8889-4bb2-b6e3-84a213f9a9bb)
-    (property "Reference" "#PWR057" (at 382.27 194.31 0)
+    (property "Reference" "#PWR046" (at 382.27 194.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 378.46 189.865 0)
@@ -4895,7 +4948,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )
@@ -4904,7 +4957,7 @@
   (symbol (lib_id "Device:R") (at 167.64 106.68 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 502d57cc-9fd5-424c-90c1-ecbadf85b267)
-    (property "Reference" "R4" (at 166.37 109.22 90)
+    (property "Reference" "R3" (at 166.37 109.22 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "27" (at 170.18 109.22 90)
@@ -4921,7 +4974,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R4") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -4930,7 +4983,7 @@
   (symbol (lib_id "power:GND") (at 36.83 180.975 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 523263ff-9c4a-4125-b35b-a1811e8eece5)
-    (property "Reference" "#PWR052" (at 36.83 187.325 0)
+    (property "Reference" "#PWR042" (at 36.83 187.325 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 36.83 184.785 0)
@@ -4946,7 +4999,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -5025,7 +5078,7 @@
   (symbol (lib_id "power:+3.3V") (at 392.43 137.795 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5b8dc0d9-ded1-4b4c-9d9f-1ae376d8afb1)
-    (property "Reference" "#PWR058" (at 392.43 141.605 0)
+    (property "Reference" "#PWR030" (at 392.43 141.605 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 395.605 137.16 0)
@@ -5041,7 +5094,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR058") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -5050,7 +5103,7 @@
   (symbol (lib_id "power:+3.3V") (at 390.525 67.945 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5bd5165e-02b3-417b-80c8-29603d27f273)
-    (property "Reference" "#PWR042" (at 386.715 67.945 0)
+    (property "Reference" "#PWR012" (at 386.715 67.945 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 394.335 67.945 90)
@@ -5066,7 +5119,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -5075,7 +5128,7 @@
   (symbol (lib_id "Device:C") (at 157.48 143.51 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5bebe0c3-fb76-4e38-a87a-7a726292b2ee)
-    (property "Reference" "C3" (at 160.02 142.24 90)
+    (property "Reference" "C16" (at 160.02 142.24 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "27pf" (at 161.29 144.78 90)
@@ -5092,25 +5145,25 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C3") (unit 1)
+          (reference "C16") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Device:R") (at 104.775 224.155 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 109.22 224.155 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5fb082ba-d531-4317-aeae-cb550c3e5e6e)
-    (property "Reference" "R19" (at 102.235 222.885 0)
+    (property "Reference" "R17" (at 106.68 222.885 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10K" (at 102.235 225.425 0)
+    (property "Value" "10K" (at 106.68 225.425 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 102.997 224.155 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 107.442 224.155 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 104.775 224.155 0)
+    (property "Datasheet" "~" (at 109.22 224.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 6c627e15-a0d9-497d-a767-8ae702abfaa2))
@@ -5118,7 +5171,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R19") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -5127,7 +5180,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 26.67 21.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6004ab0a-7ddd-4112-acde-1205830d5ec3)
-    (property "Reference" "J6" (at 29.21 21.59 0)
+    (property "Reference" "J1" (at 29.21 21.59 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "ON/OFF" (at 29.21 24.13 0)
@@ -5144,7 +5197,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "J6") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )
@@ -5153,7 +5206,7 @@
   (symbol (lib_id "Device:R_Photo") (at 389.255 109.855 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 614aeaca-05e3-4a16-b890-b434e6579fa9)
-    (property "Reference" "R13" (at 391.795 108.585 0)
+    (property "Reference" "R6" (at 391.795 108.585 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "R_Photo" (at 391.795 111.125 0)
@@ -5170,46 +5223,46 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R13") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "SamacSys_Parts2:NCP1117IDT33T4G") (at 104.775 24.13 0) (unit 1)
+  (symbol (lib_id "SamacSys_Parts2:NCP1117IDT33T4G") (at 86.995 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 631d15c3-6fcf-4b5c-bc1d-897e88aedf63)
-    (property "Reference" "IC5" (at 126.365 17.145 0)
+    (property "Reference" "IC1" (at 108.585 17.145 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "NCP1117IDT33T4G" (at 126.365 19.685 0)
+    (property "Value" "NCP1117IDT33T4G" (at 108.585 19.685 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "NCP1117IDT33T4G" (at 144.145 119.05 0)
+    (property "Footprint" "NCP1117IDT33T4G" (at 126.365 119.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ncp1117-d.pdf" (at 144.145 219.05 0)
+    (property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ncp1117-d.pdf" (at 126.365 219.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Height" "2.51" (at 144.145 419.05 0)
+    (property "Height" "2.51" (at 126.365 419.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Manufacturer_Name" "onsemi" (at 144.145 519.05 0)
+    (property "Manufacturer_Name" "onsemi" (at 126.365 519.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Manufacturer_Part_Number" "NCP1117IDT33T4G" (at 144.145 619.05 0)
+    (property "Manufacturer_Part_Number" "NCP1117IDT33T4G" (at 126.365 619.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Mouser Part Number" "863-NCP1117IDT33T4G" (at 144.145 719.05 0)
+    (property "Mouser Part Number" "863-NCP1117IDT33T4G" (at 126.365 719.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi/NCP1117IDT33T4G?qs=iLbezkQI%252BsjquTy9AXeQnQ%3D%3D" (at 144.145 819.05 0)
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi/NCP1117IDT33T4G?qs=iLbezkQI%252BsjquTy9AXeQnQ%3D%3D" (at 126.365 819.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Arrow Part Number" "" (at 144.145 919.05 0)
+    (property "Arrow Part Number" "" (at 126.365 919.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Arrow Price/Stock" "" (at 144.145 1019.05 0)
+    (property "Arrow Price/Stock" "" (at 126.365 1019.05 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (pin "1" (uuid d7dcec7f-aa79-4c00-985d-a8be212f588f))
@@ -5218,7 +5271,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "IC5") (unit 1)
+          (reference "IC1") (unit 1)
         )
       )
     )
@@ -5227,7 +5280,7 @@
   (symbol (lib_id "SamacSys_Parts2:ZMOD4410AI1R") (at 354.965 65.405 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 649cdbfa-08ac-4563-8b5c-546f4272d6de)
-    (property "Reference" "IC3" (at 394.335 58.4769 0)
+    (property "Reference" "IC2" (at 394.335 58.4769 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ZMOD4410AI1R" (at 394.335 61.0169 0)
@@ -5275,7 +5328,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "IC3") (unit 1)
+          (reference "IC2") (unit 1)
         )
       )
     )
@@ -5284,7 +5337,7 @@
   (symbol (lib_id "power:GND") (at 365.76 124.46 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 64cb0e42-9241-4e25-b386-81c48821c58a)
-    (property "Reference" "#PWR020" (at 365.76 130.81 0)
+    (property "Reference" "#PWR027" (at 365.76 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 365.76 128.27 0)
@@ -5300,7 +5353,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -5309,7 +5362,7 @@
   (symbol (lib_id "Device:R") (at 69.215 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 65492ac3-0fdc-4637-8272-46c7b0aff6f9)
-    (property "Reference" "R9" (at 71.755 241.935 0)
+    (property "Reference" "R25" (at 71.755 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 71.755 244.475 0)
@@ -5326,25 +5379,25 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R9") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Device:R") (at 89.535 224.155 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 93.98 224.155 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 68a0591c-69f2-4af6-8e6a-61e0ed61d588)
-    (property "Reference" "R21" (at 86.995 222.885 0)
+    (property "Reference" "R15" (at 91.44 222.885 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10K" (at 86.995 225.425 0)
+    (property "Value" "10K" (at 91.44 225.425 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 87.757 224.155 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 92.202 224.155 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 89.535 224.155 0)
+    (property "Datasheet" "~" (at 93.98 224.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 65c3d40a-10b3-49c4-8be4-a499391e0473))
@@ -5352,7 +5405,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R21") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
     )
@@ -5361,7 +5414,7 @@
   (symbol (lib_id "power:+3.3V") (at 249.555 99.695 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 68a31894-fb34-4766-911c-fbe03c37950e)
-    (property "Reference" "#PWR059" (at 249.555 103.505 0)
+    (property "Reference" "#PWR018" (at 249.555 103.505 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 249.555 94.615 0)
@@ -5377,7 +5430,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR059") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -5386,7 +5439,7 @@
   (symbol (lib_id "power:+3.3V") (at 36.83 173.355 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6dbf3fa7-9566-42d8-a9a5-67f6ebb7a208)
-    (property "Reference" "#PWR050" (at 36.83 177.165 0)
+    (property "Reference" "#PWR039" (at 36.83 177.165 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 36.83 168.275 0)
@@ -5402,7 +5455,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR039") (unit 1)
         )
       )
     )
@@ -5411,7 +5464,7 @@
   (symbol (lib_id "power:+3.3V") (at 387.35 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 71372162-3fba-46bb-9431-1951d625db9d)
-    (property "Reference" "#PWR056" (at 387.35 158.75 0)
+    (property "Reference" "#PWR035" (at 387.35 158.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 391.16 153.035 0)
@@ -5427,7 +5480,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -5459,10 +5512,34 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 157.48 20.32 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 75458fe5-fa21-44e9-a6d2-f82db11e5a5c)
+    (property "Reference" "H3" (at 160.02 19.05 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 160.02 21.59 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 157.48 20.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 157.48 20.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "wireless_Slave"
+        (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
+          (reference "H3") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R") (at 63.5 170.815 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7614c648-4ca7-467b-807a-f8d6f4e59f5d)
-    (property "Reference" "R28" (at 64.77 166.37 0)
+    (property "Reference" "R11" (at 64.77 166.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 64.77 168.91 0)
@@ -5479,7 +5556,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R28") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -5488,7 +5565,7 @@
   (symbol (lib_id "Device:R") (at 389.255 120.015 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 78995f05-b4a6-444a-94fd-265c0c04ba2e)
-    (property "Reference" "R14" (at 391.795 118.745 0)
+    (property "Reference" "R7" (at 391.795 118.745 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 391.795 121.285 0)
@@ -5505,7 +5582,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R14") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -5514,7 +5591,7 @@
   (symbol (lib_id "power:GND") (at 176.53 172.72 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 794f8137-adc0-4bb0-9b3c-d3c679f9e118)
-    (property "Reference" "#PWR09" (at 170.18 172.72 0)
+    (property "Reference" "#PWR038" (at 170.18 172.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 172.72 172.72 90)
@@ -5530,7 +5607,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
     )
@@ -5539,7 +5616,7 @@
   (symbol (lib_id "power:+3.3V") (at 354.965 65.405 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7b0c0a36-c684-4887-9e5d-628cd1e20dd8)
-    (property "Reference" "#PWR044" (at 358.775 65.405 0)
+    (property "Reference" "#PWR010" (at 358.775 65.405 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 351.155 65.405 90)
@@ -5555,7 +5632,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR044") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -5564,7 +5641,7 @@
   (symbol (lib_id "Device:R") (at 23.495 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7ba5d7a5-0e0e-44db-9152-1712fb3505d0)
-    (property "Reference" "R26" (at 26.035 241.935 0)
+    (property "Reference" "R19" (at 26.035 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 26.035 244.475 0)
@@ -5581,7 +5658,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R26") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -5616,7 +5693,7 @@
   (symbol (lib_id "Device:C") (at 246.38 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7e951208-f238-4546-8ac5-28177c59672c)
-    (property "Reference" "C11" (at 250.19 74.93 0)
+    (property "Reference" "C10" (at 250.19 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 250.19 77.47 0)
@@ -5633,7 +5710,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C11") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
     )
@@ -5642,7 +5719,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 24.765 133.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8083bd96-de22-4e4f-bde6-ec99fe774d88)
-    (property "Reference" "J1" (at 24.765 124.46 0)
+    (property "Reference" "J3" (at 24.765 124.46 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x02" (at 24.765 127 0)
@@ -5659,7 +5736,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "J1") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -5668,7 +5745,7 @@
   (symbol (lib_id "Device:R") (at 76.835 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 83bd8354-992a-4ae5-bd03-8aaa3e1b9afe)
-    (property "Reference" "R10" (at 79.375 241.935 0)
+    (property "Reference" "R26" (at 79.375 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 79.375 244.475 0)
@@ -5685,7 +5762,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R10") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -5694,7 +5771,7 @@
   (symbol (lib_id "Device:R") (at 46.355 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 83bf3cfa-9730-49ef-a35a-1eca1a9ac4f6)
-    (property "Reference" "R6" (at 48.895 241.935 0)
+    (property "Reference" "R22" (at 48.895 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 48.895 244.475 0)
@@ -5711,7 +5788,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R6") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -5720,7 +5797,7 @@
   (symbol (lib_id "power:GND") (at 346.71 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8578f1b8-edae-497c-a4b7-a8b35ccb28f5)
-    (property "Reference" "#PWR017" (at 346.71 135.89 0)
+    (property "Reference" "#PWR028" (at 346.71 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 346.71 133.35 0)
@@ -5736,7 +5813,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -5745,7 +5822,7 @@
   (symbol (lib_id "power:GND") (at 392.43 145.415 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 86568108-5834-41bd-9115-f2d207e36fca)
-    (property "Reference" "#PWR054" (at 398.78 145.415 0)
+    (property "Reference" "#PWR031" (at 398.78 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 396.24 145.415 90)
@@ -5761,7 +5838,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
     )
@@ -5770,7 +5847,7 @@
   (symbol (lib_id "Device:C") (at 257.81 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 87ab3237-f201-4609-b756-a61bf70e0096)
-    (property "Reference" "C12" (at 261.62 74.93 0)
+    (property "Reference" "C11" (at 261.62 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 261.62 77.47 0)
@@ -5787,7 +5864,31 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C12") (unit 1)
+          (reference "C11") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 175.26 20.32 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8882b8fe-b035-4c0f-a0a7-d0375af76582)
+    (property "Reference" "H1" (at 177.8 19.05 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 177.8 21.59 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 175.26 20.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 175.26 20.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "wireless_Slave"
+        (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
+          (reference "H1") (unit 1)
         )
       )
     )
@@ -5796,7 +5897,7 @@
   (symbol (lib_id "Device:R") (at 167.64 104.14 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8a94387d-feba-4499-bc6c-684b91bd8163)
-    (property "Reference" "R3" (at 165.1 101.6 90)
+    (property "Reference" "R2" (at 165.1 101.6 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "27" (at 170.18 101.6 90)
@@ -5813,7 +5914,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R3") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -5822,7 +5923,7 @@
   (symbol (lib_id "Device:C") (at 70.485 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8ad2fd7d-d0a9-4f06-a62a-781a6c633ca5)
-    (property "Reference" "C2" (at 74.295 118.11 0)
+    (property "Reference" "C14" (at 74.295 118.11 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 74.295 120.65 0)
@@ -5839,7 +5940,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C2") (unit 1)
+          (reference "C14") (unit 1)
         )
       )
     )
@@ -5848,7 +5949,7 @@
   (symbol (lib_id "power:GND") (at 64.135 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9109f2a6-5e29-4d05-8bda-4d5d818ebcf1)
-    (property "Reference" "#PWR05" (at 64.135 157.48 0)
+    (property "Reference" "#PWR034" (at 64.135 157.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 64.135 156.21 0)
@@ -5864,7 +5965,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -5873,7 +5974,7 @@
   (symbol (lib_id "Device:R") (at 53.34 170.815 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 95176f58-ea27-49df-9aa0-4842606a8c04)
-    (property "Reference" "R29" (at 52.07 167.005 0)
+    (property "Reference" "R10" (at 52.07 167.005 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 52.07 169.545 0)
@@ -5890,7 +5991,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R29") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -5899,7 +6000,7 @@
   (symbol (lib_id "power:+3.3V") (at 354.965 70.485 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 95760dab-e17b-46b1-883a-ee561722731f)
-    (property "Reference" "#PWR043" (at 358.775 70.485 0)
+    (property "Reference" "#PWR013" (at 358.775 70.485 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 351.155 70.485 90)
@@ -5915,7 +6016,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -5924,7 +6025,7 @@
   (symbol (lib_id "Device:R") (at 252.73 106.68 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9659df09-95df-4cf4-8071-b6df89d23687)
-    (property "Reference" "R33" (at 251.46 102.87 0)
+    (property "Reference" "R5" (at 251.46 102.87 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 251.46 105.41 0)
@@ -5941,7 +6042,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R33") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -5950,7 +6051,7 @@
   (symbol (lib_id "Device:R") (at 84.455 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9e3ce832-a0a3-408d-8fd5-fb82f3fcdd12)
-    (property "Reference" "R11" (at 86.995 241.935 0)
+    (property "Reference" "R27" (at 86.995 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 86.995 244.475 0)
@@ -5967,7 +6068,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R11") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
     )
@@ -5976,7 +6077,7 @@
   (symbol (lib_id "power:GND") (at 389.255 123.825 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a2aac2cc-e509-4fcc-8667-2bc89a707183)
-    (property "Reference" "#PWR023" (at 389.255 130.175 0)
+    (property "Reference" "#PWR026" (at 389.255 130.175 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 389.255 127.635 0)
@@ -5992,7 +6093,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -6001,7 +6102,7 @@
   (symbol (lib_id "power:GND") (at 66.04 182.245 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a4cd0d2f-8127-49aa-ad14-f0ca64170332)
-    (property "Reference" "#PWR048" (at 72.39 182.245 0)
+    (property "Reference" "#PWR045" (at 72.39 182.245 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 69.85 182.245 0)
@@ -6017,7 +6118,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR045") (unit 1)
         )
       )
     )
@@ -6026,7 +6127,7 @@
   (symbol (lib_id "power:+3.3V") (at 66.675 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a6b299e5-b5e5-4ed3-91b7-a029b74ab6b1)
-    (property "Reference" "#PWR06" (at 66.675 119.38 0)
+    (property "Reference" "#PWR023" (at 66.675 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 66.675 110.49 0)
@@ -6042,7 +6143,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -6051,7 +6152,7 @@
   (symbol (lib_id "power:+3.3V") (at 58.42 166.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a7272a49-9577-4191-b559-b0a7ab958708)
-    (property "Reference" "#PWR053" (at 58.42 170.18 0)
+    (property "Reference" "#PWR037" (at 58.42 170.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 61.595 165.735 0)
@@ -6067,7 +6168,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
     )
@@ -6076,7 +6177,7 @@
   (symbol (lib_id "Device:C") (at 269.24 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aaf1ac0f-f138-4a29-bd79-a04b3b43fb25)
-    (property "Reference" "C13" (at 273.05 74.93 0)
+    (property "Reference" "C12" (at 273.05 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 273.05 77.47 0)
@@ -6093,7 +6194,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C13") (unit 1)
+          (reference "C12") (unit 1)
         )
       )
     )
@@ -6102,7 +6203,7 @@
   (symbol (lib_id "power:GND") (at 241.3 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ab2ceb25-f6c5-4393-b121-b042506046d1)
-    (property "Reference" "#PWR014" (at 241.3 86.36 0)
+    (property "Reference" "#PWR017" (at 241.3 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 241.3 85.09 0)
@@ -6118,7 +6219,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -6127,7 +6228,7 @@
   (symbol (lib_id "power:+3.3V") (at 21.59 21.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ab854111-337f-4899-a2e7-2a3779b4a25f)
-    (property "Reference" "#PWR038" (at 21.59 25.4 0)
+    (property "Reference" "#PWR01" (at 21.59 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 21.59 16.51 0)
@@ -6143,7 +6244,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -6152,7 +6253,7 @@
   (symbol (lib_id "power:GND") (at 153.67 147.32 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad015434-3a85-4745-9c82-a782f12d4a85)
-    (property "Reference" "#PWR08" (at 147.32 147.32 0)
+    (property "Reference" "#PWR032" (at 147.32 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 149.86 147.32 90)
@@ -6168,7 +6269,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
     )
@@ -6177,7 +6278,7 @@
   (symbol (lib_id "power:+3.3V") (at 95.25 196.215 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b3a16f56-4b4e-4181-bb9c-9332e3028825)
-    (property "Reference" "#PWR015" (at 95.25 200.025 0)
+    (property "Reference" "#PWR048" (at 95.25 200.025 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 95.25 191.135 0)
@@ -6193,25 +6294,25 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Jumper:Jumper_2_Open") (at 97.155 24.13 0) (unit 1)
+  (symbol (lib_id "Jumper:Jumper_2_Open") (at 79.375 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b4446a96-7169-456f-b176-bdda450895ad)
-    (property "Reference" "USB_Power" (at 97.155 17.78 0)
+    (property "Reference" "USB_Power1" (at 79.375 17.78 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Jumper_2_Open" (at 97.155 20.32 0)
+    (property "Value" "Jumper_2_Open" (at 79.375 20.32 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 97.155 24.13 0)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 79.375 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 97.155 24.13 0)
+    (property "Datasheet" "~" (at 79.375 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e237a35a-2d5c-429f-9b75-8e246e6d03ab))
@@ -6219,7 +6320,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "USB_Power") (unit 1)
+          (reference "USB_Power1") (unit 1)
         )
       )
     )
@@ -6228,7 +6329,7 @@
   (symbol (lib_id "power:GND") (at 70.485 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b83e2293-16a2-42f5-8afd-86b9c7dfa53d)
-    (property "Reference" "#PWR07" (at 70.485 129.54 0)
+    (property "Reference" "#PWR025" (at 70.485 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 70.485 127 0)
@@ -6244,7 +6345,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -6253,7 +6354,7 @@
   (symbol (lib_id "Device:C") (at 179.07 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bb87ca8f-c1cd-4f59-82ea-0f0fefa129ea)
-    (property "Reference" "C6" (at 182.88 74.93 0)
+    (property "Reference" "C5" (at 182.88 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 182.88 77.47 0)
@@ -6270,7 +6371,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C6") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -6279,7 +6380,7 @@
   (symbol (lib_id "Device:R") (at 53.975 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bcdfb3df-3c26-4de1-9ab2-57a53f86da06)
-    (property "Reference" "R7" (at 56.515 241.935 0)
+    (property "Reference" "R23" (at 56.515 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 56.515 244.475 0)
@@ -6296,7 +6397,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R7") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -6305,7 +6406,7 @@
   (symbol (lib_id "Device:R") (at 61.595 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid beb812c4-018a-4937-9602-014946e0ab06)
-    (property "Reference" "R8" (at 64.135 241.935 0)
+    (property "Reference" "R24" (at 64.135 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 64.135 244.475 0)
@@ -6322,7 +6423,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R8") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -6331,7 +6432,7 @@
   (symbol (lib_id "Switch:SW_DIP_x06") (at 87.63 202.565 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bfe917b1-d35b-4bbb-9ba7-64ad10ebff40)
-    (property "Reference" "SW2" (at 87.63 193.675 0)
+    (property "Reference" "SW1" (at 87.63 193.675 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_DIP_x06" (at 87.63 191.135 0)
@@ -6358,7 +6459,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "SW2") (unit 1)
+          (reference "SW1") (unit 1)
         )
       )
     )
@@ -6367,7 +6468,7 @@
   (symbol (lib_id "Memory_Flash:W25Q128JVS") (at 64.135 138.43 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c17e82d6-d77e-4b4c-a9b1-31ded5edd4af)
-    (property "Reference" "U2" (at 73.025 137.16 0)
+    (property "Reference" "U3" (at 73.025 137.16 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "W25Q128JVS" (at 73.025 139.7 0)
@@ -6393,7 +6494,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "U2") (unit 1)
+          (reference "U3") (unit 1)
         )
       )
     )
@@ -6402,7 +6503,7 @@
   (symbol (lib_id "Device:C") (at 223.52 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c1e4acf0-50d2-4642-86f3-e7d1f41d32b2)
-    (property "Reference" "C9" (at 227.33 74.93 0)
+    (property "Reference" "C8" (at 227.33 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 227.33 77.47 0)
@@ -6419,7 +6520,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C9") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -6506,7 +6607,7 @@
           (reference "U1") (unit 1)
         )
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "U3") (unit 1)
+          (reference "U2") (unit 1)
         )
       )
     )
@@ -6538,22 +6639,22 @@
     )
   )
 
-  (symbol (lib_id "Device:C") (at 104.775 27.94 0) (mirror y) (unit 1)
+  (symbol (lib_id "Device:C") (at 86.995 27.94 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cd6a6046-822b-4452-b24f-ff334fcb7c76)
-    (property "Reference" "C19" (at 109.22 25.4 0)
+    (property "Reference" "C2" (at 91.44 25.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uf" (at 109.855 30.48 0)
+    (property "Value" "10uf" (at 92.075 30.48 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 103.8098 31.75 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 86.0298 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 104.775 27.94 0)
+    (property "Datasheet" "~" (at 86.995 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "JLCPCB" "C2972784" (at 104.775 27.94 0)
+    (property "JLCPCB" "C2972784" (at 86.995 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 7dcc91ad-dda2-4fac-88d2-0497cdd96281))
@@ -6561,7 +6662,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C19") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -6570,7 +6671,7 @@
   (symbol (lib_id "Device:Crystal_GND24") (at 165.1 147.32 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ce6000b6-a2d2-4961-b3cd-12eead351aa6)
-    (property "Reference" "Y3" (at 177.8 145.1041 90)
+    (property "Reference" "Y1" (at 177.8 145.1041 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "12MHz" (at 168.91 140.97 90)
@@ -6589,7 +6690,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "Y3") (unit 1)
+          (reference "Y1") (unit 1)
         )
       )
     )
@@ -6598,7 +6699,7 @@
   (symbol (lib_id "power:GND") (at 390.525 65.405 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d0827413-565b-4abd-8923-1dcc919a0ffc)
-    (property "Reference" "#PWR041" (at 396.875 65.405 0)
+    (property "Reference" "#PWR011" (at 396.875 65.405 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 394.335 65.405 0)
@@ -6614,32 +6715,32 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 125.73 31.75 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 107.95 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d3c2232f-385f-4842-a86d-63e65ca24719)
-    (property "Reference" "#PWR062" (at 125.73 38.1 0)
+    (property "Reference" "#PWR06" (at 107.95 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 125.73 36.83 0)
+    (property "Value" "GND" (at 107.95 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 125.73 31.75 0)
+    (property "Footprint" "" (at 107.95 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 125.73 31.75 0)
+    (property "Datasheet" "" (at 107.95 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e270e5f7-26e1-4c3b-80a4-615504a520e9))
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR062") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -6648,7 +6749,7 @@
   (symbol (lib_id "power:GND") (at 385.445 165.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d5359623-5d03-4096-9c0f-9165836af828)
-    (property "Reference" "#PWR055" (at 385.445 171.45 0)
+    (property "Reference" "#PWR036" (at 385.445 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 381.635 167.005 0)
@@ -6664,7 +6765,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -6673,7 +6774,7 @@
   (symbol (lib_id "power:GND") (at 65.405 247.015 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d737e514-875f-4c3e-9b15-047eb8d0ea13)
-    (property "Reference" "#PWR018" (at 65.405 253.365 0)
+    (property "Reference" "#PWR050" (at 65.405 253.365 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 65.405 250.825 0)
@@ -6689,7 +6790,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR050") (unit 1)
         )
       )
     )
@@ -6698,7 +6799,7 @@
   (symbol (lib_id "power:+3.3V") (at 389.255 106.045 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e16ec0a9-0afa-47de-a3f5-1c215ea9008e)
-    (property "Reference" "#PWR022" (at 389.255 109.855 0)
+    (property "Reference" "#PWR019" (at 389.255 109.855 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 389.255 100.965 0)
@@ -6714,25 +6815,25 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Device:R") (at 112.395 224.155 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 116.84 224.155 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e2509876-ff74-4961-a786-b759b708bdc6)
-    (property "Reference" "R18" (at 109.855 222.885 0)
+    (property "Reference" "R18" (at 114.3 222.885 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10K" (at 109.855 225.425 0)
+    (property "Value" "10K" (at 114.3 225.425 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 110.617 224.155 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 115.062 224.155 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 112.395 224.155 0)
+    (property "Datasheet" "~" (at 116.84 224.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid db0691a9-27dc-44f6-8074-2e6a472380b5))
@@ -6749,7 +6850,7 @@
   (symbol (lib_id "power:GND") (at 179.07 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e9ded8ed-2ad4-4a8e-9029-f9f95f1b9013)
-    (property "Reference" "#PWR010" (at 179.07 86.36 0)
+    (property "Reference" "#PWR016" (at 179.07 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 179.07 85.09 0)
@@ -6765,7 +6866,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -6774,7 +6875,7 @@
   (symbol (lib_id "power:GND") (at 29.845 133.35 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f1075731-7db9-48c6-b31b-e071590a4b77)
-    (property "Reference" "#PWR02" (at 29.845 139.7 0)
+    (property "Reference" "#PWR029" (at 29.845 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 29.845 138.43 0)
@@ -6790,7 +6891,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -6799,7 +6900,7 @@
   (symbol (lib_id "Device:R") (at 385.445 161.29 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f57f66f7-c413-411d-b9e7-54572c42f3df)
-    (property "Reference" "R30" (at 380.365 160.02 0)
+    (property "Reference" "R9" (at 380.365 160.02 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 380.365 161.925 0)
@@ -6816,7 +6917,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R30") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -6825,7 +6926,7 @@
   (symbol (lib_id "Device:R") (at 107.315 243.205 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f84d63b2-525a-49f5-9c8f-aec41f73f751)
-    (property "Reference" "R25" (at 109.855 241.935 0)
+    (property "Reference" "R30" (at 109.855 241.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 109.855 244.475 0)
@@ -6842,25 +6943,25 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R25") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Device:R") (at 74.295 224.155 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 78.74 224.155 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f85b7c04-cec8-4820-b7b5-651aaa709e2d)
-    (property "Reference" "R23" (at 71.755 222.885 0)
+    (property "Reference" "R13" (at 76.2 222.885 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10K" (at 71.755 225.425 0)
+    (property "Value" "10K" (at 76.2 225.425 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 72.517 224.155 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 76.962 224.155 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 74.295 224.155 0)
+    (property "Datasheet" "~" (at 78.74 224.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 78b0c20c-3a4c-4d9b-a05c-4ea1bbcc0321))
@@ -6868,32 +6969,32 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "R23") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 152.4 24.13 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 134.62 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fa928deb-b0ad-4a0a-b886-69fac78b792a)
-    (property "Reference" "#PWR061" (at 152.4 27.94 0)
+    (property "Reference" "#PWR03" (at 134.62 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 152.4 19.05 0)
+    (property "Value" "+3.3V" (at 134.62 19.05 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 152.4 24.13 0)
+    (property "Footprint" "" (at 134.62 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 152.4 24.13 0)
+    (property "Datasheet" "" (at 134.62 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b7b480d7-7645-4727-96d9-fce233548147))
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -6902,7 +7003,7 @@
   (symbol (lib_id "Device:C") (at 157.48 151.13 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe1e1944-0e28-49d4-b434-b1b12b925ba3)
-    (property "Reference" "C4" (at 160.02 149.86 90)
+    (property "Reference" "C17" (at 160.02 149.86 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "27pf" (at 161.29 152.4 90)
@@ -6919,7 +7020,7 @@
     (instances
       (project "wireless_Slave"
         (path "/0e0a1f86-1a9d-413b-96af-bc4dca868b1d/58bbf317-6f19-4695-b4b3-bbbe360cf741"
-          (reference "C4") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
     )
