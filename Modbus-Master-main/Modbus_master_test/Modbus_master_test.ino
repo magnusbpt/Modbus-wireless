@@ -1,5 +1,5 @@
 #include <math.h>
-#include <String.h>
+#include <string.h>
 #include <stdlib.h>
 
 // Modbus function code defines
@@ -54,13 +54,13 @@ void setup() {
 
   digitalWrite(42, LOW);    // Set pin 5 to standard high for pwr key to not activate
 
-  delay(1000);              // Start delay before siminit. To make sure sim module is properly turned of or on
+  delay(2000);              // Start delay before siminit. To make sure sim module is properly turned of or on
 
   siminit();                // Start siminit to turn on sim module and make sure communication works
 
   getIMEI();                // Read IMEI number
   
-  Sim_Connect();            // Connect to server and open socket
+  Sim_Connect();            // Connect to s erver and open socket
 
   clrsimBuffer();
 
@@ -76,8 +76,31 @@ void loop() {
 
   Sim_send(dataShort, lengthCounter);     // Send the input data of slave 1 to the sim module and read the respone
 
-  writecoils(2, 0, 1, relaySimToMod());   // Write relay output to slave 3 from sim module response
+  writecoils(2, 0, 1, relaySimToMod());   // Write relay output to slave 2 from sim module response
   clrmodBuffer();                         // Clear modbus buffer
+
+  // char testmsg[12] = {0x08, 0x60, 0x01, 0x60, 0x40, 0x63, 0x21, 0x48, 0x00, 0x00, 0xC7, 0xB8};
+
+  // Serial1.println(F("AT+CASEND=0,12"));                              // Need ln when writing to sim module
+  // simread();
+  // clrsimBuffer();
+
+  // Serial1.write(testmsg, 12);  // Send message to server
+  // simread();
+  // LED_status();
+  // clrsimBuffer();
+
+  // Serial1.println(F("AT+CAACK=0")); // Query Send Data Information
+  // simread();
+  // LED_status();
+  // clrsimBuffer();
+
+  // Serial1.println(F("AT+CARECV=0,50"));   // Read recieved message from server
+  // simread();
+  // LED_status();
+
+  // simReadData();    // Read message into array
+
 
   // writeTerminal();                        // Function to normal write to sim module
 }
@@ -192,7 +215,7 @@ void Sim_Connect() {                  // Connect to sim server and open UDP sock
   LED_status();
   clrsimBuffer();
 
-  Serial1.println(F("AT+CAOPEN=0,0,\"UDP\",\"207.154.251.171\",8080"));   // Open UDP connection/socket
+  Serial1.println(F("AT+CAOPEN=0,0,\"UDP\",\"164.92.164.168\",8080"));   // Open UDP connection/socket
   simread();
 
   LED_status();

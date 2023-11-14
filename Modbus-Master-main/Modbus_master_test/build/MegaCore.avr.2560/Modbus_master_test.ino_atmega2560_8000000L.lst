@@ -120,70 +120,70 @@ __trampolines_end():
 
 000001a0 <Sim_Connect()::__c>:
      1a0:	41 54 2b 43 41 4f 50 45 4e 3d 30 2c 30 2c 22 55     AT+CAOPEN=0,0,"U
-     1b0:	44 50 22 2c 22 32 30 37 2e 31 35 34 2e 32 35 31     DP","207.154.251
-     1c0:	2e 31 37 31 22 2c 38 30 38 30 00                    .171",8080.
+     1b0:	44 50 22 2c 22 31 36 34 2e 39 32 2e 31 36 34 2e     DP","164.92.164.
+     1c0:	31 36 38 22 2c 38 30 38 30 00                       168",8080.
 
-000001cb <Sim_Connect()::__c>:
-     1cb:	41 54 2b 43 4e 41 43 54 3f 00                       AT+CNACT?.
+000001ca <Sim_Connect()::__c>:
+     1ca:	41 54 2b 43 4e 41 43 54 3f 00                       AT+CNACT?.
 
-000001d5 <Sim_Connect()::__c>:
-     1d5:	41 54 2b 43 4e 41 43 54 3d 30 2c 31 00              AT+CNACT=0,1.
+000001d4 <Sim_Connect()::__c>:
+     1d4:	41 54 2b 43 4e 41 43 54 3d 30 2c 31 00              AT+CNACT=0,1.
 
-000001e2 <Sim_Connect()::__c>:
-     1e2:	41 54 2b 43 47 41 54 54 3f 00                       AT+CGATT?.
+000001e1 <Sim_Connect()::__c>:
+     1e1:	41 54 2b 43 47 41 54 54 3f 00                       AT+CGATT?.
 
-000001ec <Sim_Connect()::__c>:
-     1ec:	41 54 2b 43 47 4e 41 50 4e 00                       AT+CGNAPN.
+000001eb <Sim_Connect()::__c>:
+     1eb:	41 54 2b 43 47 4e 41 50 4e 00                       AT+CGNAPN.
 
-000001f6 <Sim_Connect()::__c>:
-     1f6:	41 54 2b 43 4f 50 53 3f 00                          AT+COPS?.
+000001f5 <Sim_Connect()::__c>:
+     1f5:	41 54 2b 43 4f 50 53 3f 00                          AT+COPS?.
 
-000001ff <Sim_Connect()::__c>:
-     1ff:	41 54 2b 43 46 55 4e 3d 31 00                       AT+CFUN=1.
+000001fe <Sim_Connect()::__c>:
+     1fe:	41 54 2b 43 46 55 4e 3d 31 00                       AT+CFUN=1.
 
-00000209 <Sim_Connect()::__c>:
-     209:	41 54 2b 43 47 44 43 4f 4e 54 3d 31 2c 22 49 50     AT+CGDCONT=1,"IP
-     219:	22 2c 22 69 6f 74 2e 31 6e 63 65 2e 6e 65 74 22     ","iot.1nce.net"
+00000208 <Sim_Connect()::__c>:
+     208:	41 54 2b 43 47 44 43 4f 4e 54 3d 31 2c 22 49 50     AT+CGDCONT=1,"IP
+     218:	22 2c 22 69 6f 74 2e 31 6e 63 65 2e 6e 65 74 22     ","iot.1nce.net"
 	...
 
-0000022a <Sim_Connect()::__c>:
-     22a:	41 54 2b 43 46 55 4e 3d 30 00                       AT+CFUN=0.
+00000229 <Sim_Connect()::__c>:
+     229:	41 54 2b 43 46 55 4e 3d 30 00                       AT+CFUN=0.
 
-00000234 <Sim_Connect()::__c>:
-     234:	41 54 2b 43 53 51 00                                AT+CSQ.
+00000233 <Sim_Connect()::__c>:
+     233:	41 54 2b 43 53 51 00                                AT+CSQ.
 
-0000023b <getIMEI()::__c>:
-     23b:	41 54 2b 47 53 4e 00                                AT+GSN.
+0000023a <getIMEI()::__c>:
+     23a:	41 54 2b 47 53 4e 00                                AT+GSN.
 
-00000242 <digital_pin_to_timer_PGM>:
-     242:	00 00 00 0a 0b 0c 00 00 00 00 00 0d 0e 0f 09 00     ................
-     252:	00 00 00 08 04 05 06 00 00 00 00 00 00 11 12 13     ................
+00000241 <digital_pin_to_timer_PGM>:
+     241:	00 00 00 0a 0b 0c 00 00 00 00 00 0d 0e 0f 09 00     ................
+     251:	00 00 00 08 04 05 06 00 00 00 00 00 00 11 12 13     ................
 	...
-     296:	00 03                                               ..
+     295:	00 03                                               ..
 
-00000298 <digital_pin_to_bit_mask_PGM>:
-     298:	01 02 04 08 10 20 40 80 01 02 04 08 10 20 40 01     ..... @...... @.
-     2a8:	02 04 08 10 20 40 80 80 08 10 01 02 04 08 10 20     .... @......... 
-     2b8:	40 80 01 02 04 08 10 20 40 80 01 02 01 02 04 08     @...... @.......
-     2c8:	10 20 40 80 01 02 04 08 10 20 40 04 80 40 20 10     . @...... @..@ .
-     2d8:	08 04 02 01 80 01 02 04 08 10 20 40 80 01 02 04     .......... @....
-     2e8:	08 10 20 40 80 20                                   .. @. 
+00000297 <digital_pin_to_bit_mask_PGM>:
+     297:	01 02 04 08 10 20 40 80 01 02 04 08 10 20 40 01     ..... @...... @.
+     2a7:	02 04 08 10 20 40 80 80 08 10 01 02 04 08 10 20     .... @......... 
+     2b7:	40 80 01 02 04 08 10 20 40 80 01 02 01 02 04 08     @...... @.......
+     2c7:	10 20 40 80 01 02 04 08 10 20 40 04 80 40 20 10     . @...... @..@ .
+     2d7:	08 04 02 01 80 01 02 04 08 10 20 40 80 01 02 04     .......... @....
+     2e7:	08 10 20 40 80 20                                   .. @. 
 
-000002ee <digital_pin_to_port_PGM>:
-     2ee:	05 05 05 05 05 05 05 05 08 08 08 08 08 08 08 02     ................
-     2fe:	02 02 02 02 02 02 02 08 07 07 0c 0c 0c 0c 0c 0c     ................
-     30e:	0c 0c 04 04 04 04 04 04 04 04 07 07 03 03 03 03     ................
-     31e:	03 03 03 03 0a 0a 0a 0a 0a 0a 0a 07 01 01 01 01     ................
-     32e:	01 01 01 01 0a 06 06 06 06 06 06 06 06 0b 0b 0b     ................
-     33e:	0b 0b 0b 0b 0b 07                                   ......
+000002ed <digital_pin_to_port_PGM>:
+     2ed:	05 05 05 05 05 05 05 05 08 08 08 08 08 08 08 02     ................
+     2fd:	02 02 02 02 02 02 02 08 07 07 0c 0c 0c 0c 0c 0c     ................
+     30d:	0c 0c 04 04 04 04 04 04 04 04 07 07 03 03 03 03     ................
+     31d:	03 03 03 03 0a 0a 0a 0a 0a 0a 0a 07 01 01 01 01     ................
+     32d:	01 01 01 01 0a 06 06 06 06 06 06 06 06 0b 0b 0b     ................
+     33d:	0b 0b 0b 0b 0b 07                                   ......
 
-00000344 <port_to_output_PGM>:
-     344:	00 00 22 00 25 00 28 00 2b 00 2e 00 31 00 34 00     ..".%.(.+...1.4.
-     354:	02 01 00 00 05 01 08 01 0b 01                       ..........
+00000343 <port_to_output_PGM>:
+     343:	00 00 22 00 25 00 28 00 2b 00 2e 00 31 00 34 00     ..".%.(.+...1.4.
+     353:	02 01 00 00 05 01 08 01 0b 01                       ..........
 
-0000035e <port_to_mode_PGM>:
-     35e:	00 00 21 00 24 00 27 00 2a 00 2d 00 30 00 33 00     ..!.$.'.*.-.0.3.
-     36e:	01 01 00 00 04 01 07 01 0a 01                       ..........
+0000035d <port_to_mode_PGM>:
+     35d:	00 00 21 00 24 00 27 00 2a 00 2d 00 30 00 33 00     ..!.$.'.*.-.0.3.
+     36d:	01 01 00 00 04 01 07 01 0a 01 00                    ...........
 
 00000378 <__ctors_start>:
 __ctors_start():
@@ -295,7 +295,7 @@ __vector_38():
 
 000003e4 <relaySimToMod()>:
 _Z13relaySimToModv():
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:701
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:724
   ADU[ADUsize++] = highByte(CRC);
 
   Serial2.write(ADU, ADUsize);
@@ -1167,7 +1167,7 @@ _Z7simreadv():
 
 00000b06 <getIMEI()>:
 _Z7getIMEIv():
-     b06:	6b e3       	ldi	r22, 0x3B	; 59
+     b06:	6a e3       	ldi	r22, 0x3A	; 58
      b08:	72 e0       	ldi	r23, 0x02	; 2
      b0a:	89 ee       	ldi	r24, 0xE9	; 233
      b0c:	94 e0       	ldi	r25, 0x04	; 4
@@ -1187,7 +1187,7 @@ _Z7getIMEIv():
 
 00000b2e <Sim_Connect()>:
 _Z11Sim_Connectv():
-     b2e:	64 e3       	ldi	r22, 0x34	; 52
+     b2e:	63 e3       	ldi	r22, 0x33	; 51
      b30:	72 e0       	ldi	r23, 0x02	; 2
      b32:	89 ee       	ldi	r24, 0xE9	; 233
      b34:	94 e0       	ldi	r25, 0x04	; 4
@@ -1195,7 +1195,7 @@ _Z11Sim_Connectv():
      b3a:	0e 94 5b 05 	call	0xab6	; 0xab6 <simread()>
      b3e:	0e 94 76 04 	call	0x8ec	; 0x8ec <LED_status()>
      b42:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <clrsimBuffer()>
-     b46:	6a e2       	ldi	r22, 0x2A	; 42
+     b46:	69 e2       	ldi	r22, 0x29	; 41
      b48:	72 e0       	ldi	r23, 0x02	; 2
      b4a:	89 ee       	ldi	r24, 0xE9	; 233
      b4c:	94 e0       	ldi	r25, 0x04	; 4
@@ -1203,7 +1203,7 @@ _Z11Sim_Connectv():
      b52:	0e 94 5b 05 	call	0xab6	; 0xab6 <simread()>
      b56:	0e 94 76 04 	call	0x8ec	; 0x8ec <LED_status()>
      b5a:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <clrsimBuffer()>
-     b5e:	69 e0       	ldi	r22, 0x09	; 9
+     b5e:	68 e0       	ldi	r22, 0x08	; 8
      b60:	72 e0       	ldi	r23, 0x02	; 2
      b62:	89 ee       	ldi	r24, 0xE9	; 233
      b64:	94 e0       	ldi	r25, 0x04	; 4
@@ -1211,7 +1211,7 @@ _Z11Sim_Connectv():
      b6a:	0e 94 5b 05 	call	0xab6	; 0xab6 <simread()>
      b6e:	0e 94 76 04 	call	0x8ec	; 0x8ec <LED_status()>
      b72:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <clrsimBuffer()>
-     b76:	6f ef       	ldi	r22, 0xFF	; 255
+     b76:	6e ef       	ldi	r22, 0xFE	; 254
      b78:	71 e0       	ldi	r23, 0x01	; 1
      b7a:	89 ee       	ldi	r24, 0xE9	; 233
      b7c:	94 e0       	ldi	r25, 0x04	; 4
@@ -1219,7 +1219,7 @@ _Z11Sim_Connectv():
      b82:	0e 94 5b 05 	call	0xab6	; 0xab6 <simread()>
      b86:	0e 94 76 04 	call	0x8ec	; 0x8ec <LED_status()>
      b8a:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <clrsimBuffer()>
-     b8e:	66 ef       	ldi	r22, 0xF6	; 246
+     b8e:	65 ef       	ldi	r22, 0xF5	; 245
      b90:	71 e0       	ldi	r23, 0x01	; 1
      b92:	89 ee       	ldi	r24, 0xE9	; 233
      b94:	94 e0       	ldi	r25, 0x04	; 4
@@ -1227,7 +1227,7 @@ _Z11Sim_Connectv():
      b9a:	0e 94 5b 05 	call	0xab6	; 0xab6 <simread()>
      b9e:	0e 94 76 04 	call	0x8ec	; 0x8ec <LED_status()>
      ba2:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <clrsimBuffer()>
-     ba6:	6c ee       	ldi	r22, 0xEC	; 236
+     ba6:	6b ee       	ldi	r22, 0xEB	; 235
      ba8:	71 e0       	ldi	r23, 0x01	; 1
      baa:	89 ee       	ldi	r24, 0xE9	; 233
      bac:	94 e0       	ldi	r25, 0x04	; 4
@@ -1235,7 +1235,7 @@ _Z11Sim_Connectv():
      bb2:	0e 94 5b 05 	call	0xab6	; 0xab6 <simread()>
      bb6:	0e 94 76 04 	call	0x8ec	; 0x8ec <LED_status()>
      bba:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <clrsimBuffer()>
-     bbe:	62 ee       	ldi	r22, 0xE2	; 226
+     bbe:	61 ee       	ldi	r22, 0xE1	; 225
      bc0:	71 e0       	ldi	r23, 0x01	; 1
      bc2:	89 ee       	ldi	r24, 0xE9	; 233
      bc4:	94 e0       	ldi	r25, 0x04	; 4
@@ -1243,7 +1243,7 @@ _Z11Sim_Connectv():
      bca:	0e 94 5b 05 	call	0xab6	; 0xab6 <simread()>
      bce:	0e 94 76 04 	call	0x8ec	; 0x8ec <LED_status()>
      bd2:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <clrsimBuffer()>
-     bd6:	65 ed       	ldi	r22, 0xD5	; 213
+     bd6:	64 ed       	ldi	r22, 0xD4	; 212
      bd8:	71 e0       	ldi	r23, 0x01	; 1
      bda:	89 ee       	ldi	r24, 0xE9	; 233
      bdc:	94 e0       	ldi	r25, 0x04	; 4
@@ -1251,7 +1251,7 @@ _Z11Sim_Connectv():
      be2:	0e 94 5b 05 	call	0xab6	; 0xab6 <simread()>
      be6:	0e 94 76 04 	call	0x8ec	; 0x8ec <LED_status()>
      bea:	0e 94 f3 02 	call	0x5e6	; 0x5e6 <clrsimBuffer()>
-     bee:	6b ec       	ldi	r22, 0xCB	; 203
+     bee:	6a ec       	ldi	r22, 0xCA	; 202
      bf0:	71 e0       	ldi	r23, 0x01	; 1
      bf2:	89 ee       	ldi	r24, 0xE9	; 233
      bf4:	94 e0       	ldi	r25, 0x04	; 4
@@ -1317,8 +1317,8 @@ setup():
      c84:	60 e0       	ldi	r22, 0x00	; 0
      c86:	8a e2       	ldi	r24, 0x2A	; 42
      c88:	0e 94 c2 0e 	call	0x1d84	; 0x1d84 <digitalWrite>
-     c8c:	68 ee       	ldi	r22, 0xE8	; 232
-     c8e:	73 e0       	ldi	r23, 0x03	; 3
+     c8c:	60 ed       	ldi	r22, 0xD0	; 208
+     c8e:	77 e0       	ldi	r23, 0x07	; 7
      c90:	80 e0       	ldi	r24, 0x00	; 0
      c92:	90 e0       	ldi	r25, 0x00	; 0
      c94:	0e 94 a0 0d 	call	0x1b40	; 0x1b40 <delay>
@@ -1745,7 +1745,7 @@ _Z20readholdingregistershss():
 
 0000101e <writecoils(unsigned char, short, short, unsigned char*)>:
 _Z10writecoilshssPh():
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:703
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:726
 
 void writecoils(byte slave, short adress, short qty, byte* out) { // Write multiple coils
     101e:	ef 92       	push	r14
@@ -1763,7 +1763,7 @@ void writecoils(byte slave, short adress, short qty, byte* out) { // Write multi
     1036:	0f be       	out	0x3f, r0	; 63
     1038:	cd bf       	out	0x3d, r28	; 61
     103a:	d9 01       	movw	r26, r18
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:709
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:732
 
   byte ADU[50];
   byte ADUsize = 0;
@@ -1771,23 +1771,23 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
 
   ADU[ADUsize++] = slave;
     103c:	89 83       	std	Y+1, r24	; 0x01
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:710
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:733
   ADU[ADUsize++] = 0x0F;
     103e:	8f e0       	ldi	r24, 0x0F	; 15
     1040:	8a 83       	std	Y+2, r24	; 0x02
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:711
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:734
   ADU[ADUsize++] = highByte(adress);
     1042:	7b 83       	std	Y+3, r23	; 0x03
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:712
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:735
   ADU[ADUsize++] = lowByte(adress);
     1044:	6c 83       	std	Y+4, r22	; 0x04
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:713
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:736
   ADU[ADUsize++] = highByte(qty);
     1046:	5d 83       	std	Y+5, r21	; 0x05
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:714
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:737
   ADU[ADUsize++] = lowByte(qty);
     1048:	4e 83       	std	Y+6, r20	; 0x06
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:715
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:738
   ADU[ADUsize++] = (qty / 8) + ((qty % 8) != 0);            // Calculate number of bytes pr. bit qty e.g 2 = 1 byte, 8 = 1 byte, 11 = 2 bytes.
     104a:	ca 01       	movw	r24, r20
     104c:	57 fd       	sbrc	r21, 7
@@ -1808,7 +1808,7 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     106a:	2f 83       	std	Y+7, r18	; 0x07
     106c:	bd 01       	movw	r22, r26
     106e:	37 e0       	ldi	r19, 0x07	; 7
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:717
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:740
 
   for (int i = 0; i < (qty / 8) + ((qty % 8) != 0); i++) {  // Put output array in bytes into the ADU
     1070:	08 0f       	add	r16, r24
@@ -1817,14 +1817,14 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     1076:	e3 2e       	mov	r14, r19
     1078:	f1 2c       	mov	r15, r1
     107a:	3f 5f       	subi	r19, 0xFF	; 255
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:717 (discriminator 3)
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:740 (discriminator 3)
     107c:	cb 01       	movw	r24, r22
     107e:	8a 1b       	sub	r24, r26
     1080:	9b 0b       	sbc	r25, r27
     1082:	80 17       	cp	r24, r16
     1084:	91 07       	cpc	r25, r17
     1086:	64 f4       	brge	.+24     	; 0x10a0 <writecoils(unsigned char, short, short, unsigned char*)+0x82>
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:718 (discriminator 2)
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:741 (discriminator 2)
     ADU[ADUsize++] = out[i];
     1088:	fb 01       	movw	r30, r22
     108a:	81 91       	ld	r24, Z+
@@ -1837,7 +1837,7 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     1098:	f5 1e       	adc	r15, r21
     109a:	f7 01       	movw	r30, r14
     109c:	80 83       	st	Z, r24
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:717 (discriminator 2)
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:740 (discriminator 2)
   ADU[ADUsize++] = lowByte(adress);
   ADU[ADUsize++] = highByte(qty);
   ADU[ADUsize++] = lowByte(qty);
@@ -1847,7 +1847,7 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     109e:	eb cf       	rjmp	.-42     	; 0x1076 <writecoils(unsigned char, short, short, unsigned char*)+0x58>
     10a0:	17 fd       	sbrc	r17, 7
     10a2:	00 e0       	ldi	r16, 0x00	; 0
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:721
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:744
     ADU[ADUsize++] = out[i];
   }
 
@@ -1856,7 +1856,7 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     10a6:	ce 01       	movw	r24, r28
     10a8:	01 96       	adiw	r24, 0x01	; 1
     10aa:	0e 94 38 04 	call	0x870	; 0x870 <CRC16_modbus(unsigned char*, int)>
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:722
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:745
   ADU[ADUsize++] = lowByte(CRC);
     10ae:	e1 e0       	ldi	r30, 0x01	; 1
     10b0:	f0 e0       	ldi	r31, 0x00	; 0
@@ -1865,7 +1865,7 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     10b6:	ee 0d       	add	r30, r14
     10b8:	ff 1d       	adc	r31, r15
     10ba:	80 83       	st	Z, r24
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:723
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:746
   ADU[ADUsize++] = highByte(CRC);
     10bc:	e8 e0       	ldi	r30, 0x08	; 8
     10be:	e0 0f       	add	r30, r16
@@ -1878,7 +1878,7 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     10cc:	f9 01       	movw	r30, r18
     10ce:	90 83       	st	Z, r25
     10d0:	07 5f       	subi	r16, 0xF7	; 247
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:725
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:748
 
   Serial2.write(ADU, ADUsize);
     10d2:	40 2f       	mov	r20, r16
@@ -1889,11 +1889,11 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     10dc:	86 e8       	ldi	r24, 0x86	; 134
     10de:	95 e0       	ldi	r25, 0x05	; 5
     10e0:	0e 94 c4 0b 	call	0x1788	; 0x1788 <Print::write(unsigned char const*, unsigned int)>
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:727
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:750
 
   modbusread();
     10e4:	0e 94 aa 07 	call	0xf54	; 0xf54 <modbusread()>
-C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:728
+C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:751
 }
     10e8:	e2 96       	adiw	r28, 0x32	; 50
     10ea:	0f b6       	in	r0, 0x3f	; 63
@@ -1947,7 +1947,7 @@ C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_
     113c:	0e 94 54 06 	call	0xca8	; 0xca8 <Sim_send(short*, int)>
 C:\Users\mbt\Documents\GitHub\GSM-Cloud-Modbus-Master\Modbus_master_test/Modbus_master_test.ino:79
 
-  writecoils(2, 0, 1, relaySimToMod());   // Write relay output to slave 3 from sim module response
+  writecoils(2, 0, 1, relaySimToMod());   // Write relay output to slave 2 from sim module response
     1140:	0e 94 f2 01 	call	0x3e4	; 0x3e4 <relaySimToMod()>
     1144:	9c 01       	movw	r18, r24
     1146:	41 e0       	ldi	r20, 0x01	; 1
@@ -4400,12 +4400,12 @@ C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\
   uint8_t bit = digitalPinToBitMask(pin);
     1d10:	90 e0       	ldi	r25, 0x00	; 0
     1d12:	fc 01       	movw	r30, r24
-    1d14:	e8 56       	subi	r30, 0x68	; 104
+    1d14:	e9 56       	subi	r30, 0x69	; 105
     1d16:	fd 4f       	sbci	r31, 0xFD	; 253
     1d18:	24 91       	lpm	r18, Z
 C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\MCUdude_corefiles/wiring_digital.c:32
   uint8_t port = digitalPinToPort(pin);
-    1d1a:	82 51       	subi	r24, 0x12	; 18
+    1d1a:	83 51       	subi	r24, 0x13	; 19
     1d1c:	9d 4f       	sbci	r25, 0xFD	; 253
     1d1e:	fc 01       	movw	r30, r24
     1d20:	84 91       	lpm	r24, Z
@@ -4423,14 +4423,14 @@ C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\
     1d28:	88 0f       	add	r24, r24
     1d2a:	99 1f       	adc	r25, r25
     1d2c:	fc 01       	movw	r30, r24
-    1d2e:	e2 5a       	subi	r30, 0xA2	; 162
+    1d2e:	e3 5a       	subi	r30, 0xA3	; 163
     1d30:	fc 4f       	sbci	r31, 0xFC	; 252
     1d32:	a5 91       	lpm	r26, Z+
     1d34:	b4 91       	lpm	r27, Z
 C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\MCUdude_corefiles/wiring_digital.c:39
   out = portOutputRegister(port);
     1d36:	fc 01       	movw	r30, r24
-    1d38:	ec 5b       	subi	r30, 0xBC	; 188
+    1d38:	ed 5b       	subi	r30, 0xBD	; 189
     1d3a:	fc 4f       	sbci	r31, 0xFC	; 252
     1d3c:	c5 91       	lpm	r28, Z+
     1d3e:	d4 91       	lpm	r29, Z
@@ -4538,19 +4538,19 @@ C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\
     1d8a:	28 2f       	mov	r18, r24
     1d8c:	30 e0       	ldi	r19, 0x00	; 0
     1d8e:	f9 01       	movw	r30, r18
-    1d90:	ee 5b       	subi	r30, 0xBE	; 190
+    1d90:	ef 5b       	subi	r30, 0xBF	; 191
     1d92:	fd 4f       	sbci	r31, 0xFD	; 253
     1d94:	84 91       	lpm	r24, Z
 C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\MCUdude_corefiles/wiring_digital.c:190
   uint8_t bit = digitalPinToBitMask(pin);
     1d96:	f9 01       	movw	r30, r18
-    1d98:	e8 56       	subi	r30, 0x68	; 104
+    1d98:	e9 56       	subi	r30, 0x69	; 105
     1d9a:	fd 4f       	sbci	r31, 0xFD	; 253
     1d9c:	d4 91       	lpm	r29, Z
 C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\MCUdude_corefiles/wiring_digital.c:191
   uint8_t port = digitalPinToPort(pin);
     1d9e:	f9 01       	movw	r30, r18
-    1da0:	e2 51       	subi	r30, 0x12	; 18
+    1da0:	e3 51       	subi	r30, 0x13	; 19
     1da2:	fd 4f       	sbci	r31, 0xFD	; 253
     1da4:	c4 91       	lpm	r28, Z
 C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\MCUdude_corefiles/wiring_digital.c:194
@@ -4575,7 +4575,7 @@ C:\Users\mbt\AppData\Local\Arduino15\packages\MegaCore\hardware\avr\2.2.3\cores\
     1db4:	f0 e0       	ldi	r31, 0x00	; 0
     1db6:	ee 0f       	add	r30, r30
     1db8:	ff 1f       	adc	r31, r31
-    1dba:	ec 5b       	subi	r30, 0xBC	; 188
+    1dba:	ed 5b       	subi	r30, 0xBD	; 189
     1dbc:	fc 4f       	sbci	r31, 0xFC	; 252
     1dbe:	a5 91       	lpm	r26, Z+
     1dc0:	b4 91       	lpm	r27, Z
