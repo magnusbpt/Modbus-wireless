@@ -28,18 +28,17 @@ char IMEI[20];               // Array to store IMEI number
 char CSQ[3];                 // Til at hente NB signalvaerdi.
 char IDarray[60];
 
-int i = 0;
-
 bool slaveSetupCheck = 0;
 byte transactionID = 0;
 int state = 0;
 int ADCValue = 0;
 float voltage = 0;
 int msgLength = 0;
+unsigned int loraLenght = 0;
 
 /***************Define functions***************/
 void loraRead();
-void millisDelay(int delayTime);
+void millisDelay(unsigned int delayTime);
 void simSetup();
 void simpow();
 bool OKcomcheck(int dly);
@@ -51,6 +50,7 @@ void serverRead();
 void sendToServer();
 void loraSlaveRead();
 bool powerStatus();
+uint16_t CRC16 (char *nData, uint16_t wLength);
 
 void setup()
 {
@@ -59,6 +59,7 @@ void setup()
   CLKPR = 0;           // Change clock division factor to 1.
 
   Serial.begin(9600);
+  simSerial.begin(9600);
   loraSerial.begin(9600);
 
   pinMode(DTR_E, OUTPUT);
@@ -72,7 +73,6 @@ void setup()
   digitalWrite(RED_LED, HIGH);
   digitalWrite(GREEN_LED, HIGH);
   digitalWrite(PWRKEY, HIGH);
-  digitalWrite(DTR_E, LOW);
 
   millisDelay(3000);
 
@@ -84,7 +84,7 @@ void setup()
   short model = 0x0001;      // Model nr.
   short firmware = 0x0001;   // Firmware nr.
 
-  for (int i = 0; i < strlen(IMEI); i++)
+  for (unsigned int i = 0; i < strlen(IMEI); i++)
   { // Put IMEI into message
     modelAndFirmware[i] = IMEI[i];
   }
@@ -115,51 +115,35 @@ void setup()
   clrsimBuffer();
 
   /**********Ask for slave setup on startup********/
-  char msg[15]; // Create message array
+  // char msg[15]; // Create message array
 
-  for (int i = 0; i < strlen(IMEI); i++)
-  { // Add IMEI to message
-    msg[i] = IMEI[i];
-  }
+  // for (int i = 0; i < strlen(IMEI); i++)
+  // { // Add IMEI to message
+  //   msg[i] = IMEI[i];
+  // }
 
-  msg[8] = transactionID++; // Add transactionID
+  // msg[8] = transactionID++; // Add transactionID
 
-  msg[9] = 0x03; // Add command 03
+  // msg[9] = 0x03; // Add command 03
 
-  msg[10] = highByte(CRC16_modbus(msg, 10)); // Add CRC
-  msg[11] = lowByte(CRC16_modbus(msg, 10));
+  // msg[10] = highByte(CRC16_modbus(msg, 10)); // Add CRC
+  // msg[11] = lowByte(CRC16_modbus(msg, 10));
 
-  simSerial.println(F("AT+CASEND=0,12")); // Write to send message 12 bytes long
-  millisDelay(500);
-  clrsimBuffer();
+  // simSerial.println(F("AT+CASEND=0,12")); // Write to send message 12 bytes long
+  // millisDelay(500);
+  // clrsimBuffer();
 
-  simSerial.write(msg, sizeof(msg)); // Send message
-  responseCheck("OK", 2000);
-  clrsimBuffer();
+  // simSerial.write(msg, sizeof(msg)); // Send message
+  // responseCheck("OK", 2000);
+  // clrsimBuffer();
 
-  simSerial.println(F("AT+CARECV=0,1460")); // Read recieved message from server
+  // simSerial.println(F("AT+CARECV=0,1460")); // Read recieved message from server
 
-  serverRead(); // Read message from server into simBuffer
+  // serverRead(); // Read message from server into simBuffer
 
   // for (int i = 0; i < strlen(simBuffer); i++) {
   //   setupMessage[i] = simBuffer[i];
   // }
-
-  loraSerial.println(F("AT+MODE=TEST"));
-  loraRead();
-  memset(loraBuffer, 0, sizeof loraBuffer);
-
-  millisDelay(100);
-
-  loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
-  loraRead();
-  memset(loraBuffer, 0, sizeof loraBuffer);
-
-  millisDelay(100);
-
-  loraSerial.println(F("AT+TEST=RXLRPKT"));
-  loraRead();
-  memset(loraBuffer, 0, sizeof loraBuffer);
 }
 
 void loop()
@@ -168,6 +152,7 @@ void loop()
   switch (state)
   {
   case slaveread:
+
     loraSlaveRead();
     break;
 
@@ -186,6 +171,9 @@ void loop()
     simSerial.println(F("AT+CAOPEN=0,0,\"UDP\",\"164.92.164.168\",8080")); // Open UDP connection/socket
     responseCheck("OK", 2000);
     clrsimBuffer();
+
+    state = slaveread;
+
     break;
 
   case slavewrite:
@@ -195,7 +183,7 @@ void loop()
 
     char masterData[20]; // Create message array
 
-    for (int i = 0; i < strlen(IMEI); i++)
+    for (unsigned int i = 0; i < strlen(IMEI); i++)
     { // Add IMEI
       masterData[i] = IMEI[i];
     }
@@ -234,48 +222,106 @@ void loop()
 
 void loraSlaveRead()
 {
+  loraSerial.println(F("AT+MODE=TEST"));
+  loraRead();
+  memset(loraBuffer, 0, sizeof loraBuffer);
+
+  millisDelay(100);
+
+  loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
+  loraRead();
+  memset(loraBuffer, 0, sizeof loraBuffer);
+
+  millisDelay(100);
+
+  loraSerial.println(F("AT+TEST=RXLRPKT"));
+  loraRead();
+  memset(loraBuffer, 0, sizeof loraBuffer);
+
+  digitalWrite(BLUE_LED, LOW);
+
   while (!loraSerial.available())
   {
-    if (powerStatus() == 0)
-    { // If power is still on
-      state = poweroff;
-      break;
-    }
   }
+  delay(100);
+  digitalWrite(BLUE_LED, HIGH);
 
   loraRead();
 
-  for (int i = 0; i < strlen(loraBuffer) - 45; i++)
+  unsigned int bufferLen = strlen(loraBuffer) / 2;
+
+  for (unsigned int i = 0; i < bufferLen; i++)
   {
-    messageBuffer[i] = loraBuffer[46 + i];
+    if (loraBuffer[i * 2] < 0x3A)
+    {
+      messageBuffer[i] = (loraBuffer[i * 2] - 48) << 4;
+    }
+    else
+    {
+      messageBuffer[i] = (loraBuffer[i * 2] - 55) << 4;
+    }
+
+    if (loraBuffer[(i * 2) + 1] < 0x3A)
+    {
+      messageBuffer[i] = messageBuffer[i] | (loraBuffer[(i * 2) + 1] - 48);
+    }
+    else
+    {
+      messageBuffer[i] = messageBuffer[i] | (loraBuffer[(i * 2) + 1] - 55);
+    }
   }
 
-  unsigned short CRCcheck = messageBuffer[strlen(messageBuffer) - 2] << 8 | messageBuffer[strlen(messageBuffer) - 1];
+  unsigned short CRCcheck = (messageBuffer[bufferLen - 2] << 8) | messageBuffer[bufferLen - 1];
 
-  messageBuffer[strlen(messageBuffer) - 2] = lowByte(CRCcheck);
-  messageBuffer[strlen(messageBuffer) - 1] = highByte(CRCcheck);
+  messageBuffer[bufferLen - 2] = lowByte(CRCcheck);
+  messageBuffer[bufferLen - 1] = highByte(CRCcheck);
 
-  if (CRC16_modbus(messageBuffer, strlen(messageBuffer)) == 0)
-  {
-    loraSerial.println(F("AT+MODE=TEST"));
-    loraRead();
-    memset(loraBuffer, 0, sizeof loraBuffer);
+  unsigned short CRC = CRC16_modbus(messageBuffer, strlen(messageBuffer) - 2);
+ 
+  messageBuffer[bufferLen] = highByte(CRC);
+  messageBuffer[bufferLen + 1] = lowByte(~CRC);
+ 
 
-    millisDelay(100);
+  simSerial.println("AT+CASEND=0,9"); // Need ln when writing to sim module
 
-    char loraTX[50] = "AT+TEST=TXLRPKT,\"";
+  millisDelay(300);
 
-    char returnID = messageBuffer[0];
+  simSerial.write(messageBuffer, 9); // Send message to server
 
-    strcat(loraTX, (const char *)returnID);
-    strcat(loraTX, "\"");
+  millisDelay(300);
 
-    loraSerial.println(loraTX);
-    loraRead();
-    memset(loraBuffer, 0, sizeof loraBuffer);
+  simSerial.println(F("AT+CARECV=0,1460")); // Read recieved message from server
+  serverRead();                             // Read server message
+  clrsimBuffer();
 
-    state = serversend; // Change state to send message to server
-  }
+  memset(messageBuffer, 0, sizeof messageBuffer);
+  memset(loraBuffer, 0, sizeof loraBuffer);
+
+  
+
+  // if (CRC == CRCcheck)
+  // {
+  //   loraSerial.println(F("AT+MODE=TEST"));
+  //   loraRead();
+  //   memset(loraBuffer, 0, sizeof loraBuffer);
+
+  //   millisDelay(1000);
+
+  //   char loraTX[50] = "AT+TEST=TXLRPKT,\"";
+
+  //   char returnID[1];
+  //   returnID[0] = messageBuffer[0];
+
+  //   strcat(loraTX, returnID);
+  //   strcat(loraTX, "\"\r\n");
+
+  //   loraSerial.write(loraTX, strlen(loraTX));
+  //   millisDelay(800);
+  //   loraRead();
+  //   memset(loraBuffer, 0, sizeof loraBuffer);
+
+  //   state = serversend; // Change state to send message to server
+  // }
 }
 
 void sendToServer()
@@ -283,10 +329,12 @@ void sendToServer()
   char serverMessage[500];
   int msgPos = 12;
 
-  if (strlen(messageBuffer) > 4)
+  int len = strlen(messageBuffer);
+
+  if (len > 4)
   {
 
-    for (int i = 0; i < strlen(IMEI); i++)
+    for (unsigned int i = 0; i < strlen(IMEI); i++)
     { // Put IMEI into message
       serverMessage[i] = IMEI[i];
     }
@@ -295,10 +343,10 @@ void sendToServer()
 
     serverMessage[9] = 0x01; // Add command 04
 
-    serverMessage[10] = 0x00;                            // Add command 04
-    serverMessage[11] = (strlen(messageBuffer) - 3) / 4; // Add length of message
+    serverMessage[10] = 0x00;
+    serverMessage[11] = (len - 3) / 4; // Add length of message
 
-    for (int i = 0; i < strlen(messageBuffer); i++)
+    for (unsigned int i = 0; i < len - 2; i++)
     { // Add message
       serverMessage[msgPos++] = messageBuffer[i];
     }
@@ -311,7 +359,7 @@ void sendToServer()
   }
   else
   {
-    for (int i = 0; i < strlen(IMEI); i++)
+    for (unsigned int i = 0; i < strlen(IMEI); i++)
     { // Put IMEI into message
       serverMessage[i] = IMEI[i];
     }
@@ -372,9 +420,16 @@ void simSetup()
       simpow();
     }
   }
-  stop = 1; // Set stop for next siminit call
+  start = 0; // Start bit used in simSetup
+  stop = 1;  // Set stop for next siminit call
 
   clrsimBuffer(); // Clear sim response buffer
+
+  clrsimBuffer(); // Clear sim response buffer
+
+  simSerial.println(F("AT+CPIN?")); // Check SIM card status
+  responseCheck("READY", 2000);
+  clrsimBuffer();
 
   simSerial.println(F("AT+GSN")); // Sent at command to get IMEI number
   responseCheck("OK", 2000);
@@ -464,20 +519,35 @@ bool powerStatus()
 void loraRead()
 { // Read response after sending AT command
 
-  millisDelay(100); // Wait for sim module to respons correctly
-  i = 0;
+  char tempBuffer[500];
+
+  millisDelay(200); // Wait for sim module to respons correctly
+  int i = 0;
+  int j = 0;
 
   while (loraSerial.available())
   { // While data incomming: Read into buffer
-    loraBuffer[i] = loraSerial.read();
+    tempBuffer[i] = loraSerial.read();
     i++;
+    if (strstr(tempBuffer, "RX ") > 0)
+    {
+      tempBuffer[i] = loraSerial.read();
+      while (loraSerial.available())
+      {
+        loraBuffer[j] = loraSerial.read();
+        if (strstr(loraBuffer, "\""))
+        {
+          loraBuffer[j] = '\0';
+          break;
+        }
+        j++;
+      }
+      memset(tempBuffer, 0, sizeof tempBuffer);
+    }
   }
-
-  Serial.write((char *)loraBuffer); // Write to terminal
-  Serial.println();
 }
 
-void millisDelay(int delayTime)
+void millisDelay(unsigned int delayTime)
 {
 
   unsigned long time_now = millis();
@@ -548,26 +618,26 @@ int responseCheck(char *c, unsigned int timeout)
     {
       check = 1;
       msg = 1;
-      digitalWrite(GREEN_LED, HIGH);
-      millisDelay(125);
       digitalWrite(GREEN_LED, LOW);
       millisDelay(125);
       digitalWrite(GREEN_LED, HIGH);
       millisDelay(125);
       digitalWrite(GREEN_LED, LOW);
+      millisDelay(125);
+      digitalWrite(GREEN_LED, HIGH);
       millisDelay(125);
     }
     else if (strstr((char *)simBuffer, "ERROR") > 0)
     {
       check = 2;
       msg = 1;
-      digitalWrite(RED_LED, HIGH);
-      millisDelay(125);
       digitalWrite(RED_LED, LOW);
       millisDelay(125);
       digitalWrite(RED_LED, HIGH);
       millisDelay(125);
       digitalWrite(RED_LED, LOW);
+      millisDelay(125);
+      digitalWrite(RED_LED, HIGH);
       millisDelay(125);
     }
 
@@ -577,13 +647,13 @@ int responseCheck(char *c, unsigned int timeout)
     {
       check = 0;
       msg = 1;
-      digitalWrite(BLUE_LED, HIGH);
-      millisDelay(125);
       digitalWrite(BLUE_LED, LOW);
       millisDelay(125);
       digitalWrite(BLUE_LED, HIGH);
       millisDelay(125);
       digitalWrite(BLUE_LED, LOW);
+      millisDelay(125);
+      digitalWrite(BLUE_LED, HIGH);
       millisDelay(125);
     }
     clrsimBuffer(); // Clear simBuffer
@@ -627,6 +697,55 @@ unsigned short CRC16_modbus(char *buf, int len)
   }
 
   return crc;
+}
+
+uint16_t CRC16 (char *nData, uint16_t wLength)
+{
+static const uint16_t wCRCTable[] = {
+0X0000, 0XC0C1, 0XC181, 0X0140, 0XC301, 0X03C0, 0X0280, 0XC241,
+0XC601, 0X06C0, 0X0780, 0XC741, 0X0500, 0XC5C1, 0XC481, 0X0440,
+0XCC01, 0X0CC0, 0X0D80, 0XCD41, 0X0F00, 0XCFC1, 0XCE81, 0X0E40,
+0X0A00, 0XCAC1, 0XCB81, 0X0B40, 0XC901, 0X09C0, 0X0880, 0XC841,
+0XD801, 0X18C0, 0X1980, 0XD941, 0X1B00, 0XDBC1, 0XDA81, 0X1A40,
+0X1E00, 0XDEC1, 0XDF81, 0X1F40, 0XDD01, 0X1DC0, 0X1C80, 0XDC41,
+0X1400, 0XD4C1, 0XD581, 0X1540, 0XD701, 0X17C0, 0X1680, 0XD641,
+0XD201, 0X12C0, 0X1380, 0XD341, 0X1100, 0XD1C1, 0XD081, 0X1040,
+0XF001, 0X30C0, 0X3180, 0XF141, 0X3300, 0XF3C1, 0XF281, 0X3240,
+0X3600, 0XF6C1, 0XF781, 0X3740, 0XF501, 0X35C0, 0X3480, 0XF441,
+0X3C00, 0XFCC1, 0XFD81, 0X3D40, 0XFF01, 0X3FC0, 0X3E80, 0XFE41,
+0XFA01, 0X3AC0, 0X3B80, 0XFB41, 0X3900, 0XF9C1, 0XF881, 0X3840,
+0X2800, 0XE8C1, 0XE981, 0X2940, 0XEB01, 0X2BC0, 0X2A80, 0XEA41,
+0XEE01, 0X2EC0, 0X2F80, 0XEF41, 0X2D00, 0XEDC1, 0XEC81, 0X2C40,
+0XE401, 0X24C0, 0X2580, 0XE541, 0X2700, 0XE7C1, 0XE681, 0X2640,
+0X2200, 0XE2C1, 0XE381, 0X2340, 0XE101, 0X21C0, 0X2080, 0XE041,
+0XA001, 0X60C0, 0X6180, 0XA141, 0X6300, 0XA3C1, 0XA281, 0X6240,
+0X6600, 0XA6C1, 0XA781, 0X6740, 0XA501, 0X65C0, 0X6480, 0XA441,
+0X6C00, 0XACC1, 0XAD81, 0X6D40, 0XAF01, 0X6FC0, 0X6E80, 0XAE41,
+0XAA01, 0X6AC0, 0X6B80, 0XAB41, 0X6900, 0XA9C1, 0XA881, 0X6840,
+0X7800, 0XB8C1, 0XB981, 0X7940, 0XBB01, 0X7BC0, 0X7A80, 0XBA41,
+0XBE01, 0X7EC0, 0X7F80, 0XBF41, 0X7D00, 0XBDC1, 0XBC81, 0X7C40,
+0XB401, 0X74C0, 0X7580, 0XB541, 0X7700, 0XB7C1, 0XB681, 0X7640,
+0X7200, 0XB2C1, 0XB381, 0X7340, 0XB101, 0X71C0, 0X7080, 0XB041,
+0X5000, 0X90C1, 0X9181, 0X5140, 0X9301, 0X53C0, 0X5280, 0X9241,
+0X9601, 0X56C0, 0X5780, 0X9741, 0X5500, 0X95C1, 0X9481, 0X5440,
+0X9C01, 0X5CC0, 0X5D80, 0X9D41, 0X5F00, 0X9FC1, 0X9E81, 0X5E40,
+0X5A00, 0X9AC1, 0X9B81, 0X5B40, 0X9901, 0X59C0, 0X5880, 0X9841,
+0X8801, 0X48C0, 0X4980, 0X8941, 0X4B00, 0X8BC1, 0X8A81, 0X4A40,
+0X4E00, 0X8EC1, 0X8F81, 0X4F40, 0X8D01, 0X4DC0, 0X4C80, 0X8C41,
+0X4400, 0X84C1, 0X8581, 0X4540, 0X8701, 0X47C0, 0X4680, 0X8641,
+0X8201, 0X42C0, 0X4380, 0X8341, 0X4100, 0X81C1, 0X8081, 0X4040 };
+
+int8_t nTemp;
+uint16_t wCRCWord = 0xFFFF;
+
+   while (wLength--)
+   {
+      nTemp = *nData++ ^ wCRCWord;
+      wCRCWord >>= 8;
+      wCRCWord ^= wCRCTable[nTemp];
+   }
+   return wCRCWord;
+
 }
 
 void serverRead()
