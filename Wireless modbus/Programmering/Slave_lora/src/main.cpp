@@ -83,6 +83,7 @@ void readSensor();
 unsigned long minutes();
 int powOf(int, int);
 unsigned short CRC16_modbus(char *, int);
+void loraFlush();
 
 void setup()
 {
@@ -107,7 +108,7 @@ void setup()
 
   msgFlag = true;
 
-  loraSerial.println(F("AT+LOWPOWER"));
+  loraSerial.println("AT+LOWPOWER");
   loraRead();
   memset(readBuffer, 0, sizeof readBuffer);
 }
@@ -153,7 +154,7 @@ void loop()
     }
   }
 
-  if (minutes() - time_old > interval || msgFlag)
+  if ((minutes() - time_old > interval) || msgFlag)
   {
     msgFlag = false;
     time_old = minutes();
@@ -207,36 +208,59 @@ void loop()
     messageBuffer[messageHead++] = highByte(CRC);
     messageBuffer[messageHead++] = lowByte(CRC);
 
-    char loraTX[50] = "AT+TEST=TXLRPKT,\"";
+    char loraTX[50] = "AT+TEST=TXLRPKT, \"";
 
-    loraSerial.println(F("ON"));
+    loraSerial.println("ON");
 
     millisDelay(100);
 
-    loraSerial.println(F("AT+MODE=TEST"));
+    loraSerial.println("AT+MODE=TEST");
+    loraFlush();
+
+    millisDelay(100);
+
+    loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF");
+    loraFlush();
+
+    millisDelay(100);
+
+    /**********Test***********/
+
+    ID = 0x01;
+
+    char message1[50] = {0x01, 0x00, 0x00, 0x00, 0xFF, 0x80, 0x59};
+
+    /************************/
+    char temp1[1];
+    char temp2 = 0;
+
+    for(int i = 0; i < 7; i++)
+    {
+      temp2 = message1[i] >> 4;
+      sprintf(temp1, "%X", temp2);
+      loraTX[(i*2) + 18] = temp1[0];
+
+      temp2 = message1[i] & 0x0F;
+      sprintf(temp1, "%X", temp2);
+      loraTX[(i*2) + 19] = temp1[0];
+    }
+
+    memset(messageBuffer, 0, sizeof messageBuffer);
+
+    strcat(loraTX, "\"\r\n");
+
+    loraSerial.write(loraTX, strlen(loraTX));
+    millisDelay(800);
     loraRead();
     memset(readBuffer, 0, sizeof readBuffer);
 
     millisDelay(100);
 
-    loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
+    loraSerial.println("AT+TEST=RXLRPKT");
     loraRead();
     memset(readBuffer, 0, sizeof readBuffer);
 
     millisDelay(100);
-
-    strcat(loraTX, messageBuffer);
-    strcat(loraTX, "\"");
-
-    loraSerial.println(F(loraTX));
-    loraRead();
-    memset(readBuffer, 0, sizeof readBuffer);
-
-    millisDelay(100);
-
-    loraSerial.println(F("AT+TEST=RXLRPKT"));
-    loraRead();
-    memset(readBuffer, 0, sizeof readBuffer);
 
     bool flag = false;
     bool flag2 = false;
@@ -247,6 +271,7 @@ void loop()
       {
         if (millis() - time_now > 10000)
         {
+          Serial.println("No message received");
           flag2 = true;
           break;
         }
@@ -254,19 +279,14 @@ void loop()
 
       if (flag2)
       {
-        loraSerial.println(F("AT+MODE=TEST"));
+        loraSerial.write(loraTX, strlen(loraTX));
+        millisDelay(800);
         loraRead();
         memset(readBuffer, 0, sizeof readBuffer);
 
-        millisDelay(100);
+        millisDelay(200);
 
-        loraSerial.println(F(loraTX));
-        loraRead();
-        memset(readBuffer, 0, sizeof readBuffer);
-
-        millisDelay(100);
-
-        loraSerial.println(F("AT+TEST=RXLRPKT"));
+        loraSerial.println("AT+TEST=RXLRPKT");
         loraRead();
         memset(readBuffer, 0, sizeof readBuffer);
 
@@ -277,6 +297,7 @@ void loop()
         loraRead();
         if (strchr(readBuffer, ID) > 0)
         {
+          Serial.println("Message received");
           flag = true;
         }
       }
@@ -284,9 +305,9 @@ void loop()
       memset(readBuffer, 0, sizeof readBuffer);
     }
 
+
     loraSerial.println(F("AT+LOWPOWER"));
-    loraRead();
-    memset(readBuffer, 0, sizeof readBuffer);
+    loraFlush();
 
     messageHead = 1;
   }
@@ -296,7 +317,7 @@ void loop()
 void loraRead()
 { // Read response after sending AT command
 
-  millisDelay(100); // Wait for sim module to respons correctly
+  millisDelay(200); // Wait for sim module to respons correctly
   i = 0;
 
   while (loraSerial.available())
@@ -305,6 +326,20 @@ void loraRead()
     i++;
   }
   Serial.println(readBuffer); // Write to terminal
+}
+
+void loraFlush()
+{ // Read response after sending AT command
+
+  millisDelay(100); // Wait for sim module to respons correctly
+  i = 0;
+  char t = 0;
+
+  while (loraSerial.available())
+  { // While data incomming: Read into buffer
+    t = loraSerial.read();
+    i++;
+  }
 }
 
 void slaveInit()
