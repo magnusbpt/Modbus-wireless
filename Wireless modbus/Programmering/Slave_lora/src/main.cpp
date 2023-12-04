@@ -4,17 +4,19 @@
 #include <string.h>
 #include <Wire.h>
 
-// default "Wire" object: SDA = GP4, SCL = GP5, I2C0 peripheral
 // our new wire object:
-#define WIRE1_SDA 6 // Use GP2 as I2C1 SDA
-#define WIRE1_SCL 7 // Use GP3 as I2C1 SCL
+#define WIRE1_SDA 6 // Use GP6 as I2C1 SDA
+#define WIRE1_SCL 7 // Use GP7 as I2C1 SCL
 arduino::MbedI2C Wire1(WIRE1_SDA, WIRE1_SCL);
 
+// Define serial port for LoRa
 #define loraSerial Serial1
 
+// Define I2C ports
 #define i2c_ext Wire
 #define i2c_int Wire1
 
+// Define pins
 #define pirSensor 4
 #define AIR_INT 5
 #define AIR_RES 6
@@ -25,6 +27,7 @@ arduino::MbedI2C Wire1(WIRE1_SDA, WIRE1_SCL);
 #define ADC1_LUX 27
 #define ADC2_DB 28
 
+// Define I2C adresses
 #define dataCommand 0x2C0D
 #define temp_write 0x44
 #define temp_read 0x45
@@ -33,6 +36,7 @@ arduino::MbedI2C Wire1(WIRE1_SDA, WIRE1_SCL);
 #define CO2_write 0x32
 #define CO2_read 0x33
 
+// Define sensor adresses
 #define tempAdress 0x0000
 #define humidityAdress 0x0001
 #define luxAdress 0x0002
@@ -45,13 +49,14 @@ arduino::MbedI2C Wire1(WIRE1_SDA, WIRE1_SCL);
 
 #define I2C_extAdress 0x0008
 
+// Define buffers
 char readBuffer[200];
 char Buf[30] = "AT+TEST=TXLRPKT,\"";
 char length[20];
 char messageBuffer[50];
 
+// Define variables
 int messageHead = 1;
-int i = 0;
 int pause = 0;
 int interval = 0;
 int delta = 0;
@@ -73,7 +78,7 @@ short CO2_last = 0;
 short db_last = 0;
 
 bool pirFlag = true;
-bool msgFlag = false;
+bool msgFlag = true;
 
 /***************Define functions***************/
 void loraRead();
@@ -87,45 +92,55 @@ void loraFlush();
 
 void setup()
 {
+  // Begin communication
   i2c_int.begin();
   i2c_ext.begin();
   Serial.begin(9600);
   loraSerial.begin(9600);
+
+  //Change ADC resolution
   analogReadResolution(12);
 
+  // Set pins
   pinMode(pirSensor, INPUT);
 
-  delay(7000);
+  //Startup delay
+  millisDelay(7000);
 
+  // Initialize slave
   slaveInit();
 
+  // Read sensors
   readSensor();
 
+  // Set first last values for comparison
   humidity_last = humidity;
   lux_last = luxValue;
   CO2_last = CO2;
   db_last = dbValue;
 
-  msgFlag = true;
-
+  // Set LoRa module to sleep
   loraSerial.println("AT+LOWPOWER");
-  loraRead();
-  memset(readBuffer, 0, sizeof readBuffer);
+  loraFlush();
 }
 
 void loop()
 {
-  delay(1000);
+  //Wait 1 second before reading sensors
+  millisDelay(1000);
 
+  //Read sensors
   readSensor();
 
-  int tempDiff = (temp_last - temp) / temp;
-  int humidityDiff = (humidity_last - humidity) / humidity;
-  int luxDiff = (lux_last - luxValue) / luxValue;
+  //Calculate difference between last and current value
+  int tempDiff = ((temp_last - temp) / temp) * 100;
+  int humidityDiff = ((humidity_last - humidity) / humidity) * 100;
+  int luxDiff = ((lux_last - luxValue) / luxValue) * 100;
 
+  //If difference is bigger than delta, put data into message buffer
   if (delta > 0)
   {
-    if (tempDiff > delta || tempDiff < -delta)
+    if ((tempDiff > delta) || (tempDiff < -delta))
     {
       msgFlag = true;
       temp_last = temp;
@@ -134,7 +149,7 @@ void loop()
       messageBuffer[messageHead++] = highByte(temp);
       messageBuffer[messageHead++] = lowByte(temp);
     }
-    if (humidityDiff > delta || humidityDiff < -delta)
+    if ((humidityDiff > delta) || (humidityDiff < -delta))
     {
       msgFlag = true;
       humidity_last = humidity;
@@ -143,7 +158,7 @@ void loop()
       messageBuffer[messageHead++] = highByte(humidity);
       messageBuffer[messageHead++] = lowByte(humidity);
     }
-    if (luxDiff > delta || luxDiff < -delta)
+    if ((luxDiff > delta) || (luxDiff < -delta))
     {
       msgFlag = true;
       lux_last = luxValue;
@@ -154,7 +169,7 @@ void loop()
     }
   }
 
-  if ((minutes() - time_old > interval) || msgFlag)
+  if (((millis() - time_old) > interval) || msgFlag)
   {
     msgFlag = false;
     time_old = minutes();
@@ -226,23 +241,21 @@ void loop()
 
     /**********Test***********/
 
-    ID = 0x01;
-
     char message1[50] = {0x01, 0x00, 0x00, 0x00, 0xFF, 0x80, 0x59};
 
     /************************/
     char temp1[1];
     char temp2 = 0;
 
-    for(int i = 0; i < 7; i++)
+    for (int i = 0; i < 7; i++)
     {
       temp2 = message1[i] >> 4;
       sprintf(temp1, "%X", temp2);
-      loraTX[(i*2) + 18] = temp1[0];
+      loraTX[(i * 2) + 18] = temp1[0];
 
       temp2 = message1[i] & 0x0F;
       sprintf(temp1, "%X", temp2);
-      loraTX[(i*2) + 19] = temp1[0];
+      loraTX[(i * 2) + 19] = temp1[0];
     }
 
     memset(messageBuffer, 0, sizeof messageBuffer);
@@ -256,9 +269,18 @@ void loop()
 
     millisDelay(100);
 
+    loraSerial.println("AT+MODE=TEST");
+    loraFlush();
+
+    millisDelay(100);
+
+    loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF");
+    loraFlush();
+
+    millisDelay(100);
+
     loraSerial.println("AT+TEST=RXLRPKT");
-    loraRead();
-    memset(readBuffer, 0, sizeof readBuffer);
+    loraFlush();
 
     millisDelay(100);
 
@@ -286,16 +308,48 @@ void loop()
 
         millisDelay(200);
 
+        loraSerial.println("AT+MODE=TEST");
+        loraFlush();
+
+        millisDelay(100);
+
+        loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF");
+        loraFlush();
+
+        millisDelay(100);
+
         loraSerial.println("AT+TEST=RXLRPKT");
-        loraRead();
-        memset(readBuffer, 0, sizeof readBuffer);
+        loraFlush();
+
+        millisDelay(100);
 
         flag2 = false;
       }
       else
       {
         loraRead();
-        if (strchr(readBuffer, ID) > 0)
+
+        char IDtemp[2];
+
+        if((ID >> 4) > 0x09)
+        {
+          IDtemp[0] = (ID >> 4) + 55;
+        }
+        else
+        {
+          IDtemp[0] = (ID >> 4) + 48;
+        }
+
+        if((ID & 0x0F) > 0x09)
+        {
+          IDtemp[1] = (ID & 0x0F) + 55;
+        }
+        else
+        {
+          IDtemp[1] = (ID & 0x0F) + 48;
+        }
+
+        if (strstr(readBuffer, IDtemp) > 0)
         {
           Serial.println("Message received");
           flag = true;
@@ -305,20 +359,20 @@ void loop()
       memset(readBuffer, 0, sizeof readBuffer);
     }
 
+    millisDelay(100);
 
     loraSerial.println(F("AT+LOWPOWER"));
     loraFlush();
 
     messageHead = 1;
   }
-
 }
 
 void loraRead()
 { // Read response after sending AT command
 
   millisDelay(200); // Wait for sim module to respons correctly
-  i = 0;
+  int i = 0;
 
   while (loraSerial.available())
   { // While data incomming: Read into buffer
@@ -332,7 +386,7 @@ void loraFlush()
 { // Read response after sending AT command
 
   millisDelay(100); // Wait for sim module to respons correctly
-  i = 0;
+  int i = 0;
   char t = 0;
 
   while (loraSerial.available())
@@ -352,21 +406,20 @@ void slaveInit()
 
   millisDelay(100);
 
-  
   i2c_int.beginTransmission(GPIO_write); // transmit to device #0x68
   i2c_int.write(0x1E);                   // sends five bytes
   i2c_int.write(0x00);                   // sends five bytes
   i2c_int.endTransmission();             // stop transmitting
 
   millisDelay(100);
-  
+
   i2c_int.beginTransmission(GPIO_write); // transmit to device #0x68
   i2c_int.write(0x1F);                   // sends five bytes
   i2c_int.write(0x00);                   // sends five bytes
   i2c_int.endTransmission();             // stop transmitting
 
   millisDelay(100);
-  
+
   i2c_int.beginTransmission(GPIO_write); // transmit to device #0x68
   i2c_int.write(0x23);                   // sends five bytes
   i2c_int.write(0x00);                   // sends five bytes
@@ -395,7 +448,7 @@ void slaveInit()
   // Wire.requestFrom(GPIO_read, 1);
   char delta_pause = Wire.read();
 
-  delta = (delta_pause >> 3) / 100;
+  delta = delta_pause >> 3;
 
   pause = delta_pause & 0x0F;
 
@@ -425,6 +478,10 @@ void slaveInit()
 
   ID = ID | (ID_int >> 4);
 
+/****test*****/
+  ID = 0x01;
+/************/
+
   interval = ID_int & 0x0F;
 
   if (interval == 0x01)
@@ -443,7 +500,7 @@ void slaveInit()
   {
     interval = 1440;
   }
-  
+  interval = 0;
 }
 
 void millisDelay(int delayTime)
