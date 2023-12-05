@@ -16,10 +16,13 @@
 
 // AltSoftSerial Serial1;    //Initilize modbus serial as AltSoftSerial
 
+#define simSerial Serial1
+#define modbusSerial Serial2
+
 static byte value[50];      // Array to store isolated modbus slave adress value e.g temerature of adress 1
 byte modBuffer[50];         // Buffer to store modbus slave response
 byte simMsg[120];           // Array with message from sim module
-unsigned char simBuffer[200];        // Buffer to store sim module response
+char simBuffer[200];        // Buffer to store sim module response
 char IMEI[20];              // Array to store IMEI number
 
 char model[] = "H";         // Master model
@@ -36,14 +39,13 @@ byte* dataByte;             // Pointer to array with bytes
 short* dataShort;           // Pointer to array with shorts 
 
 void setup() {
-  Serial1.begin(9600);    // Begin serial with modbus baud rate of 9600
-  Serial.begin(9600);       // Begin serial with pc baud rate 9600
-  Serial2.begin(9600);      // Begin serial with sim module on hardware serial 2 with baud rate 9600
+  simSerial.begin(9600);    // Begin serial with modbus baud rate of 9600
+  modbusSerial.begin(9600);      // Begin serial with sim module on hardware serial 2 with baud rate 9600
 
   pinMode(5, OUTPUT);       // Set pin 5 on arduino as input for pwr key on sim module
   digitalWrite(5, HIGH);    // Set pin 5 to standard high for pwr key to not activate
 
-  delay(1000);              // Start delay before siminit. To make sure sim module is properly turned of or on
+  delay(2000);              // Start delay before siminit. To make sure sim module is properly turned of or on
 
   siminit();                // Start siminit to turn on sim module and make sure communication works
 
@@ -51,20 +53,20 @@ void setup() {
   
   Sim_Connect();            // Connect to server and open socket
 
-  // Serial2.println("AT+CASEND=0,18");  // Send AT command
+  // simSerial.println("AT+CASEND=0,18");  // Send AT command
   // simread();
   // clrsimBuffer();
 
-  // Serial2.write(data_msg, 18);  // Send AT command
-  // Serial2.println();                              // Need ln when writing to sim module
+  // simSerial.write(data_msg, 18);  // Send AT command
+  // simSerial.println();                              // Need ln when writing to sim module
   // simread();
   // clrsimBuffer();
 
-  // Serial2.println(F("AT+CAACK=0")); // Query Send Data Information
+  // simSerial.println(F("AT+CAACK=0")); // Query Send Data Information
   // simread();
   // clrsimBuffer();
 
-  // Serial2.println(F("AT+CARECV=0,50"));   // Read recieved message from server
+  // simSerial.println(F("AT+CARECV=0,50"));   // Read recieved message from server
   // simread();
   // clrsimBuffer();
 
@@ -73,69 +75,69 @@ void setup() {
 
 void loop() {
 
-  unsigned char data_msg[18] = {0x86, 0x00, 0x16, 0x04, 0x17, 0x82, 0x80, 0x10, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01, 0x02, 0x26, 0x95, 0x85}; // 860016041782801001000101000102269585
-  unsigned char setup_msg[11] = {0x86, 0x00, 0x16, 0x04, 0x17, 0x82, 0x80, 0x10, 0x03, 0x4E, 0x97}; //8600160417828010034E97
-  unsigned char heart_msg[11] = {0x86, 0x00, 0x16, 0x04, 0x17, 0x82, 0x80, 0x10, 0x00, 0x80, 0x66}; //8600160417828010008066
+  // unsigned char data_msg[18] = {0x86, 0x00, 0x16, 0x04, 0x17, 0x82, 0x80, 0x10, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01, 0x02, 0x26, 0x95, 0x85}; // 860016041782801001000101000102269585
+  // unsigned char setup_msg[11] = {0x86, 0x00, 0x16, 0x04, 0x17, 0x82, 0x80, 0x10, 0x03, 0x4E, 0x97}; //8600160417828010034E97
+  // unsigned char heart_msg[11] = {0x86, 0x00, 0x16, 0x04, 0x17, 0x82, 0x80, 0x10, 0x00, 0x80, 0x66}; //8600160417828010008066
 
-  Serial2.println("AT+CASEND=0,11");  // Send AT command
-  simread();
-  clrsimBuffer();
+  // simSerial.println("AT+CASEND=0,11");  // Send AT command
+  // simread();
+  // clrsimBuffer();
 
-  Serial2.write(heart_msg, 11);  // Send AT command
-  Serial2.println();                              // Need ln when writing to sim module
-  simread();
-  clrsimBuffer();
+  // simSerial.write(heart_msg, 11);  // Send AT command
+  // simSerial.println();                              // Need ln when writing to sim module
+  // simread();
+  // clrsimBuffer();
 
-  Serial2.println(F("AT+CAACK=0")); // Query Send Data Information
-  simread();
-  clrsimBuffer();
+  // simSerial.println(F("AT+CAACK=0")); // Query Send Data Information
+  // simread();
+  // clrsimBuffer();
 
-  Serial2.println(F("AT+CARECV=0,50"));   // Read recieved message from server
-  simread();
+  // simSerial.println(F("AT+CARECV=0,50"));   // Read recieved message from server
+  // simread();
 
-  int len = 0;
-  int start1 = 0;
-  char chartemp[100];
-  unsigned char temp1;
+  // int len = 0;
+  // int start1 = 0;
+  // char chartemp[100];
+  // unsigned char temp1;
 
-  if (simBuffer[27] < 48) {               // Reads the number of bytes recieved from the server and put it into lengthCounter
-    len = simBuffer[26] - 48;
-    start1 = 28;
-  } else {
-    len = ((simBuffer[26] - 48) * 10) + (simBuffer[27] - 48);
-    start1 = 29;
-  }
+  // if (simBuffer[27] < 48) {               // Reads the number of bytes recieved from the server and put it into lengthCounter
+  //   len = simBuffer[26] - 48;
+  //   start1 = 28;
+  // } else {
+  //   len = ((simBuffer[26] - 48) * 10) + (simBuffer[27] - 48);
+  //   start1 = 29;
+  // }
 
-  for (int i = 0; i < len; i++) {     // Reads the message into simMsg array to be used
-    Serial.print(simBuffer[i + start1], HEX);
-  }
+  // for (int i = 0; i < len; i++) {     // Reads the message into simMsg array to be used
+  //   Serial.print(simBuffer[i + start1], HEX);
+  // }
 
-  Serial.println();
+  // Serial.println();
 
-  clrsimBuffer();
+  // clrsimBuffer();
 
 
-  // while (Serial1.available()) {   // Stay in while while data available
+  // while (modbusSerial.available()) {   // Stay in while while data available
 
-  //   int numBytes = Serial1.available();   // Find number of bytes to read
+  //   int numBytes = modbusSerial.available();   // Find number of bytes to read
   //   for (int i = 0; i < numBytes; i++) {
-  //     modBuffer[i] = Serial1.read();      // Read into modBuffer
+  //     modBuffer[i] = modbusSerial.read();      // Read into modBuffer
   //     Serial.print(modBuffer[i], HEX);      // Print to terminal
   //     Serial.print(" ");
   //   }
   //   Serial.println();
   // }
   
-  // readholdingregisters(1, 0, 1);    // Read holding register af tempurature of slave 1
+  readholdingregisters(1, 0, 1);    // Read holding register af tempurature of slave 1
 
-  // dataByte = modbusValue();         // Put the data into databyte
+  dataByte = modbusValue();         // Put the data into databyte
 
-  // dataShort = tempConvert(bytesToShort(dataByte, lengthCounter), lengthCounter);    // Make the bytes to short and convert it into the correct value for the server to read
+  dataShort = tempConvert(bytesToShort(dataByte, lengthCounter), lengthCounter);    // Make the bytes to short and convert it into the correct value for the server to read
 
-  // Sim_send(dataShort, lengthCounter);     // Send the input data of slave 1 to the sim module and read the respone
+  Sim_send(dataShort, lengthCounter);     // Send the input data of slave 1 to the sim module and read the respone
 
-  // writecoils(3, 0, 1, relaySimToMod());   // Write relay output to slave 3 from sim module response
-  // clrmodBuffer();                         // Clear modbus buffer
+  writecoils(2, 0, 1, relaySimToMod());   // Write relay output to slave 3 from sim module response
+  clrmodBuffer();                         // Clear modbus buffer
 
   // writeTerminal();                        // Function to normal write to sim module
 }
@@ -150,7 +152,7 @@ void millisDelay(int delayTime) {
 }
 
 void getIMEI(){                     // Function to get IMEI number
-  Serial2.println(F("AT+GSN"));     // Sent at command to get IMEI number
+  simSerial.println(F("AT+GSN"));     // Sent at command to get IMEI number
   simread();                        // Read response
 
   for(int i = 0; i < 15; i++){      // Put response into IMEI array
@@ -214,51 +216,51 @@ short* bytesToShort(byte* byteArr, int len) {   // Converts an array of bytes to
 
 void Sim_Connect() {                  // Connect to sim server and open UDP socket
 
-  Serial2.println(F("AT+CSQ"));       // Check signal quality
+  simSerial.println(F("AT+CSQ"));       // Check signal quality
   simread();                          // read response and print out
   clrsimBuffer();
 
-  Serial2.println(F("AT+CFUN=0"));    // Set phone functionality to minimal 
+  simSerial.println(F("AT+CFUN=0"));    // Set phone functionality to minimal 
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+CGDCONT=1,\"IP\",\"iot.1nce.net\""));   // Define PDP contect: PDP contect identifier, Set to IP, APN 
+  simSerial.println(F("AT+CGDCONT=1,\"IP\",\"iot.1nce.net\""));   // Define PDP contect: PDP contect identifier, Set to IP, APN 
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+CFUN=1"));    // Set phone funtionality to full
+  simSerial.println(F("AT+CFUN=1"));    // Set phone funtionality to full
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+COPS=1,2,\"23820\""));     // Check operator. See operator e.g Telia and if connected to NB or CAT-M
+  simSerial.println(F("AT+COPS=1,2,\"23820\""));     // Check operator. See operator e.g Telia and if connected to NB or CAT-M
   simread();
   clrsimBuffer();
   
-  Serial2.println(F("AT+CGATT?"));    // Check if connected to GPRS service
+  simSerial.println(F("AT+CGATT?"));    // Check if connected to GPRS service
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+COPS?"));     // Check operator. See operator e.g Telia and if connected to NB or CAT-M
+  simSerial.println(F("AT+COPS?"));     // Check operator. See operator e.g Telia and if connected to NB or CAT-M
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+CGNAPN"));    // Check if connected to the correct APN
+  simSerial.println(F("AT+CGNAPN"));    // Check if connected to the correct APN
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+CNCFG=0,1,\"iot.1nce.net\""));    // Check if connected to the correct APN
+  simSerial.println(F("AT+CNCFG=0,1,\"iot.1nce.net\""));    // Check if connected to the correct APN
   simread();
   clrsimBuffer();
   
-  Serial2.println(F("AT+CNACT=0,1")); // Activate network
+  simSerial.println(F("AT+CNACT=0,1")); // Activate network
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+CNACT?"));    // Check if network is active to adress
+  simSerial.println(F("AT+CNACT?"));    // Check if network is active to adress
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+CAOPEN=0,0,\"UDP\",\"164.92.139.57\",8080"));   // Open UDP connection/socket
+  simSerial.println(F("AT+CAOPEN=0,0,\"UDP\",\"164.92.164.168\",8080"));   // Open UDP connection/socket
   simread();
   clrsimBuffer();
 }
@@ -276,13 +278,13 @@ short* tempConvert(short* temp, int len) {    // Scale teperature so the server 
 
 void Sim_send(short* data, int len) {             // Create message and send to the server
 
-  unsigned char msg[50];                          // To hold message
-  unsigned char dat[10];                          // To hold incomming data
-  unsigned char crcData[10];                      // To hold CRC
-  unsigned char sendLength[20] = "AT+CASEND=0,";  // To hold at command that sends size of data to be send
-  unsigned char msgLength[20];                    // Hold size of message
+  char msg[50];                          // To hold message
+  char dat[10];                          // To hold incomming data
+  char crcData[10];                      // To hold CRC
+  char sendLength[20] = "AT+CASEND=0,";  // To hold at command that sends size of data to be send
+  char msgLength[20];                    // Hold size of message
 
-  unsigned short crc = 0;
+  short crc = 0;
 
   // Reset arrays
   memset(msg, 0, sizeof msg);           
@@ -300,7 +302,7 @@ void Sim_send(short* data, int len) {             // Create message and send to 
   }
   strcat(msg, "30");
 
-  crc = CRC16_xmodem(msg, strlen(msg));             // Find CRC from message
+  crc = CRC16_xmodem((unsigned char*)msg, strlen(msg));             // Find CRC from message
 
   sprintf(crcData, "%u", crc);
 
@@ -316,20 +318,20 @@ void Sim_send(short* data, int len) {             // Create message and send to 
   sprintf(msgLength, "%u", strlen(msg));          // Add message size to end of AT command
   strcat(sendLength, msgLength);
 
-  Serial2.write(sendLength, strlen(sendLength));  // Send AT command
-  Serial2.println();                              // Need ln when writing to sim module
+  simSerial.write(sendLength, strlen(sendLength));  // Send AT command
+  simSerial.println();                              // Need ln when writing to sim module
   simread();
   clrsimBuffer();
 
-  Serial2.write(msg, strlen(msg));  // Send message to server
+  simSerial.write(msg, strlen(msg));  // Send message to server
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+CAACK=0")); // Query Send Data Information
+  simSerial.println(F("AT+CAACK=0")); // Query Send Data Information
   simread();
   clrsimBuffer();
 
-  Serial2.println(F("AT+CARECV=0,50"));   // Read recieved message from server
+  simSerial.println(F("AT+CARECV=0,50"));   // Read recieved message from server
   simread();
 
   simReadData();    // Read message into array
@@ -361,10 +363,10 @@ void simReadData() {  // Read recieved message from server into array
 }
 
 void Sim_close() {                       // Used to close socket and APP network
-  Serial2.println(F("AT+CACLOSE=0"));
+  simSerial.println(F("AT+CACLOSE=0"));
   simread();
 
-  Serial2.println(F("AT+CNACT=0,0"));
+  simSerial.println(F("AT+CNACT=0,0"));
   simread();
 }
 
@@ -508,10 +510,10 @@ bool comcheck(int dly, char* s) {           // Check if read communication is co
 
   while (!check) {  // Stay in while until correct response is read
 
-    while (Serial2.available()) {           // Check response
-      int numBytes = Serial2.available();
+    while (simSerial.available()) {           // Check response
+      int numBytes = simSerial.available();
       for (int i = 0; i < numBytes; i++) {
-        simBuffer[i] = Serial2.read();
+        simBuffer[i] = simSerial.read();
       }
     }
     // Serial.write(simBuffer);
@@ -542,17 +544,17 @@ bool ATcomcheck(int dly) {                  // Same as comcheck, but only for ch
 
   delay(dly);
 
-  if (Serial2.available()) {
-    int numBytes = Serial2.available();
+  if (simSerial.available()) {
+    int numBytes = simSerial.available();
     for (int i = 0; i < numBytes; i++) {
-      simBuffer[i] = Serial2.read();
+      simBuffer[i] = simSerial.read();
     }
   }
   // Serial.write(Buffer);
   if (strstr(simBuffer, "OK")) {
     check = 1;
-    Serial.print(F("Detected: "));
-    Serial.println("OK");
+    // Serial.print(F("Detected: "));
+    // Serial.println("OK");
   } else {
     check = 0;
     // Serial.println(F("Not detected"));
@@ -565,9 +567,9 @@ bool ATcomcheck(int dly) {                  // Same as comcheck, but only for ch
 void siminit() {                    // Initiate sim module by checking if it can recieve "AT"
 
   while (stop) {                    // Stay in loop while stop is set
-    for (int i = 0; i < 4; i++) {   // Check four times for OK response
-      Serial2.println(F("AT"));     // Print AT
-      start = ATcomcheck(300);      // Check for OK
+    for (int i = 0; i < 5; i++) {   // Check four times for OK response
+      simSerial.println(F("AT"));     // Print AT
+      start = ATcomcheck(200);      // Check for OK
       if (start) {                  // If start is set, stop while
         stop = 0;
       }
@@ -586,11 +588,11 @@ void simread() {    // Read response after sending AT command
 
   delay(3000);      // Wait for sim module to respons correctly
 
-  while (Serial2.available()) {           // While data incomming: Read into buffer
+  while (simSerial.available()) {           // While data incomming: Read into buffer
 
-    int numBytes = Serial2.available();
+    int numBytes = simSerial.available();
     for (int i = 0; i < numBytes; i++) {
-      simBuffer[i] = Serial2.read();
+      simBuffer[i] = simSerial.read();
     }
   }
   Serial.write((char*)simBuffer);    // Write to terminal
@@ -604,10 +606,10 @@ void clrsimBuffer() {   // Clear simBuffer
 void writeTerminal() {    // Function used to normally write to sim module via terminal
 
   if (Serial.available())
-    Serial2.write(Serial.read());
+    simSerial.write(Serial.read());
 
-  if (Serial2.available())
-    Serial.write(Serial2.read());
+  if (simSerial.available())
+    Serial.write(simSerial.read());
 }
 
 void readcoils(byte slave, short adress, short qty) {  // Reads coils (if relays are on or off)
@@ -631,7 +633,7 @@ void readcoils(byte slave, short adress, short qty) {  // Reads coils (if relays
   ADU[ADUsize++] = highByte(CRC);
 
   //Write AUD to MODBUS slave
-  Serial1.write(ADU, ADUsize);
+  modbusSerial.write(ADU, ADUsize);
 
   //Read message from slave
   modbusread();
@@ -658,7 +660,7 @@ void readdiscreteinputs(byte slave, short adress, short qty) {  // Reads discrea
   ADU[ADUsize++] = highByte(CRC);
 
   //Write AUD to MODBUS slave
-  Serial1.write(ADU, ADUsize);
+  modbusSerial.write(ADU, ADUsize);
 
   //Read message from slave
   modbusread();
@@ -681,7 +683,7 @@ void readholdingregisters(byte slave, short adress, short qty) {  // Read holdin
   ADU[ADUsize++] = lowByte(CRC);
   ADU[ADUsize++] = highByte(CRC);
 
-  Serial1.write(ADU, ADUsize);
+  modbusSerial.write(ADU, ADUsize);
 
   modbusread();
 }
@@ -703,7 +705,7 @@ void readinputregisters(byte slave, short adress, short qty) {  // Read input re
   ADU[ADUsize++] = lowByte(CRC);
   ADU[ADUsize++] = highByte(CRC);
 
-  Serial1.write(ADU, ADUsize);
+  modbusSerial.write(ADU, ADUsize);
 
   modbusread();
 }
@@ -732,7 +734,7 @@ void writesinglecoil(byte slave, short adress, bool out) {  // Write single coil
   ADU[ADUsize++] = lowByte(CRC);
   ADU[ADUsize++] = highByte(CRC);
 
-  Serial1.write(ADU, ADUsize);
+  modbusSerial.write(ADU, ADUsize);
 
   modbusread();
 }
@@ -754,7 +756,7 @@ void writesingleregister(byte slave, short adress, short out) { // Write single 
   ADU[ADUsize++] = lowByte(CRC);
   ADU[ADUsize++] = highByte(CRC);
 
-  Serial1.write(ADU, ADUsize);
+  modbusSerial.write(ADU, ADUsize);
 
   modbusread();
 }
@@ -781,7 +783,7 @@ void writecoils(byte slave, short adress, short qty, byte* out) { // Write multi
   ADU[ADUsize++] = lowByte(CRC);
   ADU[ADUsize++] = highByte(CRC);
 
-  Serial1.write(ADU, ADUsize);
+  modbusSerial.write(ADU, ADUsize);
 
   modbusread();
 }
@@ -809,7 +811,7 @@ void writemultipleregisters(byte slave, short adress, short qty, short* out) {  
   ADU[ADUsize++] = lowByte(CRC);
   ADU[ADUsize++] = highByte(CRC);
 
-  Serial1.write(ADU, ADUsize);
+  modbusSerial.write(ADU, ADUsize);
 
   modbusread();
 }
@@ -818,11 +820,11 @@ void modbusread() {   // Read modbus response
 
   delay(300);   // Wait for slaves to process message
 
-  while (Serial1.available()) {   // Stay in while while data available
+  while (modbusSerial.available()) {   // Stay in while while data available
 
-    int numBytes = Serial1.available();   // Find number of bytes to read
+    int numBytes = modbusSerial.available();   // Find number of bytes to read
     for (int i = 0; i < numBytes; i++) {
-      modBuffer[i] = Serial1.read();      // Read into modBuffer
+      modBuffer[i] = modbusSerial.read();      // Read into modBuffer
       Serial.print(modBuffer[i], HEX);      // Print to terminal
       Serial.print(" ");
     }

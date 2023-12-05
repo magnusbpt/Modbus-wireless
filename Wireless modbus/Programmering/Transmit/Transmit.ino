@@ -35,11 +35,11 @@ void loop() {
   read();
   memset(readBuffer, 0, sizeof readBuffer);
 
-  delay(1000);
+  delay(300);
 
-  // Serial1.println(F("AT+TEST=RXLRPKT"));
-  // read();
-  // memset(readBuffer, 0, sizeof readBuffer);
+  Serial1.println(F("AT+TEST=RXLRPKT"));
+  read();
+  memset(readBuffer, 0, sizeof readBuffer);
 
   // while (!Serial1.available()){}
   // read();

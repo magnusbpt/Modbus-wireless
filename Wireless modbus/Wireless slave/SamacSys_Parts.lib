@@ -249,4 +249,112 @@ P 5 0 1 6 200 400 1000 400 1000 -800 200 -800 200 400 N
 ENDDRAW
 ENDDEF
 #
+#SamacSys ECAD Model 4081
+#/1932330/593791/2.50/2/3/Switch
+DEF 4081 S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "4081" 650 200 50 H V L CNN
+F2 "4081" 650 100 50 H I L CNN
+F3 "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/311/4081_Web.pdf" 650 0 50 H I L CNN
+F4 "Adafruit Accessories Flat Vibration Switch - Breadboard friendly" 650 -100 50 H I L CNN "Description"
+F5 "5.8" 650 -200 50 H I L CNN "Height"
+F6 "Adafruit" 650 -300 50 H I L CNN "Manufacturer_Name"
+F7 "4081" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "485-4081" 650 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Adafruit/4081?qs=vLWxofP3U2ypipoZplSnyg%3D%3D" 650 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "4081" 650 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/4081/adafruit-industries?region=nac" 650 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 219-6LPST
+#/1439087/593791/2.50/12/4/Connector
+DEF 219-6LPST J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "219-6LPST" 750 200 50 H V L CNN
+F2 "2196LPST" 750 100 50 H I L CNN
+F3 "https://www.mouser.com/datasheet/2/96/219-1144706.pdf" 750 0 50 H I L CNN
+F4 "Switch DIP ON OFF SPST 6 Flush Slide 0.1A 20VDC Gull Wing 2.54mm SMD Tube" 750 -100 50 H I L CNN "Description"
+F5 "4.2" 750 -200 50 H I L CNN "Height"
+F6 "CTS" 750 -300 50 H I L CNN "Manufacturer_Name"
+F7 "219-6LPST" 750 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "774-2196LPST" 750 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/CTS-Electronic-Components/219-6LPST?qs=qNzHFtQhdJ%252BKgVpfJmEziw%3D%3D" 750 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "219-6LPST" 750 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/219-6lpst/cts" 750 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 0 -300 200 R 50 50 0 0 P
+X 5 5 0 -400 200 R 50 50 0 0 P
+X 6 6 0 -500 200 R 50 50 0 0 P
+X 7 7 900 -500 200 L 50 50 0 0 P
+X 8 8 900 -400 200 L 50 50 0 0 P
+X 9 9 900 -300 200 L 50 50 0 0 P
+X 10 10 900 -200 200 L 50 50 0 0 P
+X 11 11 900 -100 200 L 50 50 0 0 P
+X 12 12 900 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -600 200 -600 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 10118192-0002LF
+#/18815475/593791/2.50/11/3/Connector
+DEF 10118192-0002LF J 0 30 Y Y 1 F N
+F0 "J" 850 300 50 H V L CNN
+F1 "10118192-0002LF" 850 200 50 H V L CNN
+F2 "101181920002LF" 850 100 50 H I L CNN
+F3 "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/10118192.pdf" 850 0 50 H I L CNN
+F4 "Micro USB 2.0, Input Output Connectors, B TYPE RECEPTACLE without flange" 850 -100 50 H I L CNN "Description"
+F5 "3.08" 850 -200 50 H I L CNN "Height"
+F6 "Amphenol Communications Solutions-FCI" 850 -300 50 H I L CNN "Manufacturer_Name"
+F7 "10118192-0002LF" 850 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 850 -500 50 H I L CNN "Mouser Part Number"
+F9 "" 850 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "10118192-0002LF" 850 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/10118192-0002lf/amphenol-fci?region=nac" 850 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 0 -300 200 R 50 50 0 0 P
+X 5 5 0 -400 200 R 50 50 0 0 P
+X MP1 MP1 0 -500 200 R 50 50 0 0 P
+X MP2 MP2 1000 0 200 L 50 50 0 0 P
+X MP3 MP3 1000 -100 200 L 50 50 0 0 P
+X MP4 MP4 1000 -200 200 L 50 50 0 0 P
+X MP5 MP5 1000 -300 200 L 50 50 0 0 P
+X MP6 MP6 1000 -400 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 800 100 800 -600 200 -600 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model NCP1117IDT33T4G
+#/15560553/593791/2.50/3/3/Integrated Circuit
+DEF NCP1117IDT33T4G IC 0 30 Y Y 1 F N
+F0 "IC" 1550 300 50 H V L CNN
+F1 "NCP1117IDT33T4G" 1550 200 50 H V L CNN
+F2 "NCP1117IDT33T4G" 1550 100 50 H I L CNN
+F3 "https://www.onsemi.com/pdf/datasheet/ncp1117-d.pdf" 1550 0 50 H I L CNN
+F4 "Linear Voltage Regulator IC Positive Fixed 1 Output 1A DPAK" 1550 -100 50 H I L CNN "Description"
+F5 "2.51" 1550 -200 50 H I L CNN "Height"
+F6 "onsemi" 1550 -300 50 H I L CNN "Manufacturer_Name"
+F7 "NCP1117IDT33T4G" 1550 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "863-NCP1117IDT33T4G" 1550 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/onsemi/NCP1117IDT33T4G?qs=iLbezkQI%252BsjquTy9AXeQnQ%3D%3D" 1550 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1550 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 1550 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ADJUST/GROUND 1 1700 -100 200 L 50 50 0 0 P
+X OUTPUT 2 0 0 200 R 50 50 0 0 P
+X INPUT 3 1700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1500 100 1500 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
 #End Library
