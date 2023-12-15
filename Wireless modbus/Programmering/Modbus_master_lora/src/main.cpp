@@ -51,7 +51,6 @@ void serverRead();
 void sendToServer();
 void loraSlaveRead();
 bool powerStatus();
-void loraFlush();
 
 void setup()
 {
@@ -116,31 +115,31 @@ void setup()
   clrsimBuffer();
 
   /**********Ask for slave setup on startup********/
-  // char msg[15]; // Create message array
+  char msg[15]; // Create message array
 
-  // for (int i = 0; i < strlen(IMEI); i++)
-  // { // Add IMEI to message
-  //   msg[i] = IMEI[i];
-  // }
+  for (int i = 0; i < strlen(IMEI); i++)
+  { // Add IMEI to message
+    msg[i] = IMEI[i];
+  }
 
-  // msg[8] = transactionID++; // Add transactionID
+  msg[8] = transactionID++; // Add transactionID
 
-  // msg[9] = 0x03; // Add command 03
+  msg[9] = 0x03; // Add command 03
 
-  // msg[10] = highByte(CRC16_modbus(msg, 10)); // Add CRC
-  // msg[11] = lowByte(CRC16_modbus(msg, 10));
+  msg[10] = highByte(CRC16_modbus(msg, 10)); // Add CRC
+  msg[11] = lowByte(CRC16_modbus(msg, 10));
 
-  // simSerial.println(F("AT+CASEND=0,12")); // Write to send message 12 bytes long
-  // millisDelay(500);
-  // clrsimBuffer();
+  simSerial.println(F("AT+CASEND=0,12")); // Write to send message 12 bytes long
+  millisDelay(500);
+  clrsimBuffer();
 
-  // simSerial.write(msg, sizeof(msg)); // Send message
-  // responseCheck("OK", 2000);
-  // clrsimBuffer();
+  simSerial.write(msg, sizeof(msg)); // Send message
+  responseCheck("OK", 2000);
+  clrsimBuffer();
 
-  // simSerial.println(F("AT+CARECV=0,1460")); // Read recieved message from server
+  simSerial.println(F("AT+CARECV=0,1460")); // Read recieved message from server
 
-  // serverRead(); // Read message from server into simBuffer
+  serverRead(); // Read message from server into simBuffer
 
   // for (int i = 0; i < strlen(simBuffer); i++) {
   //   setupMessage[i] = simBuffer[i];
@@ -219,26 +218,25 @@ void loop()
     state = slaveread;
     break;
   }
-
-  if (powerStatus() == 0) {  //If power is still on
-    state = poweroff;
-  }
 }
 
 void loraSlaveRead()
 {
   loraSerial.println(F("AT+MODE=TEST"));
-  loraFlush();
+  loraRead();
+  memset(loraBuffer, 0, sizeof loraBuffer);
 
   millisDelay(100);
 
   loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
-  loraFlush();
+  loraRead();
+  memset(loraBuffer, 0, sizeof loraBuffer);
 
   millisDelay(100);
 
   loraSerial.println(F("AT+TEST=RXLRPKT"));
-  loraFlush();
+  loraRead();
+  memset(loraBuffer, 0, sizeof loraBuffer);
 
   digitalWrite(BLUE_LED, LOW);
 
@@ -254,8 +252,6 @@ void loraSlaveRead()
 
   returnID[0] = loraBuffer[0];
   returnID[1] = loraBuffer[1];
-
-  bufferLen = strlen(loraBuffer) / 2;
 
   for (unsigned int i = 0; i < bufferLen; i++)
   {
@@ -285,14 +281,12 @@ void loraSlaveRead()
   unsigned short CRC = (CRCtemp & 0xFF00) | lowByte(~CRCtemp);
 
   memset(loraBuffer, 0, sizeof loraBuffer);
-
-  millisDelay(2000);
-
-  // simSerial.println("AT+CASEND=0,11"); // Need ln when writing to sim module
+ 
+  // simSerial.println("AT+CASEND=0,40"); // Need ln when writing to sim module
 
   // millisDelay(300);
 
-  // simSerial.write(messageBuffer, 11); // Send message to server
+  // simSerial.write(messageBuffer, 40); // Send message to server
 
   // millisDelay(300);
 
@@ -301,18 +295,18 @@ void loraSlaveRead()
   // clrsimBuffer();
 
   // memset(messageBuffer, 0, sizeof messageBuffer);
-  
+
   if (CRC == CRCcheck)
   {
     loraSerial.println(F("AT+MODE=TEST"));
-    loraFlush();
+    loraRead();
+    memset(loraBuffer, 0, sizeof loraBuffer);
 
     millisDelay(100);
 
     loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
-    loraFlush();
-
-    millisDelay(100);
+    loraRead();
+    memset(loraBuffer, 0, sizeof loraBuffer);
 
     char loraTX[50] = "AT+TEST=TXLRPKT,\"";
 
@@ -322,7 +316,8 @@ void loraSlaveRead()
 
     loraSerial.write(loraTX, strlen(loraTX));
     millisDelay(800);
-    loraFlush();
+    loraRead();
+    memset(loraBuffer, 0, sizeof loraBuffer);
 
     state = serversend; // Change state to send message to server
   }
@@ -426,7 +421,7 @@ void simSetup()
 
   clrsimBuffer(); // Clear sim response buffer
 
-  while (stop) {                        // Stay in loop while stop is set
+   while (stop) {                        // Stay in loop while stop is set
     simSerial.println(F("AT+CGREG?"));  // Print AT
     start = responseCheck("0,5", 1000);
     if (start) {  // If start is set, stop while
@@ -527,20 +522,6 @@ bool powerStatus()
   }
 }
 
-void loraFlush()
-{ // Read response after sending AT command
-
-  millisDelay(100); // Wait for sim module to respons correctly
-  int i = 0;
-  char t = 0;
-
-  while (loraSerial.available())
-  { // While data incomming: Read into buffer
-    t = loraSerial.read();
-    i++;
-  }
-}
-
 void loraRead()
 { // Read response after sending AT command
 
@@ -549,6 +530,7 @@ void loraRead()
   millisDelay(200); // Wait for sim module to respons correctly
   int i = 0;
   int j = 0;
+  bufferLen = 0;
 
   while (loraSerial.available())
   { // While data incomming: Read into buffer
@@ -566,6 +548,7 @@ void loraRead()
           break;
         }
         j++;
+        bufferLen++;
       }
       memset(tempBuffer, 0, sizeof tempBuffer);
     }
