@@ -222,31 +222,31 @@ void loop()
 
 void loraSlaveRead()
 {
-  loraSerial.println(F("AT+MODE=TEST"));
-  loraRead();
-  memset(loraBuffer, 0, sizeof loraBuffer);
+  loraSerial.println(F("AT+MODE=TEST")); //LoRa enter test mode
+  loraRead(); //Read LoRa module response
+  memset(loraBuffer, 0, sizeof loraBuffer); //Empty LoRa buffer
 
   millisDelay(100);
 
-  loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
-  loraRead();
-  memset(loraBuffer, 0, sizeof loraBuffer);
+  loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF")); //Set LoRa RF configuration
+  loraRead(); //Read LoRa module response
+  memset(loraBuffer, 0, sizeof loraBuffer); //Empty LoRa buffer
 
   millisDelay(100);
 
-  loraSerial.println(F("AT+TEST=RXLRPKT"));
-  loraRead();
-  memset(loraBuffer, 0, sizeof loraBuffer);
+  loraSerial.println(F("AT+TEST=RXLRPKT")); //Enter LoRa recieve mode
+  loraRead(); //Read LoRa module response
+  memset(loraBuffer, 0, sizeof loraBuffer); //Empty LoRa buffer
 
-  digitalWrite(BLUE_LED, LOW);
+  digitalWrite(BLUE_LED, LOW); //Turn ON LED for message indication
 
-  while (!loraSerial.available() && powerStatus())
+  while (!loraSerial.available() && powerStatus()) //Wait for LoRa message or powerOFF
   {
   }
   delay(100);
-  digitalWrite(BLUE_LED, HIGH);
+  digitalWrite(BLUE_LED, HIGH); //Turn OFF LED for message indication
 
-  loraRead();
+  loraRead(); //Read LoRa message
 
   char returnID[2];
 
@@ -296,31 +296,31 @@ void loraSlaveRead()
 
   // memset(messageBuffer, 0, sizeof messageBuffer);
 
-  if (CRC == CRCcheck)
-  {
-    loraSerial.println(F("AT+MODE=TEST"));
-    loraRead();
-    memset(loraBuffer, 0, sizeof loraBuffer);
+  if (CRC == CRCcheck) //If the checksum match
+	{
+    loraSerial.println(F("AT+MODE=TEST")); //Enter test mode
+    loraRead(); //Read LoRa module response
+    memset(loraBuffer, 0, sizeof loraBuffer); //Empty LoRa buffer
 
     millisDelay(100);
+    
+    loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF")); //Set LoRa RF configuration
+    loraRead(); //Read LoRa module response
+    memset(loraBuffer, 0, sizeof loraBuffer); //Empty LoRa buffer
 
-    loraSerial.println(F("AT+TEST=RFCFG,868,SF12,125,8,8,22,ON,OFF,OFF"));
-    loraRead();
-    memset(loraBuffer, 0, sizeof loraBuffer);
+    char loraTX[50] = "AT+TEST=TXLRPKT,\""; //Make array for LoRa message 
 
-    char loraTX[50] = "AT+TEST=TXLRPKT,\"";
+    loraTX[17] = returnID[0]; //Insert first byte og slave adress
+    loraTX[18] = returnID[1]; //Insert second byte og slave adress
+    strcat(loraTX, "\"\r\n"); //Insert ", CR and LF to end of message
 
-    loraTX[17] = returnID[0];
-    loraTX[18] = returnID[1];
-    strcat(loraTX, "\"\r\n");
-
-    loraSerial.write(loraTX, strlen(loraTX));
-    millisDelay(800);
-    loraRead();
-    memset(loraBuffer, 0, sizeof loraBuffer);
+    loraSerial.write(loraTX, strlen(loraTX)); //Write message to LoRa module
+    millisDelay(1000); //Wait for message to be sent
+    loraRead(); //Read LoRa module response
+    memset(loraBuffer, 0, sizeof loraBuffer); //Empty LoRa buffer
 
     state = serversend; // Change state to send message to server
-  }
+	}
 }
 
 void sendToServer()
