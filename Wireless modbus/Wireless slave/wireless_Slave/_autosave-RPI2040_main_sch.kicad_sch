@@ -3891,7 +3891,7 @@
     (fill (type none))
     (uuid 42720a03-45bb-4d61-b3ca-32211a085a79)
   )
-  (rectangle (start 181.61 165.1) (end 292.735 236.22)
+  (rectangle (start 181.61 157.48) (end 292.735 236.22)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid 5c377ab3-ac74-49e1-9c01-feaf48840f8d)
