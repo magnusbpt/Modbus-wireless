@@ -534,6 +534,10 @@ void slaveInit()
   {
     interval = 1440;
   }
+  else
+  {
+	interval = 5;
+  }
 }
 
 void millisDelay(int delayTime)
@@ -558,7 +562,11 @@ void readSensor()
   Serial.println("Read sensor");
 
   /******Lux sensor******/
-  luxValue = analogRead(ADC1_LUX);
+  int sensorValue = analogRead(ADC1_LUX);
+  
+  float voltage = sensorValue * (5.0 / 1023.0);
+  
+  luxValue = 0.9 * (((10000.0*3.6)/voltage)-10000.0)
 
   /******dB sensor******/
   dbValue = analogRead(ADC2_DB);
@@ -622,7 +630,7 @@ void readSensor()
 
   /******CO2 sensor******/
   
-  i2c_int.beginTransmission(CO2_Adress); // transmit to device #0x44
+  i2c_int.beginTransmission(CO2_Adress); // transmit to device #0x32
   i2c_int.write(0x00);
   i2c_int.endTransmission(); // stop transmitting
 
