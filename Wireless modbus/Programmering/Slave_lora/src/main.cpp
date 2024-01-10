@@ -534,6 +534,10 @@ void slaveInit()
   {
     interval = 1440;
   }
+  else
+  {
+	interval = 5;
+  }
 }
 
 void millisDelay(int delayTime)
@@ -558,7 +562,11 @@ void readSensor()
   Serial.println("Read sensor");
 
   /******Lux sensor******/
-  luxValue = analogRead(ADC1_LUX);
+  int sensorValue = analogRead(ADC1_LUX);
+  
+  float voltage = sensorValue * (5.0 / 1023.0);
+  
+  luxValue = 0.9 * (((10000.0*3.6)/voltage)-10000.0);
 
   /******dB sensor******/
   dbValue = analogRead(ADC2_DB);
@@ -621,21 +629,17 @@ void readSensor()
   digitalValue = digitalRead(Digital_in);
 
   /******CO2 sensor******/
-  
-  i2c_int.beginTransmission(CO2_Adress); // transmit to device #0x44
-  i2c_int.write(0x00);
-  i2c_int.endTransmission(); // stop transmitting
 
-  millisDelay(50);
+  i2c_int.requestFrom(CO2_Adress, 6);
+  unsigned char CO2High = i2c_int.read();
+  unsigned char CO2Low = i2c_int.read();
+  int check3 = i2c_int.read(); // Do not care. Just a place holder
+  int check4 = i2c_int.read();
+  int check5 = i2c_int.read(); // Do not care. Just a place holder
+  int check6 = i2c_int.read();
 
-  // i2c_int.requestFrom(CO2_Adress, 255);
-  // for(int i = 0; i < 255; i++){
-  //   CO2 = i2c_int.read();
-  //   Serial.print(i);
-  //   Serial.print(": ");
-  //   Serial.println(CO2);
-  //   millisDelay(50);
-  // }
+  CO2 = (CO2High << 8) | (CO2Low);
+
 }
 
 int powOf(int base, int exp)

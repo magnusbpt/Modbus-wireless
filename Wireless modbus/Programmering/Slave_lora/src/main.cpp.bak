@@ -303,9 +303,9 @@ void loop()
       while (!flag)
       {
         unsigned long time_now = millis();
-        while (!loraSerial.available())
+        while (!loraSerial.available()) //Wait for message to be recieved
         {
-          if (millis() - time_now > 10000)
+          if (millis() - time_now > 10000) //If no message recieved
           {
             Serial.println("No message received");
             flag2 = true;
@@ -315,24 +315,26 @@ void loop()
 
         if (flag2)
         {
-          loraSerial.write(loraTX, strlen(loraTX));
-          millisDelay(800);
+		  //Write message to LoRa module
+          loraSerial.write(loraTX, strlen(loraTX)); 
+          millisDelay(1000);
           loraRead();
           memset(readBuffer, 0, sizeof readBuffer);
 
-          millisDelay(200);
-
+		  //Enter setup mode
           loraSerial.println("AT+MODE=TEST");
           loraRead();
           memset(readBuffer, 0, sizeof readBuffer);
 
           millisDelay(100);
 
+		  //Setup RF configuration
           loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF");
           loraFlush();
 
           millisDelay(100);
 
+		  //Enter recieve mode
           loraSerial.println("AT+TEST=RXLRPKT");
           loraRead();
           memset(readBuffer, 0, sizeof readBuffer);
@@ -347,6 +349,7 @@ void loop()
 
           char IDtemp[2];
 
+		  //Convert ID to ASCII value
           if((ID >> 4) > 0x09)
           {
             IDtemp[0] = (ID >> 4) + 55;
@@ -377,6 +380,7 @@ void loop()
 
       millisDelay(100);
 
+	  //Enter low power mode
       loraSerial.println(F("AT+LOWPOWER"));
       loraRead();
       memset(readBuffer, 0, sizeof readBuffer);
@@ -554,7 +558,13 @@ void readSensor()
   Serial.println("Read sensor");
 
   /******Lux sensor******/
-  luxValue = analogRead(ADC1_LUX);
+  int sensorValue = analogRead(ADC1_LUX);
+  
+  float voltage = sensorValue * (5.0 / 1023.0);
+  
+  ((10000*3.6)/voltage)-10000
+  
+  luxValue = 0.9 * (((10000.0*3.6)/voltage)-10000.0)
 
   /******dB sensor******/
   dbValue = analogRead(ADC2_DB);
@@ -618,7 +628,7 @@ void readSensor()
 
   /******CO2 sensor******/
   
-  i2c_int.beginTransmission(CO2_Adress); // transmit to device #0x44
+  i2c_int.beginTransmission(CO2_Adress); // transmit to device #0x32
   i2c_int.write(0x00);
   i2c_int.endTransmission(); // stop transmitting
 
