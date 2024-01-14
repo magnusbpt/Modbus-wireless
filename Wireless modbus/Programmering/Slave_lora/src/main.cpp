@@ -39,14 +39,13 @@ arduino::MbedI2C Wire1(WIRE1_SDA, WIRE1_SCL);
 #define tempPort 0x0001
 #define humidityPort 0x0002
 #define luxPort 0x0003
-#define dbPort 0x0004
-#define CO2Port 0x0005
+#define CO2Port 0x0004
 
-#define digitalPort 0x0006
-#define pirPort 0x0007
-#define vibPort 0x0008
+#define digitalPort 0x0005
+#define pirPort 0x0006
+#define vibPort 0x0007
 
-#define I2C_extPort 0x0009
+#define I2C_extPort 0x0008
 
 // Define buffers
 char readBuffer[200];
@@ -59,7 +58,7 @@ int messageHead = 1;
 unsigned int pause = 0;
 unsigned int interval = 0;
 unsigned int delta = 0;
-unsigned int ID = 0;
+uint8_t ID = 0;
 unsigned long time_old = 0;
 
 unsigned short luxValue = 0;
@@ -135,267 +134,265 @@ void setup()
 void loop()
 {
   // Wait 1 second before reading sensors
-  millisDelay(2000);
+  millisDelay(1000);
 
-  // Initialize slave
-  slaveInit();
+  // Read sensors
+  readSensor();
 
-  // // Read sensors
-  // readSensor();
+  // Calculate difference between last and current value
+  int tempDiff = ((temp_last - temp) / temp) * 100;
+  int humidityDiff = ((humidity_last - humidity) / humidity) * 100;
+  int luxDiff = ((lux_last - luxValue) / luxValue) * 100;
+  int CO2Diff = ((CO2_last - CO2) / CO2) * 100;
 
-  // // Calculate difference between last and current value
-  // int tempDiff = ((temp_last - temp) / temp) * 100;
-  // int humidityDiff = ((humidity_last - humidity) / humidity) * 100;
-  // int luxDiff = ((lux_last - luxValue) / luxValue) * 100;
-  // int CO2Diff = ((CO2_last - CO2) / CO2) * 100;
+  // If difference is bigger than delta, put data into message buffer
+  if (delta > 0)
+  {
+    if ((tempDiff > delta) || (tempDiff < -delta)) // If temperature change is bigger than delta
+    {
+      msgFlag = true;   // Set flag to make message
+      temp_last = temp; // Set last data
+    }
+    if ((humidityDiff > delta) || (humidityDiff < -delta)) // If humidity change is bigger than delta
+    {
+      msgFlag = true;           // Set flag to make message
+      humidity_last = humidity; // Set last data
+    }
+    if ((luxDiff > delta) || (luxDiff < -delta)) // If lux change is bigger than delta
+    {
+      msgFlag = true;      // Set flag to make message
+      lux_last = luxValue; // Set last data
+    }
+    if ((CO2Diff > delta) || (CO2Diff < -delta)) // If CO2 change is bigger than delta
+    {
+      msgFlag = true; // Set flag to make message
+      CO2_last = CO2; // Set last data
+    }
+  }
 
-  // // If difference is bigger than delta, put data into message buffer
-  // if (delta > 0)
-  // {
-  //   if ((tempDiff > delta) || (tempDiff < -delta)) // If temperature change is bigger than delta
-  //   {
-  //     msgFlag = true;   // Set flag to make message
-  //     temp_last = temp; // Set last data
-  //   }
-  //   if ((humidityDiff > delta) || (humidityDiff < -delta)) // If humidity change is bigger than delta
-  //   {
-  //     msgFlag = true;           // Set flag to make message
-  //     humidity_last = humidity; // Set last data
-  //   }
-  //   if ((luxDiff > delta) || (luxDiff < -delta)) // If lux change is bigger than delta
-  //   {
-  //     msgFlag = true;      // Set flag to make message
-  //     lux_last = luxValue; // Set last data
-  //   }
-  //   if ((CO2Diff > delta) || (CO2Diff < -delta)) // If CO2 change is bigger than delta
-  //   {
-  //     msgFlag = true; // Set flag to make message
-  //     CO2_last = CO2; // Set last data
-  //   }
-  // }
+  if (((millis() - time_old) > interval) || msgFlag)
+  {
+    msgFlag = false;
+    time_old = minutes();
 
-  // if (((millis() - time_old) > interval) || msgFlag)
-  // {
-  //   msgFlag = false;
-  //   time_old = minutes();
+    messageBuffer[messageHead++] = highByte(tempPort);  //Add temperature port to message
+    messageBuffer[messageHead++] = lowByte(tempPort);
+    messageBuffer[messageHead++] = highByte(temp);  //Add temperature to message
+    messageBuffer[messageHead++] = lowByte(temp);
+    messageBuffer[messageHead++] = 0x02; //Add data type (integer) to message
 
-  //   messageBuffer[messageHead++] = highByte(tempPort);  //Add temperature port to message
-  //   messageBuffer[messageHead++] = lowByte(tempPort);
-  //   messageBuffer[messageHead++] = highByte(temp);  //Add temperature to message
-  //   messageBuffer[messageHead++] = lowByte(temp);
-  //   messageBuffer[messageHead++] = 0x02; //Add data type (integer) to message
+    messageBuffer[messageHead++] = highByte(humidityPort);
+    messageBuffer[messageHead++] = lowByte(humidityPort);
+    messageBuffer[messageHead++] = highByte(humidity);
+    messageBuffer[messageHead++] = lowByte(humidity);
+    messageBuffer[messageHead++] = 0x02;
 
-  //   messageBuffer[messageHead++] = highByte(humidityPort);
-  //   messageBuffer[messageHead++] = lowByte(humidityPort);
-  //   messageBuffer[messageHead++] = highByte(humidity);
-  //   messageBuffer[messageHead++] = lowByte(humidity);
-  //   messageBuffer[messageHead++] = 0x02;
+    messageBuffer[messageHead++] = highByte(luxPort);
+    messageBuffer[messageHead++] = lowByte(luxPort);
+    messageBuffer[messageHead++] = highByte(luxValue);
+    messageBuffer[messageHead++] = lowByte(luxValue);
+    messageBuffer[messageHead++] = 0x02;
 
-  //   messageBuffer[messageHead++] = highByte(luxPort);
-  //   messageBuffer[messageHead++] = lowByte(luxPort);
-  //   messageBuffer[messageHead++] = highByte(luxValue);
-  //   messageBuffer[messageHead++] = lowByte(luxValue);
-  //   messageBuffer[messageHead++] = 0x02;
+    messageBuffer[messageHead++] = highByte(CO2Port);
+    messageBuffer[messageHead++] = lowByte(CO2Port);
+    messageBuffer[messageHead++] = highByte(CO2);
+    messageBuffer[messageHead++] = lowByte(CO2);
+    messageBuffer[messageHead++] = 0x02;
 
-  //   messageBuffer[messageHead++] = highByte(CO2Port);
-  //   messageBuffer[messageHead++] = lowByte(CO2Port);
-  //   messageBuffer[messageHead++] = highByte(CO2);
-  //   messageBuffer[messageHead++] = lowByte(CO2);
-  //   messageBuffer[messageHead++] = 0x02;
+    messageBuffer[messageHead++] = highByte(digitalPort);
+    messageBuffer[messageHead++] = lowByte(digitalPort);
+    messageBuffer[messageHead++] = 0x00;
+    messageBuffer[messageHead++] = digitalValue;
+    messageBuffer[messageHead++] = 0x01; //Add data type (boolean) to message
 
-  //   messageBuffer[messageHead++] = highByte(digitalPort);
-  //   messageBuffer[messageHead++] = lowByte(digitalPort);
-  //   messageBuffer[messageHead++] = 0x00;
-  //   messageBuffer[messageHead++] = digitalValue;
-  //   messageBuffer[messageHead++] = 0x01; //Add data type (boolean) to message
+    if (pirFlag)
+    {
+      messageBuffer[messageHead++] = highByte(pirPort);
+      messageBuffer[messageHead++] = lowByte(pirPort);
+      messageBuffer[messageHead++] = 0x00;
+      messageBuffer[messageHead++] = pirValue;
+      messageBuffer[messageHead++] = 0x01;
+    }
 
-  //   if (pirFlag)
-  //   {
-  //     messageBuffer[messageHead++] = highByte(pirPort);
-  //     messageBuffer[messageHead++] = lowByte(pirPort);
-  //     messageBuffer[messageHead++] = 0x00;
-  //     messageBuffer[messageHead++] = pirValue;
-  //     messageBuffer[messageHead++] = 0x01;
-  //   }
+    messageBuffer[messageHead++] = highByte(vibPort);
+    messageBuffer[messageHead++] = lowByte(vibPort);
+    messageBuffer[messageHead++] = 0x00;
+    messageBuffer[messageHead++] = vibValue;
+    messageBuffer[messageHead++] = 0x01;
 
-  //   messageBuffer[messageHead++] = highByte(vibPort);
-  //   messageBuffer[messageHead++] = lowByte(vibPort);
-  //   messageBuffer[messageHead++] = 0x00;
-  //   messageBuffer[messageHead++] = vibValue;
-  //   messageBuffer[messageHead++] = 0x01;
+    messageBuffer[0] = ID;
 
-  //   messageBuffer[0] = ID;
+    short CRC = 0; // To hold CRC
 
-  //   short CRC = 0; // To hold CRC
+    CRC = CRC16_modbus(messageBuffer, messageHead); // Calculate CRC
 
-  //   CRC = CRC16_modbus(messageBuffer, messageHead); // Calculate CRC
+    messageBuffer[messageHead++] = highByte(CRC);
+    messageBuffer[messageHead++] = lowByte(CRC);
 
-  //   messageBuffer[messageHead++] = highByte(CRC);
-  //   messageBuffer[messageHead++] = lowByte(CRC);
+    char loraTX[100] = "AT+TEST=TXLRPKT, \""; // Make array for LoRa message
 
-  //   char loraTX[100] = "AT+TEST=TXLRPKT, \""; // Make array for LoRa message
+    loraSerial.println("ON"); // Wakeup LoRa module
 
-  //   loraSerial.println("ON"); // Wakeup LoRa module
+    millisDelay(100);
 
-  //   millisDelay(100);
+    loraSerial.println("AT+MODE=TEST"); // Enter test mode
+    loraFlush();                        // Read and flush message
 
-  //   loraSerial.println("AT+MODE=TEST"); // Enter test mode
-  //   loraFlush();                        // Read and flush message
+    millisDelay(100);
 
-  //   millisDelay(100);
+    loraSerial.println("AT+TEST=RFCFG,868,SF12,500,8,10,22,ON,OFF,OFF"); // Set LoRa RF configuration
+    loraFlush();                                                         // Read and flush message
 
-  //   loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF"); // Set LoRa RF configuration
-  //   loraFlush();                                                         // Read and flush message
+    millisDelay(100);
 
-  //   millisDelay(100);
+    /**********Test***********/
 
-  //   /**********Test***********/
+    char message1[100] = "AT+TEST=TXLRPKT, \"0102030405060708091122334455667788990203040506070809";
 
-  //   char message1[50] = {0x01, 0x00, 0x00, 0x00, 0xFF, 0x80, 0x59};
+    /************************/
+    // Temporary variables for conversion
+    char temp1[1];
+    char temp2 = 0;
 
-  //   /************************/
-  //   // Temporary variables for conversion
-  //   char temp1[1];
-  //   char temp2 = 0;
+    for (int i = 0; i < messageHead; i++)
+    {
+      temp2 = messageBuffer[i] >> 4;   // Add four MSB to temp2
+      sprintf(temp1, "%X", temp2);     // Convert temp2 to hexadecimal representation and add to temp1
+      loraTX[(i * 2) + 18] = temp1[0]; // Add temp1 to loraTX message
 
-  //   for (int i = 0; i < messageHead; i++)
-  //   {
-  //     temp2 = messageBuffer[i] >> 4;   // Add four MSB to temp2
-  //     sprintf(temp1, "%X", temp2);     // Convert temp2 to hexadecimal representation and add to temp1
-  //     loraTX[(i * 2) + 18] = temp1[0]; // Add temp1 to loraTX message
+      temp2 = messageBuffer[i] & 0x0F; // Add four LSB to temp2
+      sprintf(temp1, "%X", temp2);     // Convert temp2 to hexadecimal representation and add to temp1
+      loraTX[(i * 2) + 19] = temp1[0]; // Add temp1 to loraTX message
+    }
 
-  //     temp2 = messageBuffer[i] & 0x0F; // Add four LSB to temp2
-  //     sprintf(temp1, "%X", temp2);     // Convert temp2 to hexadecimal representation and add to temp1
-  //     loraTX[(i * 2) + 19] = temp1[0]; // Add temp1 to loraTX message
-  //   }
+    memset(messageBuffer, 0, sizeof messageBuffer);
 
-  //   memset(messageBuffer, 0, sizeof messageBuffer);
+    strcat(loraTX, "\"\r\n"); // Insert ", CR and LF to end of message
 
-  //   strcat(loraTX, "\"\r\n"); // Insert ", CR and LF to end of message
+    digitalWrite(LED, HIGH); // Turn on LED for message indication
 
-  //   digitalWrite(LED, HIGH); // Turn on LED for message indication
+    loraSerial.write(loraTX, strlen(loraTX)); // Write message to LoRa module
+    millisDelay(1000);                        // Wait for message to be sent
+    loraRead();                               // Read LoRa module response
+    memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
 
-  //   loraSerial.write(loraTX, strlen(loraTX)); // Write message to LoRa module
-  //   millisDelay(1000);                        // Wait for message to be sent
-  //   loraRead();                               // Read LoRa module response
-  //   memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
+    millisDelay(100);
 
-  //   millisDelay(100);
+    digitalWrite(LED, LOW); // Turn of LED
 
-  //   digitalWrite(LED, LOW); // Turn of LED
+    loraSerial.println("AT+MODE=TEST");       // Enter test mode
+    loraRead();                               // Read LoRa module response
+    memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
 
-  //   loraSerial.println("AT+MODE=TEST");       // Enter test mode
-  //   loraRead();                               // Read LoRa module response
-  //   memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
+    millisDelay(100);
 
-  //   millisDelay(100);
+    loraSerial.println("AT+TEST=RFCFG,868,SF12,500,8,10,22,ON,OFF,OFF"); // Set LoRa RF configuration
+    loraRead();                                                          // Read LoRa module response
+    memset(readBuffer, 0, sizeof readBuffer);                            // Empty LoRa buffer
 
-  //   loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF"); // Set LoRa RF configuration
-  //   loraRead();                                                          // Read LoRa module response
-  //   memset(readBuffer, 0, sizeof readBuffer);                            // Empty LoRa buffer
+    millisDelay(100);
 
-  //   millisDelay(100);
+    loraSerial.println("AT+TEST=RXLRPKT");    // Enter recieve mode
+    loraRead();                               // Read LoRa module response
+    memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
 
-  //   loraSerial.println("AT+TEST=RXLRPKT");    // Enter recieve mode
-  //   loraRead();                               // Read LoRa module response
-  //   memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
+    digitalWrite(LED, HIGH); // Turn on LED for message indication
 
-  //   millisDelay(100);
+    millisDelay(100);
 
-  //   bool flag = false;
-  //   bool flag2 = false;
-  //   while (!flag)
-  //   {
-  //     unsigned long time_now = millis();
-  //     while (!loraSerial.available()) // Wait for message to be recieved
-  //     {
-  //       if (millis() - time_now > 10000) // If no message recieved
-  //       {
-  //         Serial.println("No message received");
-  //         flag2 = true;
-  //         break;
-  //       }
-  //     }
+    bool flag = false;
+    bool flag2 = false;
+    while (!flag)
+    {
+      unsigned long time_now = millis();
+      while (!loraSerial.available()) // Wait for message to be recieved
+      {
+        if (millis() - time_now > 10000) // If no message recieved
+        {
+          Serial.println("No message received");
+          flag2 = true;
+          break;
+        }
+      }
 
-  //     if (flag2)
-  //     {
-
-  //       digitalWrite(LED, HIGH); // Turn on LED for message indication
+      if (flag2)
+      {
         
-  //       // Write message to LoRa module
-  //       loraSerial.write(loraTX, strlen(loraTX));
-  //       millisDelay(1000);
-  //       loraRead();
-  //       memset(readBuffer, 0, sizeof readBuffer);
+        // Write message to LoRa module
+        loraSerial.write(loraTX, strlen(loraTX));
+        millisDelay(1000);
+        loraRead();
+        memset(readBuffer, 0, sizeof readBuffer);
 
-  //       digitalWrite(LED, LOW); // Turn on LED for message indication
+        // Enter test mode
+        loraSerial.println("AT+MODE=TEST");
+        loraRead();
+        memset(readBuffer, 0, sizeof readBuffer);
 
-  //       // Enter test mode
-  //       loraSerial.println("AT+MODE=TEST");
-  //       loraRead();
-  //       memset(readBuffer, 0, sizeof readBuffer);
+        millisDelay(100);
 
-  //       millisDelay(100);
+        // Setup RF configuration
+        loraSerial.println("AT+TEST=RFCFG,868,SF12,500,8,10,22,ON,OFF,OFF");
+        loraFlush();
 
-  //       // Setup RF configuration
-  //       loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF");
-  //       loraFlush();
+        millisDelay(100);
 
-  //       millisDelay(100);
+        // Enter recieve mode
+        loraSerial.println("AT+TEST=RXLRPKT");
+        loraRead();
+        memset(readBuffer, 0, sizeof readBuffer);
 
-  //       // Enter recieve mode
-  //       loraSerial.println("AT+TEST=RXLRPKT");
-  //       loraRead();
-  //       memset(readBuffer, 0, sizeof readBuffer);
+        millisDelay(100);
 
-  //       millisDelay(100);
+        flag2 = false;
+      }
+      else
+      {
 
-  //       flag2 = false;
-  //     }
-  //     else
-  //     {
-  //       loraRead();
+        digitalWrite(LED, LOW); // Turn on LED for message indication
 
-  //       char IDtemp[2];
+        loraRead();
 
-  //       // Convert ID to ASCII value
-  //       if ((ID >> 4) > 0x09)
-  //       {
-  //         IDtemp[0] = (ID >> 4) + 55;
-  //       }
-  //       else
-  //       {
-  //         IDtemp[0] = (ID >> 4) + 48;
-  //       }
+        char IDtemp[2];
 
-  //       if ((ID & 0x0F) > 0x09)
-  //       {
-  //         IDtemp[1] = (ID & 0x0F) + 55;
-  //       }
-  //       else
-  //       {
-  //         IDtemp[1] = (ID & 0x0F) + 48;
-  //       }
+        // Convert ID to ASCII value
+        if ((ID >> 4) > 0x09)
+        {
+          IDtemp[0] = (ID >> 4) + 55;
+        }
+        else
+        {
+          IDtemp[0] = (ID >> 4) + 48;
+        }
 
-  //       if (strstr(readBuffer, IDtemp) > 0)
-  //       {
-  //         Serial.println("Message received");
-  //         flag = true;
-  //       }
-  //     }
+        if ((ID & 0x0F) > 0x09)
+        {
+          IDtemp[1] = (ID & 0x0F) + 55;
+        }
+        else
+        {
+          IDtemp[1] = (ID & 0x0F) + 48;
+        }
 
-  //     memset(readBuffer, 0, sizeof readBuffer);
-  //   }
+        if (strstr(readBuffer, IDtemp) > 0)
+        {
+          Serial.println("Message received");
+          flag = true;
+        }
+      }
 
-  //   millisDelay(100);
+      memset(readBuffer, 0, sizeof readBuffer);
+    }
 
-  //   // Enter low power mode
-  //   loraSerial.println(F("AT+LOWPOWER"));
-  //   loraRead();
-  //   memset(readBuffer, 0, sizeof readBuffer);
+    millisDelay(100);
 
-  //   messageHead = 1;
-  // }
+    // Enter low power mode
+    loraSerial.println(F("AT+LOWPOWER"));
+    loraRead();
+    memset(readBuffer, 0, sizeof readBuffer);
+
+    messageHead = 1;
+  }
 }
 
 void loraRead()
@@ -506,8 +503,8 @@ void slaveInit()
   if((deltatemp & 0x01) == 0x01)
   {
     delta = delta | 0x08;
-  }
-  if(deltatemp == 0)
+  } 
+  else
   {
     delta = 0;
   }
