@@ -32,21 +32,20 @@ arduino::MbedI2C Wire1(WIRE1_SDA, WIRE1_SCL);
 // Define I2C adresses
 #define dataCommand 0x2C0D
 #define temp_Adress 0x44
-#define GPIO_Adress 0x68
+#define GPIO_Adress 0x34
 #define CO2_Adress 0x32
 
 // Define sensor adresses
 #define tempPort 0x0001
 #define humidityPort 0x0002
 #define luxPort 0x0003
-#define dbPort 0x0004
-#define CO2Port 0x0005
+#define CO2Port 0x0004
 
-#define digitalPort 0x0006
-#define pirPort 0x0007
-#define vibPort 0x0008
+#define digitalPort 0x0005
+#define pirPort 0x0006
+#define vibPort 0x0007
 
-#define I2C_extPort 0x0009
+#define I2C_extPort 0x0008
 
 // Define buffers
 char readBuffer[200];
@@ -56,10 +55,10 @@ char messageBuffer[50];
 
 // Define variables
 int messageHead = 1;
-int pause = 0;
-int interval = 0;
-int delta = 0;
-char ID = 0;
+unsigned int pause = 0;
+unsigned int interval = 0;
+unsigned int delta = 0;
+uint8_t ID = 0;
 unsigned long time_old = 0;
 
 unsigned short luxValue = 0;
@@ -124,11 +123,12 @@ void setup()
   humidity_last = humidity;
   lux_last = luxValue;
   CO2_last = CO2;
-  db_last = dbValue;
+  temp_last = temp;
 
   // Set LoRa module to sleep
   loraSerial.println("AT+LOWPOWER");
   loraFlush();
+
 }
 
 void loop()
@@ -150,36 +150,36 @@ void loop()
   {
     if ((tempDiff > delta) || (tempDiff < -delta)) // If temperature change is bigger than delta
     {
-      msgFlag = true; //Set flag to make message
-      temp_last = temp; //Set last data
+      msgFlag = true;   // Set flag to make message
+      temp_last = temp; // Set last data
     }
     if ((humidityDiff > delta) || (humidityDiff < -delta)) // If humidity change is bigger than delta
     {
-      msgFlag = true; //Set flag to make message
-      humidity_last = humidity; //Set last data
+      msgFlag = true;           // Set flag to make message
+      humidity_last = humidity; // Set last data
     }
     if ((luxDiff > delta) || (luxDiff < -delta)) // If lux change is bigger than delta
     {
-      msgFlag = true; //Set flag to make message
-      lux_last = luxValue; //Set last data
+      msgFlag = true;      // Set flag to make message
+      lux_last = luxValue; // Set last data
     }
     if ((CO2Diff > delta) || (CO2Diff < -delta)) // If CO2 change is bigger than delta
     {
-      msgFlag = true; //Set flag to make message
-      CO2_last = CO2; //Set last data
+      msgFlag = true; // Set flag to make message
+      CO2_last = CO2; // Set last data
     }
   }
 
-  if (((minutes() - time_old) > interval) || msgFlag)
+  if (((millis() - time_old) > interval) || msgFlag)
   {
     msgFlag = false;
     time_old = minutes();
 
-    messageBuffer[messageHead++] = highByte(tempPort);
+    messageBuffer[messageHead++] = highByte(tempPort);  //Add temperature port to message
     messageBuffer[messageHead++] = lowByte(tempPort);
-    messageBuffer[messageHead++] = highByte(temp);
+    messageBuffer[messageHead++] = highByte(temp);  //Add temperature to message
     messageBuffer[messageHead++] = lowByte(temp);
-    messageBuffer[messageHead++] = 0x02;
+    messageBuffer[messageHead++] = 0x02; //Add data type (integer) to message
 
     messageBuffer[messageHead++] = highByte(humidityPort);
     messageBuffer[messageHead++] = lowByte(humidityPort);
@@ -203,7 +203,7 @@ void loop()
     messageBuffer[messageHead++] = lowByte(digitalPort);
     messageBuffer[messageHead++] = 0x00;
     messageBuffer[messageHead++] = digitalValue;
-    messageBuffer[messageHead++] = 0x01;
+    messageBuffer[messageHead++] = 0x01; //Add data type (boolean) to message
 
     if (pirFlag)
     {
@@ -229,161 +229,167 @@ void loop()
     messageBuffer[messageHead++] = highByte(CRC);
     messageBuffer[messageHead++] = lowByte(CRC);
 
-   char loraTX[100] = "AT+TEST=TXLRPKT, \""; //Make array for LoRa message 
+    char loraTX[100] = "AT+TEST=TXLRPKT, \""; // Make array for LoRa message
 
-    loraSerial.println("ON"); //Wakeup LoRa module
-
-    millisDelay(100);
-
-    loraSerial.println("AT+MODE=TEST"); //Enter test mode
-    loraFlush(); //Read and flush message
+    loraSerial.println("ON"); // Wakeup LoRa module
 
     millisDelay(100);
 
-    loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF"); //Set LoRa RF configuration
-    loraFlush(); //Read and flush message
+    loraSerial.println("AT+MODE=TEST"); // Enter test mode
+    loraFlush();                        // Read and flush message
+
+    millisDelay(100);
+
+    loraSerial.println("AT+TEST=RFCFG,868,SF12,500,8,10,22,ON,OFF,OFF"); // Set LoRa RF configuration
+    loraFlush();                                                         // Read and flush message
 
     millisDelay(100);
 
     /**********Test***********/
 
-    char message1[50] = {0x01, 0x00, 0x00, 0x00, 0xFF, 0x80, 0x59};
+    char message1[100] = "AT+TEST=TXLRPKT, \"0102030405060708091122334455667788990203040506070809";
 
     /************************/
-    //Temporary variables for conversion
+    // Temporary variables for conversion
     char temp1[1];
     char temp2 = 0;
 
     for (int i = 0; i < messageHead; i++)
     {
-      temp2 = messageBuffer[i] >> 4; //Add four MSB to temp2
-      sprintf(temp1, "%X", temp2);  //Convert temp2 to hexadecimal representation and add to temp1
-      loraTX[(i * 2) + 18] = temp1[0]; //Add temp1 to loraTX message
+      temp2 = messageBuffer[i] >> 4;   // Add four MSB to temp2
+      sprintf(temp1, "%X", temp2);     // Convert temp2 to hexadecimal representation and add to temp1
+      loraTX[(i * 2) + 18] = temp1[0]; // Add temp1 to loraTX message
 
-      temp2 = messageBuffer[i] & 0x0F; //Add four LSB to temp2
-      sprintf(temp1, "%X", temp2); //Convert temp2 to hexadecimal representation and add to temp1
-      loraTX[(i * 2) + 19] = temp1[0]; //Add temp1 to loraTX message
+      temp2 = messageBuffer[i] & 0x0F; // Add four LSB to temp2
+      sprintf(temp1, "%X", temp2);     // Convert temp2 to hexadecimal representation and add to temp1
+      loraTX[(i * 2) + 19] = temp1[0]; // Add temp1 to loraTX message
     }
 
     memset(messageBuffer, 0, sizeof messageBuffer);
 
-    strcat(loraTX, "\"\r\n"); //Insert ", CR and LF to end of message
+    strcat(loraTX, "\"\r\n"); // Insert ", CR and LF to end of message
 
-    digitalWrite(LED, HIGH); //Turn on LED for message indication
+    digitalWrite(LED, HIGH); // Turn on LED for message indication
 
-    loraSerial.write(loraTX, strlen(loraTX)); //Write message to LoRa module
-    millisDelay(1000); //Wait for message to be sent
-    loraRead(); //Read LoRa module response
-    memset(readBuffer, 0, sizeof readBuffer); //Empty LoRa buffer
+    loraSerial.write(loraTX, strlen(loraTX)); // Write message to LoRa module
+    millisDelay(1000);                        // Wait for message to be sent
+    loraRead();                               // Read LoRa module response
+    memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
 
     millisDelay(100);
 
-    digitalWrite(LED, LOW); //Turn of LED
+    digitalWrite(LED, LOW); // Turn of LED
 
-      loraSerial.println("AT+MODE=TEST"); //Enter test mode
-      loraRead(); //Read LoRa module response
-      memset(readBuffer, 0, sizeof readBuffer); //Empty LoRa buffer
+    loraSerial.println("AT+MODE=TEST");       // Enter test mode
+    loraRead();                               // Read LoRa module response
+    memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
 
-      millisDelay(100);
+    millisDelay(100);
 
-      loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF"); //Set LoRa RF configuration
-      loraRead(); //Read LoRa module response
-      memset(readBuffer, 0, sizeof readBuffer); //Empty LoRa buffer
+    loraSerial.println("AT+TEST=RFCFG,868,SF12,500,8,10,22,ON,OFF,OFF"); // Set LoRa RF configuration
+    loraRead();                                                          // Read LoRa module response
+    memset(readBuffer, 0, sizeof readBuffer);                            // Empty LoRa buffer
 
-      millisDelay(100);
+    millisDelay(100);
 
-      loraSerial.println("AT+TEST=RXLRPKT"); //Enter recieve mode
-      loraRead(); //Read LoRa module response
-      memset(readBuffer, 0, sizeof readBuffer); //Empty LoRa buffer
+    loraSerial.println("AT+TEST=RXLRPKT");    // Enter recieve mode
+    loraRead();                               // Read LoRa module response
+    memset(readBuffer, 0, sizeof readBuffer); // Empty LoRa buffer
 
-      millisDelay(100);
+    digitalWrite(LED, HIGH); // Turn on LED for message indication
 
-      bool flag = false;
-      bool flag2 = false;
-      while (!flag)
+    millisDelay(100);
+
+    bool flag = false;
+    bool flag2 = false;
+    while (!flag)
+    {
+      unsigned long time_now = millis();
+      while (!loraSerial.available()) // Wait for message to be recieved
       {
-        unsigned long time_now = millis();
-        while (!loraSerial.available()) //Wait for message to be recieved
+        if (millis() - time_now > 10000) // If no message recieved
         {
-          if (millis() - time_now > 10000) //If no message recieved
-          {
-            Serial.println("No message received");
-            flag2 = true;
-            break;
-          }
+          Serial.println("No message received");
+          flag2 = true;
+          break;
         }
+      }
 
-        if (flag2)
+      if (flag2)
+      {
+        
+        // Write message to LoRa module
+        loraSerial.write(loraTX, strlen(loraTX));
+        millisDelay(1000);
+        loraRead();
+        memset(readBuffer, 0, sizeof readBuffer);
+
+        // Enter test mode
+        loraSerial.println("AT+MODE=TEST");
+        loraRead();
+        memset(readBuffer, 0, sizeof readBuffer);
+
+        millisDelay(100);
+
+        // Setup RF configuration
+        loraSerial.println("AT+TEST=RFCFG,868,SF12,500,8,10,22,ON,OFF,OFF");
+        loraFlush();
+
+        millisDelay(100);
+
+        // Enter recieve mode
+        loraSerial.println("AT+TEST=RXLRPKT");
+        loraRead();
+        memset(readBuffer, 0, sizeof readBuffer);
+
+        millisDelay(100);
+
+        flag2 = false;
+      }
+      else
+      {
+
+        digitalWrite(LED, LOW); // Turn on LED for message indication
+
+        loraRead();
+
+        char IDtemp[2];
+
+        // Convert ID to ASCII value
+        if ((ID >> 4) > 0x09)
         {
-		  //Write message to LoRa module
-          loraSerial.write(loraTX, strlen(loraTX)); 
-          millisDelay(1000);
-          loraRead();
-          memset(readBuffer, 0, sizeof readBuffer);
-
-		  //Enter setup mode
-          loraSerial.println("AT+MODE=TEST");
-          loraRead();
-          memset(readBuffer, 0, sizeof readBuffer);
-
-          millisDelay(100);
-
-		  //Setup RF configuration
-          loraSerial.println("AT+TEST=RFCFG,868,SF12,125,8,10,22,ON,OFF,OFF");
-          loraFlush();
-
-          millisDelay(100);
-
-		  //Enter recieve mode
-          loraSerial.println("AT+TEST=RXLRPKT");
-          loraRead();
-          memset(readBuffer, 0, sizeof readBuffer);
-
-          millisDelay(100);
-
-          flag2 = false;
+          IDtemp[0] = (ID >> 4) + 55;
         }
         else
         {
-          loraRead();
-
-          char IDtemp[2];
-
-		  //Convert ID to ASCII value
-          if((ID >> 4) > 0x09)
-          {
-            IDtemp[0] = (ID >> 4) + 55;
-          }
-          else
-          {
-            IDtemp[0] = (ID >> 4) + 48;
-          }
-
-          if((ID & 0x0F) > 0x09)
-          {
-            IDtemp[1] = (ID & 0x0F) + 55;
-          }
-          else
-          {
-            IDtemp[1] = (ID & 0x0F) + 48;
-          }
-
-          if (strstr(readBuffer, IDtemp) > 0)
-          {
-            Serial.println("Message received");
-            flag = true;
-          }
+          IDtemp[0] = (ID >> 4) + 48;
         }
 
-        memset(readBuffer, 0, sizeof readBuffer);
+        if ((ID & 0x0F) > 0x09)
+        {
+          IDtemp[1] = (ID & 0x0F) + 55;
+        }
+        else
+        {
+          IDtemp[1] = (ID & 0x0F) + 48;
+        }
+
+        if (strstr(readBuffer, IDtemp) > 0)
+        {
+          Serial.println("Message received");
+          flag = true;
+        }
       }
 
-      millisDelay(100);
-
-	  //Enter low power mode
-      loraSerial.println(F("AT+LOWPOWER"));
-      loraRead();
       memset(readBuffer, 0, sizeof readBuffer);
+    }
+
+    millisDelay(100);
+
+    // Enter low power mode
+    loraSerial.println(F("AT+LOWPOWER"));
+    loraRead();
+    memset(readBuffer, 0, sizeof readBuffer);
 
     messageHead = 1;
   }
@@ -421,52 +427,52 @@ void slaveInit()
 {
   Serial.println("Slave init");
 
-  i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
-  i2c_int.write(0x01);                    // sends five bytes
-  i2c_int.write(0x00);                    // sends five bytes
-  i2c_int.endTransmission();              // stop transmitting
+  // i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
+  // i2c_int.write(0x01);                    // sends five bytes
+  // i2c_int.write(0x00);                    // sends five bytes
+  // i2c_int.endTransmission();              // stop transmitting
 
-  millisDelay(100);
+  // millisDelay(100);
 
-  i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
-  i2c_int.write(0x1D);                    // sends five bytes
-  i2c_int.write(0x00);                    // sends five bytes
-  i2c_int.endTransmission();              // stop transmitting
+  // i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
+  // i2c_int.write(0x1D);                    // sends five bytes
+  // i2c_int.write(0x00);                    // sends five bytes
+  // i2c_int.endTransmission();              // stop transmitting
 
-  millisDelay(100);
+  // millisDelay(100);
 
-  i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
-  i2c_int.write(0x1E);                    // sends five bytes
-  i2c_int.write(0x00);                    // sends five bytes
-  i2c_int.endTransmission();              // stop transmitting
+  // i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
+  // i2c_int.write(0x1E);                    // sends five bytes
+  // i2c_int.write(0x00);                    // sends five bytes
+  // i2c_int.endTransmission();              // stop transmitting
 
-  millisDelay(100);
+  // millisDelay(100);
 
-  i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
-  i2c_int.write(0x1F);                    // sends five bytes
-  i2c_int.write(0x00);                    // sends five bytes
-  i2c_int.endTransmission();              // stop transmitting
+  // i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
+  // i2c_int.write(0x1F);                    // sends five bytes
+  // i2c_int.write(0x00);                    // sends five bytes
+  // i2c_int.endTransmission();              // stop transmitting
 
-  millisDelay(100);
+  // millisDelay(100);
 
-  i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
-  i2c_int.write(0x2C);                    // sends five bytes
-  i2c_int.write(0xFF);                    // sends five bytes
-  i2c_int.endTransmission();              // stop transmitting
+  // i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
+  // i2c_int.write(0x2C);                    // sends five bytes
+  // i2c_int.write(0xFF);                    // sends five bytes
+  // i2c_int.endTransmission();              // stop transmitting
 
-  millisDelay(100);
+  // millisDelay(100);
 
-  i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
-  i2c_int.write(0x2D);                    // sends five bytes
-  i2c_int.write(0xFF);                    // sends five bytes
-  i2c_int.endTransmission();              // stop transmitting
+  // i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
+  // i2c_int.write(0x2D);                    // sends five bytes
+  // i2c_int.write(0xFF);                    // sends five bytes
+  // i2c_int.endTransmission();              // stop transmitting
 
-  millisDelay(100);
+  // millisDelay(100);
 
-  i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
-  i2c_int.write(0x2E);                    // sends five bytes
-  i2c_int.write(0x03);                    // sends five bytes
-  i2c_int.endTransmission();              // stop transmitting
+  // i2c_int.beginTransmission(GPIO_Adress); // transmit to device #0x68
+  // i2c_int.write(0x2E);                    // sends five bytes
+  // i2c_int.write(0x03);                    // sends five bytes
+  // i2c_int.endTransmission();              // stop transmitting
 
   millisDelay(100);
 
@@ -474,15 +480,40 @@ void slaveInit()
   i2c_int.write(0x14);                    // sends five bytes
   i2c_int.endTransmission();              // stop transmitting
 
-  i2c_int.requestFrom(GPIO_Adress, 1); //request 1 byte from device #0x68
-  int delta_pause = i2c_int.read();
+  i2c_int.requestFrom(GPIO_Adress, 1); // request 1 byte from device #0x68
+  int delta_int = i2c_int.read();
 
-  Serial.print("Delta pause: ");
-  Serial.println(delta_pause);
+  interval = delta_int >> 4;
 
-  delta = delta_pause >> 3;
+  uint8_t deltatemp = delta_int & 0x0F;
+  delta = 0;
 
-  pause = delta_pause & 0x0F;
+  if((deltatemp & 0x08) == 0x08)
+  {
+    delta = delta | 0x01;
+  }
+  if((deltatemp & 0x04) == 0x04)
+  {
+    delta = delta | 0x02;
+  }
+  if((deltatemp & 0x02) == 0x02)
+  {
+    delta = delta | 0x04;
+  }
+  if((deltatemp & 0x01) == 0x01)
+  {
+    delta = delta | 0x08;
+  } 
+  else
+  {
+    delta = 0;
+  }
+
+  Serial.print("Delta: ");
+  Serial.println(delta);
+
+  Serial.print("Pause: ");
+  Serial.println(pause);
 
   millisDelay(100);
 
@@ -492,13 +523,10 @@ void slaveInit()
 
   millisDelay(100);
 
-  i2c_int.requestFrom(GPIO_Adress, 1); //request 1 byte from device #0x68
-  short ID_int = i2c_int.read();
+  i2c_int.requestFrom(GPIO_Adress, 1); // request 1 byte from device #0x68
+  short ID_pause = i2c_int.read();
 
-  Serial.print("ID1: ");
-  Serial.println(delta_pause);
-
-  ID = ID_int << 4;
+  ID = ID_pause << 4;
 
   millisDelay(100);
 
@@ -508,35 +536,38 @@ void slaveInit()
 
   millisDelay(100);
 
-  i2c_int.requestFrom(GPIO_Adress, 1); //request 1 byte from device #0x68
-  ID_int = i2c_int.read();
+  i2c_int.requestFrom(GPIO_Adress, 1); // request 1 byte from device #0x68
+  ID_pause = i2c_int.read();
 
-  Serial.print("ID2: ");
-  Serial.println(delta_pause);
+  ID = (ID_pause >> 4) | ID ;
 
-  ID = ID | (ID_int >> 4);
+  Serial.print("ID: ");
+  Serial.println(ID);
 
-  interval = ID_int & 0x0F;
+  pause = ID_pause & 0x0F;
 
-  if (interval == 0x01)
+  Serial.print("Interval: ");
+  Serial.println(interval);
+
+  if (interval == 0x08)
   {
     interval = 30;
   }
-  else if (interval == 0x02)
+  else if (interval == 0x04)
   {
     interval = 60;
   }
-  else if (interval == 0x04)
+  else if (interval == 0x02)
   {
     interval = 720;
   }
-  else if (interval == 0x08)
+  else if (interval == 0x01)
   {
     interval = 1440;
   }
   else
   {
-	interval = 5;
+    interval = 15;
   }
 }
 
@@ -563,10 +594,10 @@ void readSensor()
 
   /******Lux sensor******/
   int sensorValue = analogRead(ADC1_LUX);
-  
+
   float voltage = sensorValue * (5.0 / 1023.0);
-  
-  luxValue = 0.9 * (((10000.0*3.6)/voltage)-10000.0);
+
+  luxValue = 0.9 * (((10000.0 * 3.6) / voltage) - 10000.0);
 
   /******dB sensor******/
   dbValue = analogRead(ADC2_DB);
@@ -577,7 +608,10 @@ void readSensor()
   if ((millis() - pirTime > pause * 60000) || pirStart)
   {
     pirValue = digitalRead(pirSensor);
-    pirTime = millis();
+    if(pirValue > 0)
+    {
+      pirTime = millis();
+    }
     pirStart = false;
     pirFlag = true;
   }
@@ -585,7 +619,7 @@ void readSensor()
   /******Temp and humidity******/
 
   i2c_int.beginTransmission(temp_Adress); // transmit to device #0x44
-  i2c_int.write(0x2C);
+  i2c_int.write(0x2C); //Set IC to one shot mode
   i2c_int.write(0x0D);
   i2c_int.endTransmission(); // stop transmitting
 
@@ -599,11 +633,11 @@ void readSensor()
   unsigned char humLow = i2c_int.read();
   int check2 = i2c_int.read();
 
-  temp = (tempHigh << 8) | (tempLow);
+  temp = (tempHigh << 8) | (tempLow); // Combine two bytes to one value
   humidity = (humHigh << 8) | (humLow);
 
-  temp = (-45.0 + (175.0 * (temp / (powOf(2, 16) - 1.0)))) * 10;
-  humidity = (100.0 * (humidity / (powOf(2, 16) - 1.0))) * 10;
+  temp = (-45.0 + (175.0 * (temp / (powOf(2, 16) - 1.0)))) * 10; // Calculate temperature
+  humidity = (100.0 * (humidity / (powOf(2, 16) - 1.0))) * 10; // Calculate humidity
 
   /******Vibration******/
   int vibCounter = 0;
@@ -638,8 +672,7 @@ void readSensor()
   int check5 = i2c_int.read(); // Do not care. Just a place holder
   int check6 = i2c_int.read();
 
-  CO2 = (CO2High << 8) | (CO2Low);
-
+  CO2 = (CO2High << 8) | (CO2Low); // Combine two bytes to one value
 }
 
 int powOf(int base, int exp)
