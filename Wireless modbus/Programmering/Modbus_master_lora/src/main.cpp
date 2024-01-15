@@ -326,6 +326,8 @@ void loraSlaveRead()
   loraTX[18] = returnID[1]; // Insert second byte og slave adress
   strcat(loraTX, "\"\r\n"); // Insert ", CR and LF to end of message
 
+  millisDelay(1000);
+
   loraSerial.write(loraTX, strlen(loraTX)); // Write message to LoRa module
   millisDelay(1000);                        // Wait for message to be sent
   loraFlush();
@@ -351,7 +353,7 @@ void sendToServer()
     serverMessage[9] = 0x01; // Add command 04
 
     serverMessage[10] = 0x00;
-    serverMessage[11] = ((bufferLen / 2) - 3) / 5; // Add length of message
+    serverMessage[11] = ((bufferLen / 2) - 2) / 6; // Add length of message
 
     for (unsigned int i = 0; i < (bufferLen / 2) - 2; i++)
     { // Add message
