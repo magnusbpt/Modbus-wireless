@@ -54,7 +54,7 @@ char length[20];
 char messageBuffer[50];
 
 // Define variables
-int messageHead = 1;
+int messageHead = 0;
 unsigned int pause = 0;
 unsigned int interval = 0;
 unsigned int delta = 0;
@@ -134,71 +134,76 @@ void setup()
 void loop()
 {
   // Wait 1 second before reading sensors
-  millisDelay(1000);
+  millisDelay(5000);
 
   // Read sensors
   readSensor();
 
   // Calculate difference between last and current value
-  int tempDiff = ((temp_last - temp) / temp) * 100;
-  int humidityDiff = ((humidity_last - humidity) / humidity) * 100;
-  int luxDiff = ((lux_last - luxValue) / luxValue) * 100;
-  int CO2Diff = ((CO2_last - CO2) / CO2) * 100;
+  // int tempDiff = ((temp_last - temp) / temp) * 100;
+  // int humidityDiff = ((humidity_last - humidity) / humidity) * 100;
+  // int luxDiff = ((lux_last - luxValue) / luxValue) * 100;
+  // int CO2Diff = ((CO2_last - CO2) / CO2) * 100;
 
   // If difference is bigger than delta, put data into message buffer
-  if (delta > 0)
-  {
-    if ((tempDiff > delta) || (tempDiff < -delta)) // If temperature change is bigger than delta
-    {
-      msgFlag = true;   // Set flag to make message
-      temp_last = temp; // Set last data
-    }
-    if ((humidityDiff > delta) || (humidityDiff < -delta)) // If humidity change is bigger than delta
-    {
-      msgFlag = true;           // Set flag to make message
-      humidity_last = humidity; // Set last data
-    }
-    if ((luxDiff > delta) || (luxDiff < -delta)) // If lux change is bigger than delta
-    {
-      msgFlag = true;      // Set flag to make message
-      lux_last = luxValue; // Set last data
-    }
-    if ((CO2Diff > delta) || (CO2Diff < -delta)) // If CO2 change is bigger than delta
-    {
-      msgFlag = true; // Set flag to make message
-      CO2_last = CO2; // Set last data
-    }
-  }
+  // if (delta > 0)
+  // {
+  //   if ((tempDiff > delta) || (tempDiff < -delta)) // If temperature change is bigger than delta
+  //   {
+  //     msgFlag = true;   // Set flag to make message
+  //     temp_last = temp; // Set last data
+  //   }
+  //   if ((humidityDiff > delta) || (humidityDiff < -delta)) // If humidity change is bigger than delta
+  //   {
+  //     msgFlag = true;           // Set flag to make message
+  //     humidity_last = humidity; // Set last data
+  //   }
+  //   if ((luxDiff > delta) || (luxDiff < -delta)) // If lux change is bigger than delta
+  //   {
+  //     msgFlag = true;      // Set flag to make message
+  //     lux_last = luxValue; // Set last data
+  //   }
+  //   if ((CO2Diff > delta) || (CO2Diff < -delta)) // If CO2 change is bigger than delta
+  //   {
+  //     msgFlag = true; // Set flag to make message
+  //     CO2_last = CO2; // Set last data
+  //   }
+  // }
 
   if (((millis() - time_old) > interval) || msgFlag)
   {
     msgFlag = false;
     time_old = minutes();
 
+    messageBuffer[messageHead++] = ID; // Add ID to message
     messageBuffer[messageHead++] = highByte(tempPort);  //Add temperature port to message
     messageBuffer[messageHead++] = lowByte(tempPort);
     messageBuffer[messageHead++] = highByte(temp);  //Add temperature to message
     messageBuffer[messageHead++] = lowByte(temp);
     messageBuffer[messageHead++] = 0x02; //Add data type (integer) to message
 
+    messageBuffer[messageHead++] = ID; // Add ID to message
     messageBuffer[messageHead++] = highByte(humidityPort);
     messageBuffer[messageHead++] = lowByte(humidityPort);
     messageBuffer[messageHead++] = highByte(humidity);
     messageBuffer[messageHead++] = lowByte(humidity);
     messageBuffer[messageHead++] = 0x02;
 
+    messageBuffer[messageHead++] = ID; // Add ID to message
     messageBuffer[messageHead++] = highByte(luxPort);
     messageBuffer[messageHead++] = lowByte(luxPort);
     messageBuffer[messageHead++] = highByte(luxValue);
     messageBuffer[messageHead++] = lowByte(luxValue);
     messageBuffer[messageHead++] = 0x02;
 
+    messageBuffer[messageHead++] = ID; // Add ID to message
     messageBuffer[messageHead++] = highByte(CO2Port);
     messageBuffer[messageHead++] = lowByte(CO2Port);
     messageBuffer[messageHead++] = highByte(CO2);
     messageBuffer[messageHead++] = lowByte(CO2);
     messageBuffer[messageHead++] = 0x02;
 
+    messageBuffer[messageHead++] = ID; // Add ID to message
     messageBuffer[messageHead++] = highByte(digitalPort);
     messageBuffer[messageHead++] = lowByte(digitalPort);
     messageBuffer[messageHead++] = 0x00;
@@ -207,6 +212,7 @@ void loop()
 
     if (pirFlag)
     {
+      messageBuffer[messageHead++] = ID; // Add ID to message
       messageBuffer[messageHead++] = highByte(pirPort);
       messageBuffer[messageHead++] = lowByte(pirPort);
       messageBuffer[messageHead++] = 0x00;
@@ -214,13 +220,12 @@ void loop()
       messageBuffer[messageHead++] = 0x01;
     }
 
+    messageBuffer[messageHead++] = ID; // Add ID to message
     messageBuffer[messageHead++] = highByte(vibPort);
     messageBuffer[messageHead++] = lowByte(vibPort);
     messageBuffer[messageHead++] = 0x00;
     messageBuffer[messageHead++] = vibValue;
     messageBuffer[messageHead++] = 0x01;
-
-    messageBuffer[0] = ID;
 
     short CRC = 0; // To hold CRC
 
@@ -391,7 +396,7 @@ void loop()
     loraRead();
     memset(readBuffer, 0, sizeof readBuffer);
 
-    messageHead = 1;
+    messageHead = 0;
   }
 }
 
